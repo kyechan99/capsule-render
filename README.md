@@ -1,9 +1,12 @@
-![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=footer&text=capsule%20render&fontSize=90)
+![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90)
 <p align='center'> Decorate Your GitHub Profile ! </p>
 <p align='center'>
-  <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white" href="https://github.com/kyechan99/capsule-render/labels/Idea"/>
-  <img src="https://img.shields.io/badge/DEMO%20-%234FC08D.svg?&style=for-the-badge&&logoColor=white" href="#demo"/>
-
+  <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
+    <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
+  </a>
+  <a href="#demo">
+    <img src="https://img.shields.io/badge/DEMO%20-%234FC08D.svg?&style=for-the-badge&&logoColor=white"/>
+  </a>
 </p>
 
 ## Types
@@ -101,31 +104,29 @@ Write `&fontSize= ` behind **Text** query
 > Do not write `px`
 
 ## FontAlign
-Change text align.
-- `&fontAlign=start` : align-left
-- `&fontAlign=middle` : align-center (default)
-- `&fontAlign=end` : align-right
+Change text align. write number **between 0~100**
+
+`&fontAlign= ` : Default value is 50. center of image
 
 ```
-![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlign=end)
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlign=70)
 ```
 
 
 # Demo <a id="demo">
 
 ## Wave <a id="wave">
-![wave](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&text=WAVE&fontAlign=end)
+![wave](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&text=WAVE)
 
 ## Slice <a id="slice">
-![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE)
+![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=82)
   
 ## Rect <a id="rect">
-![rect](https://capsule-render.vercel.app/api?type=rect&color=auto)
-
-## Use Slice and Rect Both
-![slice](https://capsule-render.vercel.app/api?type=slice&height=200&section=footer)
-![rect](https://capsule-render.vercel.app/api?type=rect&height=100)
+![rect](https://capsule-render.vercel.app/api?type=rect&color=random&text=RECT&fontAlign=30&fontSize=30)
 
 
+<hr/>
 
-![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=footer&text=capsule%20render&fontSize=90)
+Easy to write and preview : [readme-profile-generator](https://github.com/kyechan99/readme-profile-generator)
+
+![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&section=footer&text=Use%20me!&fontSize=90)
