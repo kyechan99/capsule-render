@@ -5,7 +5,7 @@ module.exports = (req, res) => {
     const {
         type = 'wave',
         section = 'header',
-        height = 200,
+        height = 120,
         text,
         fontSize,
         fontAlign
@@ -18,12 +18,12 @@ module.exports = (req, res) => {
 
     res.setHeader("Content-Type", "image/svg+xml");
     res.send(`
-    <svg width="854" height="320" viewBox="0 0 854 320" xmlns="http://www.w3.org/2000/svg">
+    <svg width="854" height="${height}" viewBox="0 0 854 ${height}" xmlns="http://www.w3.org/2000/svg">
         <style>
             ${model.style(section, fontSize)}
         </style>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854 320">
-            ${model[regexData(type)].render(checkColor(color))}
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854 ${height}">
+            ${model[regexData(type)].render(checkColor(color), height)}
         </svg>
         ${checkText(text, fontColor, fontAlign)}
     </svg>

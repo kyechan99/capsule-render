@@ -1,13 +1,14 @@
 const waveModel = require('../model/wave');
-const eggModel = require('../model/egg');
+// const eggModel = require('../model/egg');
+const rectModel = require('../model/rect');
 const sliceModel = require('../model/slice');
 
 const models = {
     wave : {
         render: waveModel.render
     },
-    egg : {
-        render: eggModel.render
+    rect : {
+        render: rectModel.render
     },
     slice : {
         render: sliceModel.render
