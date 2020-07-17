@@ -13,9 +13,9 @@ const models = {
     slice : {
         render: sliceModel.render
     },
-    style : function (section, fontSize = '80px') {
+    style : function (section, fontSize = '80') {
         let css = `.text {
-            font-size: ${fontSize};
+            font-size: ${fontSize}px;
             font-weight: 700;
         }`;
         if (section === 'footer')
