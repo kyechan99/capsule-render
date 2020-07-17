@@ -1,5 +1,5 @@
 const waveModel = require('../model/wave');
-// const eggModel = require('../model/egg');
+const eggModel = require('../model/egg');
 const rectModel = require('../model/rect');
 const sliceModel = require('../model/slice');
 
@@ -12,6 +12,9 @@ const models = {
     },
     slice : {
         render: sliceModel.render
+    },
+    egg : {
+        render: eggModel.render
     },
     style : function (section, fontSize = '80') {
         let css = `.text {

@@ -11,6 +11,7 @@
 
 ## Types
 - [wave](#wave)
+- [egg](#egg)
 - [slice](#slice)
 - [rect](#rect)
 
@@ -29,6 +30,7 @@ Just write query parameter end of this url. Like this
 ## Type
 Type data makes to change Background Image.
 - [wave](#wave) : default
+- [egg](#egg)
 - [slice](#slice)
 - [rect](#rect)
 
@@ -117,6 +119,9 @@ Change text align. write number **between 0~100**
 
 ## Wave <a id="wave">
 ![wave](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&text=WAVE)
+
+## Egg <a id="egg">
+![egg](https://capsule-render.vercel.app/api?type=egg&color=auto&height=210)
 
 ## Slice <a id="slice">
 ![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=82)
