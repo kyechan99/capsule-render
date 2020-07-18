@@ -1,5 +1,5 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90)
-<p align='center'> Decorate Your GitHub Profile ! </p>
+<p align='center'> Decorate GitHub Profile or any Repo like me! </p>
 <p align='center'>
   <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
     <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
@@ -23,8 +23,14 @@ https://capsule-render.vercel.app/api?
 ```
 Just write query parameter end of this url. Like this
 
+Markdown:
 ```
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90)
+```
+
+HTML:
+```
+<img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90" />
 ```
 
 ## Type
@@ -128,7 +134,7 @@ Change text align. write number **between 0~100**
 ![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=82)
   
 ## Rect <a id="rect">
-![rect](https://capsule-render.vercel.app/api?type=rect&color=random&text=RECT&fontAlign=30&fontSize=30)
+![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=RECT&fontAlign=30&fontSize=30)
 
 
 <hr/>

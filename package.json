@@ -1,16 +1,19 @@
 {
-  "name": "bg-image-generator",
+  "name": "capsule-render",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "vercel dev"
   },
   "author": "kyechan99",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.19.2",
-    "cors": "^2.8.5",
-    "node-fetch": "^2.6.0"
-  }
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kyechan99/capsule-render/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kyechan99/capsule-render.git"
+  },
+  "dependencies": {}
 }
