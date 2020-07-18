@@ -3,11 +3,7 @@ const path = (height) => {
 }
 
 const render = (color, height) => {
-    if ((typeof color) === 'object')
-        color = 'url(#linear)';
-
-    return `<path fill="${color}" fill-opacity="1" 
-        d="${path(height)}"></path>`;
+    return `<path fill="${color}" fill-opacity="1" d="${path(height)}"></path>`;
 }
 
 module.exports = { render };

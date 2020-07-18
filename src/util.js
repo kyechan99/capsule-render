@@ -1,3 +1,4 @@
+const { isGradientColor } = require('./verification');
 const pallete = require('./pallete.json');
 const gradient = require('./gradient.json');
 
@@ -21,12 +22,12 @@ function generateAutoGradient() {
 }
 
 function checkColor(color) {  
-    if ((typeof color) === 'object')
-        return color;
+    if (isGradientColor(color))
+        return 'url(#linear)';
     if (color === 'random')
         return generateRandomColor();  
     if (color)
-        return '#'+color;
+        return '#' + color;
     return '#B897FF';
 }
 
@@ -38,10 +39,5 @@ function checkText(text, fontColor = '000000', fontAlign = '50') {
     return `<text text-anchor="middle" x="${fontAlign}%" y="50%" class="text" style="fill:#${fontColor};">${text}</text>`;
 }
 
-function regexData(data) {
-    return String(data)
-        .toLowerCase()
-        .replace(/[^a-z]/g, '')
-}
 
-module.exports = { generateAutoColor, generateAutoGradient, checkColor, checkText, regexData };
+module.exports = { generateAutoColor, generateAutoGradient, checkColor, checkText };

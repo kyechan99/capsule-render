@@ -2,6 +2,7 @@ const waveModel = require('../model/wave');
 const eggModel = require('../model/egg');
 const rectModel = require('../model/rect');
 const sliceModel = require('../model/slice');
+const { isGradientColor } = require('../src/verification');
 
 const models = {
     wave : {
@@ -29,7 +30,7 @@ const models = {
         return css;
     },
     gradientDef : function (color) {
-        if ((typeof color) === 'object')
+        if (!isGradientColor(color))
             return '';
         
         let offset = '';

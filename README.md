@@ -43,6 +43,7 @@ Write `&type= ` on the URL
 Change Background Image!
 - `&color=auto` : Proven random color. List are [here](https://github.com/kyechan99/capsule-render/blob/master/src/pallete.json)
 - `&color=random` : Really random color. I don't know what colors are showing.
+- `&color=gradient` : Proven random gradient. List are [here](https://github.com/kyechan99/capsule-render/blob/master/src/gradient.json)
 - `&color=_hexcode` : default(#B897FF)
 
 If you use `auto` mode. no need to change `fontColor`. 
@@ -132,6 +133,12 @@ Change text align. write number **between 0~100**
 
 <hr/>
 
+# DEV with
 Easy to write and preview : [readme-profile-generator](https://github.com/kyechan99/readme-profile-generator)
+
+SVG Path Easy Maker [Codepen](https://codepen.io/kyechan99/pen/yLeQVBa)
+
+SVG Path draw [mavo.io](https://mavo.io/demos/svgpath/)
+
 
 ![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&section=footer&text=Use%20me!&fontSize=90)

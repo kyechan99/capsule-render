@@ -1,5 +1,6 @@
 const model = require('../model/index');
-const { generateAutoColor, generateAutoGradient, checkColor, checkText, regexData } = require('../src/util');
+const { generateAutoColor, generateAutoGradient, checkColor, checkText } = require('../src/util');
+const { regexData } = require('../src/verification');
 
 module.exports = (req, res) => {
     const {
