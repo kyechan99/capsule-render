@@ -1,4 +1,5 @@
 const pallete = require('./pallete.json');
+const gradient = require('./gradient.json');
 
 function generateRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -14,7 +15,14 @@ function generateAutoColor() {
     return [auto.color, auto.text];
 }
 
+function generateAutoGradient() {
+    const auto = gradient[Math.floor(Math.random() * gradient.length)];
+    return [auto.color, auto.text];
+}
+
 function checkColor(color) {  
+    if ((typeof color) === 'object')
+        return color;
     if (color === 'random')
         return generateRandomColor();  
     if (color)
@@ -26,7 +34,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50') {
     if (text === '' || text === undefined)
         return '';
 
-    // debate : adjustable text-anchor. not only pos-x
+    // debate : adjustable text-anchor|pos-y. not only pos-x
     return `<text text-anchor="middle" x="${fontAlign}%" y="50%" class="text" style="fill:#${fontColor};">${text}</text>`;
 }
 
@@ -36,4 +44,4 @@ function regexData(data) {
         .replace(/[^a-z]/g, '')
 }
 
-module.exports = { generateAutoColor, checkColor, checkText, regexData };
+module.exports = { generateAutoColor, generateAutoGradient, checkColor, checkText, regexData };
