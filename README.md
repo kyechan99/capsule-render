@@ -12,6 +12,7 @@
 ## Types
 - [wave](#wave)
 - [egg](#egg)
+- [shark](#shark)
 - [slice](#slice)
 - [rect](#rect)
 
@@ -37,6 +38,7 @@ HTML:
 Type data makes to change Background Image.
 - [wave](#wave) : default
 - [egg](#egg)
+- [shark](#shark)
 - [slice](#slice)
 - [rect](#rect)
 
@@ -129,6 +131,9 @@ Change text align. write number **between 0~100**
 
 ## Egg <a id="egg">
 ![egg](https://capsule-render.vercel.app/api?type=egg&color=auto&height=210)
+
+## Egg <a id="shark">
+![egg](https://capsule-render.vercel.app/api?type=shark&color=gradient&height=140)
 
 ## Slice <a id="slice">
 ![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=82)

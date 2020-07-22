@@ -1,7 +1,8 @@
 const waveModel = require('../model/wave');
-const eggModel = require('../model/egg');
 const rectModel = require('../model/rect');
 const sliceModel = require('../model/slice');
+const eggModel = require('../model/egg');
+const sharkModel = require('../model/shark');
 const { isGradientColor } = require('../src/verification');
 
 const models = {
@@ -16,6 +17,9 @@ const models = {
     },
     egg : {
         render: eggModel.render
+    },
+    shark : {
+        render: sharkModel.render
     },
     style : function (section, fontSize = '80') {
         let css = `.text {
