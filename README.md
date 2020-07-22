@@ -50,16 +50,23 @@ Write `&type= ` on the URL
 ## Color
 Change Background Image!
 - `&color=auto` : Proven random color. List are [here](https://github.com/kyechan99/capsule-render/blob/master/src/pallete.json)
+- `&color=timeAuto` : Proven random color, but is decided by time.
 - `&color=random` : Really random color. I don't know what colors are showing.
 - `&color=gradient` : Proven random gradient. List are [here](https://github.com/kyechan99/capsule-render/blob/master/src/gradient.json)
+- `&color=timeGradient` : Proven random gradient, but is decided by time.
 - `&color=_hexcode` : default(#B897FF)
 
 If you use `auto` mode. no need to change `fontColor`. 
 `auto` also change fontColor auto.
+
 ```
 ![header](https://capsule-render.vercel.app/api?color=auto)
 ```
 > If you use static color. Do not write '#'
+
+> When use `timeAuto` and `timeGradient`?
+>
+> Used section `header` and `footer` at the same time. 
 
 ## Section
 Section data makes reverse Background Image.
@@ -144,12 +151,10 @@ Change text align. write number **between 0~100**
 
 <hr/>
 
-# DEV with
-Easy to write and preview : [readme-profile-generator](https://github.com/kyechan99/readme-profile-generator)
+# Things that helped contribute
 
-SVG Path Easy Maker [Codepen](https://codepen.io/kyechan99/pen/yLeQVBa)
-
-SVG Path draw [mavo.io](https://mavo.io/demos/svgpath/)
+- SVG Path Easy Maker [Codepen](https://codepen.io/kyechan99/pen/yLeQVBa)
+- SVG Path draw [mavo.io](https://mavo.io/demos/svgpath/)
 
 
-![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&section=footer&text=Use%20me!&fontSize=90)
+![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&section=footer&text=Now%20Use%20me!&fontSize=90)

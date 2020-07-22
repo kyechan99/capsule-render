@@ -1,5 +1,5 @@
 const model = require('../model/index');
-const { generateAutoColor, generateAutoGradient, checkColor, checkText } = require('../src/util');
+const { generateAutoColor, generateAutoGradient, generateAutoByTime, checkColor, checkText } = require('../src/util');
 const { regexData } = require('../src/verification');
 
 module.exports = (req, res) => {
@@ -18,6 +18,8 @@ module.exports = (req, res) => {
         [color, fontColor] = generateAutoColor();
     else if (color === 'gradient')
         [color, fontColor] = generateAutoGradient();
+    else if (color === 'timeAuto' || color === 'timeGradient')
+        [color, fontColor] = generateAutoByTime(color);
 
     res.setHeader("Content-Type", "image/svg+xml");
     res.send(`

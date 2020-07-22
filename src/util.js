@@ -21,6 +21,26 @@ function generateAutoGradient() {
     return [auto.color, auto.text];
 }
 
+function generateAutoByTime(queryColor) {
+    if (queryColor === 'timeAuto')
+        return randomizedByTime(pallete);
+    // else 'timeGradient'
+    return randomizedByTime(gradient);
+}
+
+function randomizedByTime(colorData) {
+    const buildDate = new Date("Wed Jul 22 2020 17:00:00");
+    let nowDate = new Date();
+    nowDate.setSeconds(0);
+    nowDate.setMilliseconds(0);
+
+    let diffMinute = (nowDate.getTime() - buildDate.getTime()) / 60000;
+    if (diffMinute >= colorData.length)
+        diffMinute %= colorData.length;
+
+    return [colorData[diffMinute].color, colorData[diffMinute].text];
+}
+
 function checkColor(color) {  
     if (isGradientColor(color))
         return 'url(#linear)';
@@ -40,4 +60,4 @@ function checkText(text, fontColor = '000000', fontAlign = '50') {
 }
 
 
-module.exports = { generateAutoColor, generateAutoGradient, checkColor, checkText };
+module.exports = { generateAutoColor, generateAutoGradient, generateAutoByTime, checkColor, checkText };
