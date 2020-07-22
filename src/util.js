@@ -34,7 +34,7 @@ function randomizedByTime(colorData) {
     nowDate.setSeconds(0);
     nowDate.setMilliseconds(0);
 
-    let diffMinute = (nowDate.getTime() - buildDate.getTime()) / 60000;
+    let diffMinute = Math.abs(nowDate.getTime() - buildDate.getTime()) / 60000;
     if (diffMinute >= colorData.length)
         diffMinute %= colorData.length;
 
