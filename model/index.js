@@ -25,6 +25,7 @@ const models = {
         let css = `.text {
             font-size: ${fontSize}px;
             font-weight: 700;
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
         }`;
         if (section === 'footer')
             css += `path {
