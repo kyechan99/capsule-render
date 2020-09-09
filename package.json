@@ -15,5 +15,7 @@
     "type": "git",
     "url": "https://github.com/kyechan99/capsule-render.git"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vercel": "^20.1.0"
+  }
 }

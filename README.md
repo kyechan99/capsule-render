@@ -15,6 +15,7 @@
 - [shark](#shark)
 - [slice](#slice)
 - [rect](#rect)
+- [rounded](#rounded)
 
 Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 
@@ -139,14 +140,17 @@ Change text align. write number **between 0~100**
 ## Egg <a id="egg">
 ![egg](https://capsule-render.vercel.app/api?type=egg&color=auto&height=210)
 
-## Egg <a id="shark">
-![egg](https://capsule-render.vercel.app/api?type=shark&color=gradient&height=140)
+## Shark <a id="shark">
+![shark](https://capsule-render.vercel.app/api?type=shark&color=gradient&height=140)
 
 ## Slice <a id="slice">
 ![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=82)
   
 ## Rect <a id="rect">
 ![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=RECT&fontAlign=30&fontSize=30)
+
+## Rounded <a id="rounded">
+![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded&fontAlign=30&fontSize=30&height=200)
 
 
 <hr/>

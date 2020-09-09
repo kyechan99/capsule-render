@@ -3,6 +3,7 @@ const rectModel = require('../model/rect');
 const sliceModel = require('../model/slice');
 const eggModel = require('../model/egg');
 const sharkModel = require('../model/shark');
+const roundedModel = require('../model/rounded');
 const { isGradientColor } = require('../src/verification');
 
 const models = {
@@ -20,6 +21,9 @@ const models = {
     },
     shark : {
         render: sharkModel.render
+    },
+    rounded : {
+        render: roundedModel.render
     },
     style : function (section, fontSize = '80') {
         let css = `.text {
