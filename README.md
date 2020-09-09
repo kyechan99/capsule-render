@@ -105,7 +105,7 @@ Write Something `&text= `.
 Change text color. Default value is 000000
 Value should be Hex code with erased '#'
 
-Write `&fontAlign= ` behind **Text** query
+Write `&fontColor= ` behind **Text** query
 
 ```
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontColor=d6ace6)
@@ -123,7 +123,7 @@ Write `&fontSize= ` behind **Text** query
 > Do not write `px`
 
 ## FontAlign
-Change text align. write number **between 0~100**
+Change text horizontal-align (x). write number **between 0~100**
 
 `&fontAlign= ` : Default value is 50. center of image
 
@@ -131,6 +131,14 @@ Change text align. write number **between 0~100**
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlign=70)
 ```
 
+## FontAlignY
+Change text vertical-align (y). write number **between 0~100**
+
+`&fontAlignY= ` : Default value is 50. center of image
+
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlignY=20)
+```
 
 # Demo <a id="demo">
 
@@ -150,7 +158,7 @@ Change text align. write number **between 0~100**
 ![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=RECT&fontAlign=30&fontSize=30)
 
 ## Rounded <a id="rounded">
-![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded&fontAlign=30&fontSize=30&height=200)
+![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded&fontAlignY=50&fontSize=30&height=200)
 
 
 <hr/>

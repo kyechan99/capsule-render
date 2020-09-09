@@ -9,7 +9,8 @@ module.exports = (req, res) => {
         height = 120,
         text,
         fontSize,
-        fontAlign
+        fontAlign,
+		fontAlignY
     } = req.query;
     let color = req.query.color;
     let fontColor = req.query.fontColor;
@@ -31,7 +32,7 @@ module.exports = (req, res) => {
             ${model.gradientDef(color)}
             ${model[regexData(type)].render(checkColor(color), height)}
         </svg>
-        ${checkText(text, fontColor, fontAlign)}
+        ${checkText(text, fontColor, fontAlign, fontAlignY)}
     </svg>
     `);
 

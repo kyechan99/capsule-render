@@ -51,12 +51,12 @@ function checkColor(color) {
     return '#B897FF';
 }
 
-function checkText(text, fontColor = '000000', fontAlign = '50') {
+function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '50') {
     if (text === '' || text === undefined)
         return '';
 
     // debate : adjustable text-anchor|pos-y. not only pos-x
-    return `<text text-anchor="middle" x="${fontAlign}%" y="50%" class="text" style="fill:#${fontColor};">${text}</text>`;
+    return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY}%" class="text" style="fill:#${fontColor};">${text}</text>`;
 }
 
 
