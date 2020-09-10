@@ -54,6 +54,15 @@ const models = {
             </linearGradient>
         </defs>
         `;
+    },
+    textBg : function (bgColor, posX, posY, fontHeight, text) {
+		// 40 : padding value
+		const height = Number(fontHeight) + 40;
+		// 0.5 : temp sizing.
+		const width = text.length * Number(fontHeight) * 0.5 + 40;
+        return `
+        <rect fill="#${bgColor}" height="${height}" width ="${width}" x="${posX}%" y="${posY}%" transform="translate(-${width/2}, -${height/2})"  rx ="25" ry ="25" />
+        `;
     }
 }
 

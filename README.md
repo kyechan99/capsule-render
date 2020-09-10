@@ -101,6 +101,21 @@ Write Something `&text= `.
 >
 > It makes confused API
 
+## Text Background
+Background of Text.
+
+Write `&textBg=true` to active.
+
+> If you want to increase background-size, 
+add `%20` between text values.
+This is because background-size depends on the length of the english-text. (%20 means spacing)
+
+```
+![header](https://capsule-render.vercel.app/api?type=rounded&color=gradient&text=%20asdf%20&height=300&fontSize=100&textBg=true)
+```
+
+
+
 ## FontColor
 Change text color. Default value is 000000
 Value should be Hex code with erased '#'
