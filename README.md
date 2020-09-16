@@ -42,6 +42,7 @@ Type data makes to change Background Image.
 - [shark](#shark)
 - [slice](#slice)
 - [rect](#rect)
+- [rounded](#rounded)
 
 Write `&type= ` on the URL
 ```
@@ -170,10 +171,10 @@ Change text vertical-align (y). write number **between 0~100**
 ![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=82)
   
 ## Rect <a id="rect">
-![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=RECT&fontAlign=30&fontSize=30)
+![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=%20%20RECT%20%20&fontAlign=30&fontSize=30&textBg=true)
 
 ## Rounded <a id="rounded">
-![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded&fontAlignY=50&fontSize=30&height=200)
+![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded&fontAlignY=50&fontSize=40&height=200)
 
 
 <hr/>
