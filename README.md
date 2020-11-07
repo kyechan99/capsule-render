@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90)
+![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn)
 <p align='center'> Decorate GitHub Profile or any Repo like me! </p>
 <p align='center'>
   <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
@@ -115,7 +115,17 @@ This is because background-size depends on the length of the english-text. (%20 
 ![header](https://capsule-render.vercel.app/api?type=rounded&color=gradient&text=%20asdf%20&height=300&fontSize=100&textBg=true)
 ```
 
+## Animation
+Text animation.
 
+Write `&animation= `, if you want to use.
+
+- `fadeIn` : fadeIn 1.2s
+- `scaleIn` : scaleIn .8s
+
+```
+![header](https://capsule-render.vercel.app/api?text=capsule_render&animation=fadeIn)
+```
 
 ## FontColor
 Change text color. Default value is 000000
