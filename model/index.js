@@ -36,6 +36,8 @@ const models = {
                 transform: rotate(180deg);
                 transform-origin: 50% 50%;
             }`;
+		
+		
         return css;
     },
     gradientDef : function (color) {
@@ -63,7 +65,48 @@ const models = {
         return `
         <rect fill="#${bgColor}" height="${height}" width ="${width}" x="${posX}%" y="${posY}%" transform="translate(-${width/2}, -${height/2})"  rx ="25" ry ="25" />
         `;
-    }
+    },
+	animation : function (animation, fontAlign, fontAlignY) {
+		if (!animation)
+			return '';
+		
+		let css = '';
+		switch (animation) {
+			case 'fadeIn':
+				css += `
+						.text {
+							animation: fadeIn 1.2s ease-in-out forwards;
+						}
+						`;
+				css += `@keyframes fadeIn {
+						  from {
+							opacity: 0;
+						  }
+						  to {
+							opacity: 1;
+						  }
+						};`;
+			break;
+			case 'scaleIn':
+				css += `
+						.text {
+							animation: scaleIn .8s ease-in-out forwards;
+						}
+						`;
+				css += `@keyframes scaleIn {
+						  from {
+							transform: translate(${fontAlign}%, ${fontAlignY}%) scale(0);
+						  }
+						  to {
+							transform: translate(0%, 0%) scale(1);
+						  }
+						};`;
+			break;
+			default:
+		}
+		
+		return css;
+	}
 }
 
 module.exports = models;

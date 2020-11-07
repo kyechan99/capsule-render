@@ -11,7 +11,8 @@ module.exports = (req, res) => {
 		textBg = 'false',
         fontSize = 70,
         fontAlign = 50,
-		fontAlignY = 50
+		fontAlignY = 50,
+		animation
     } = req.query;
     let color = req.query.color;
     let fontColor = req.query.fontColor;
@@ -28,6 +29,7 @@ module.exports = (req, res) => {
     <svg width="854" height="${height}" viewBox="0 0 854 ${height}" xmlns="http://www.w3.org/2000/svg">
         <style>
             ${model.style(section, fontSize)}
+            ${model.animation(animation, fontAlign, fontAlignY)}
         </style>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854 ${height}">
             ${model.gradientDef(color)}
