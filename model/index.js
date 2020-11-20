@@ -87,6 +87,41 @@ const models = {
 						  }
 						};`;
 			break;
+			case 'blinking':
+				css += `.text {
+							animation: blinking 1.6s step-start 0s infinite;
+						}`;
+				css += `@keyframes blinking {
+						  50% {
+							opacity: 0;
+						  }
+						};`;
+			break;
+			case 'blink':
+				css += `.text {
+							animation: blink .6s step-start 0s backwards;
+						}`;
+				css += `@keyframes blink {
+						  10% { opacity: 1; }
+						  25% { opacity: 0; }
+						  40% { opacity: 1; }
+						  55% { opacity: 0; }
+						  70% { opacity: 1; }
+						  85% { opacity: 0; }
+						};`;
+			break;
+			case 'twinkling':
+				css += `.text {
+							animation: twinkling 4s ease-in-out infinite;
+						}`;
+				css += `@keyframes twinkling {
+						  40% { opacity: 1; }
+						  50% { opacity: 0.5; }
+						  60% { opacity: 1; }
+						  70% { opacity: 0.5; }
+						  80% { opacity: 1; }
+						};`;
+			break;
 			default:
 		}
 		

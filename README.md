@@ -123,6 +123,9 @@ Write `&animation= `, if you want to use.
 
 - `fadeIn` : fadeIn 1.2s
 - `scaleIn` : scaleIn .8s
+- `blink` : blink .6s
+- `blinking` : blinking 1.6s
+- `twinkling` : twinkling 4s
 
 ```
 ![header](https://capsule-render.vercel.app/api?text=capsule_render&animation=fadeIn)
@@ -185,7 +188,7 @@ Change text vertical-align (y). write number **between 0~100**
 ![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=%20%20RECT%20%20&fontAlign=30&fontSize=30&textBg=true)
 
 ## Soft <a id="soft">
-![soft](https://capsule-render.vercel.app/api?type=soft&color=auto&text=Goot%20to%20use%20with%20other%20readme&fontSize=40&animation=scaleIn)
+![soft](https://capsule-render.vercel.app/api?type=soft&color=auto&text=Good%20to%20use%20with%20other%20readme&fontSize=40&animation=twinkling)
 
 ## Rounded <a id="rounded">
 ![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded&fontAlignY=50&fontSize=40&height=200)
