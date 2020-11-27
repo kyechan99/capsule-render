@@ -12,7 +12,8 @@ module.exports = (req, res) => {
         fontSize = 70,
         fontAlign = 50,
 		fontAlignY = 50,
-		animation
+		animation,
+		rotate = 0
     } = req.query;
     let color = req.query.color;
     let fontColor = req.query.fontColor;
@@ -28,7 +29,7 @@ module.exports = (req, res) => {
     res.send(`
     <svg width="854" height="${height}" viewBox="0 0 854 ${height}" xmlns="http://www.w3.org/2000/svg">
         <style>
-            ${model.style(section, fontSize)}
+            ${model.style(section, fontSize, rotate)}
             ${model.animation(animation, fontAlign, fontAlignY)}
         </style>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854 ${height}">

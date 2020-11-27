@@ -15,11 +15,17 @@ const models = {
     shark : { render: sharkModel.render },
     rounded : { render: roundedModel.render },
     soft : { render: softModel.render },
-    style : function (section, fontSize = '80') {
+    style : function (section, fontSize = '80', rotate) {
         let css = 	`.text {
 						font-size: ${fontSize}px;
 						font-weight: 700;
 						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}`;
+		
+		if (rotate !== 0)
+			css +=	`.text {
+						transform-origin: center center;
+						transform:rotate(${rotate}deg);
 					}`;
 		
         if (section === 'footer')

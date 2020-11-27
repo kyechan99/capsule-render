@@ -170,6 +170,18 @@ Change text vertical-align (y). write number **between 0~100**
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlignY=20)
 ```
 
+## Rotate
+Usage `&rotate= `, to rotate text.
+
+You can also use negative number.
+
+> Recommend number arrange. ☞ 0~360, 0~-360. 
+
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontSize=20&rotate=-30)
+```
+
+
 # Demo <a id="demo">
 
 ## Wave <a id="wave">
@@ -182,7 +194,7 @@ Change text vertical-align (y). write number **between 0~100**
 ![shark](https://capsule-render.vercel.app/api?type=shark&color=gradient&height=140)
 
 ## Slice <a id="slice">
-![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=82)
+![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=70&rotate=13&fontAlignY=25)
   
 ## Rect <a id="rect">
 ![rect](https://capsule-render.vercel.app/api?type=rect&color=gradient&text=%20%20RECT%20%20&fontAlign=30&fontSize=30&textBg=true)
