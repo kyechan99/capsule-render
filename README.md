@@ -177,7 +177,7 @@ Usage `&rotate= `, to rotate text.
 
 You can also use negative number.
 
-> Recommend number arrange. ☞ 0~360, 0~-360. 
+> Recommend number arrange. ☞ `0 ~ 360`, `0 ~ -360`. 
 
 ```
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontSize=20&rotate=-30)
