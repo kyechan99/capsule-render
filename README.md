@@ -16,6 +16,7 @@
 - [slice](#slice)
 - [rect](#rect)
 - [rounded](#rounded)
+- [cylinder](#cylinder)
 
 Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 
@@ -44,6 +45,7 @@ Type data makes to change Background Image.
 - [rect](#rect)
 - [soft](#soft)
 - [rounded](#rounded)
+- [cylinder](#cylinder)
 
 Write `&type= ` on the URL
 ```
@@ -204,6 +206,9 @@ You can also use negative number.
 
 ## Rounded <a id="rounded">
 ![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded&fontAlignY=50&fontSize=40&height=200)
+
+## Cylinder <a id="cylinder">
+![cylinder](https://capsule-render.vercel.app/api?type=cylinder&color=auto&text=Cylinder&fontAlignY=50&fontSize=40&height=150&animation=blinking)
 
 
 <hr/>

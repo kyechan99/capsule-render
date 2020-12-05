@@ -5,16 +5,18 @@ const eggModel = require('../model/egg');
 const sharkModel = require('../model/shark');
 const roundedModel = require('../model/rounded');
 const softModel = require('../model/soft');
+const cylinderModel = require('../model/cylinder');
 const { isGradientColor } = require('../src/verification');
 
 const models = {
-    wave : { render: waveModel.render },
-    rect : { render: rectModel.render },
-    slice : { render: sliceModel.render },
+	cylinder : { render: cylinderModel.render},
     egg : { render: eggModel.render },
     shark : { render: sharkModel.render },
+    rect : { render: rectModel.render },
     rounded : { render: roundedModel.render },
+    slice : { render: sliceModel.render },
     soft : { render: softModel.render },
+    wave : { render: waveModel.render },
     style : function (section, fontSize = '80', rotate) {
         let css = 	`.text {
 						font-size: ${fontSize}px;
