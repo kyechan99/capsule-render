@@ -11,24 +11,24 @@ function generateRandomColor() {
     return color;
 }
 
-function generateAutoColor() {
+function generateAutoColor(fontColor) {
     const auto = pallete[Math.floor(Math.random() * pallete.length)];
-    return [auto.color, auto.text];
+    return [auto.color, fontColor ? fontColor : auto.text ];
 }
 
-function generateAutoGradient() {
+function generateAutoGradient(fontColor) {
     const auto = gradient[Math.floor(Math.random() * gradient.length)];
-    return [auto.color, auto.text];
+    return [auto.color, fontColor ? fontColor : auto.text ];
 }
 
-function generateAutoByTime(queryColor) {
+function generateAutoByTime(queryColor, fontColor) {
     if (queryColor === 'timeAuto')
-        return randomizedByTime(pallete);
+        return randomizedByTime(pallete, fontColor);
     // else 'timeGradient'
-    return randomizedByTime(gradient);
+    return randomizedByTime(gradient, fontColor);
 }
 
-function randomizedByTime(colorData) {
+function randomizedByTime(colorData, fontColor) {
     const buildDate = new Date("Wed Jul 22 2020 17:00:00");
     let nowDate = new Date();
     nowDate.setSeconds(0);
@@ -38,7 +38,7 @@ function randomizedByTime(colorData) {
     if (diffMinute >= colorData.length)
         diffMinute %= colorData.length;
 
-    return [colorData[diffMinute].color, colorData[diffMinute].text];
+    return [colorData[diffMinute].color, fontColor ? fontColor : colorData[diffMinute].text];
 }
 
 function checkColor(color) {  

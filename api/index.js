@@ -8,7 +8,7 @@ module.exports = (req, res) => {
         section = 'header',
         height = 120,
         text,
-		textBg = 'false',
+		textBg = 'false',   // It Means to activate the text background color. text-color -> text-background-color.
         fontSize = 70,
         fontAlign = 50,
 		fontAlignY = 50,
@@ -19,11 +19,11 @@ module.exports = (req, res) => {
     let fontColor = req.query.fontColor;
 
     if (color === 'auto')
-        [color, fontColor] = generateAutoColor();
+        [color, fontColor] = generateAutoColor(fontColor);
     else if (color === 'gradient')
-        [color, fontColor] = generateAutoGradient();
+        [color, fontColor] = generateAutoGradient(fontColor);
     else if (color === 'timeAuto' || color === 'timeGradient')
-        [color, fontColor] = generateAutoByTime(color);
+        [color, fontColor] = generateAutoByTime(color, fontColor);
 
     res.setHeader("Content-Type", "image/svg+xml");
     res.send(`
