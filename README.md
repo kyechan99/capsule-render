@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn)
+![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn&fontAlignY=38)
 <p align='center'> Decorate GitHub Profile or any Repo like me! </p>
 <p align='center'>
   <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
@@ -77,10 +77,12 @@ If you use `auto` mode. no need to change `fontColor`.
 Section data makes reverse Background Image.
 - `&section=header` : (default)
 - `&section=footer`
+- `&section=reversal` : Reverse the image left and right. (Color at the same time)
 
 Write `&section= ` on the URL
 ```
 ![footer](https://capsule-render.vercel.app/api?section=footer)
+![reversal](https://capsule-render.vercel.app/api?type=slice&section=reversal&color=gradient)
 ```
 
 ## Height
@@ -187,7 +189,7 @@ You can also use negative number.
 # Demo <a id="demo">
 
 ## Wave <a id="wave">
-![wave](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&text=WAVE)
+![wave](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&text=WAVE&section=reversal)
 
 ## Egg <a id="egg">
 ![egg](https://capsule-render.vercel.app/api?type=egg&color=auto&height=210)

@@ -7,6 +7,7 @@ const roundedModel = require('../model/rounded');
 const softModel = require('../model/soft');
 const cylinderModel = require('../model/cylinder');
 const { isGradientColor } = require('../src/verification');
+const { checkSection } = require('../src/util');
 
 const models = {
 	cylinder : { render: cylinderModel.render},
@@ -31,10 +32,7 @@ const models = {
 					}`;
 		
         if (section === 'footer')
-            css += 	`path {
-						transform: rotate(180deg);
-						transform-origin: 50% 50%;
-					}`;
+			css += checkSection(section);
 		
         return css;
     },

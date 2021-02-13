@@ -1,3 +1,5 @@
+const { checkSection } = require('../src/util');
+
 const path = (height) => {
     height = Number(height);
     const c1 = height - 95;     // 27 is edge point
@@ -5,8 +7,10 @@ const path = (height) => {
     return `M 0 ${c1} C 61 ${c2} 61 ${c2} 122 ${c1} C 183 ${c2} 183 ${c2} 244 ${c1} C 305 ${c2} 305 ${c2} 366 ${c1} C 427 ${c2} 427 ${c2} 488 ${c1} C 549 ${c2} 549 ${c2} 610 ${c1} C 671 ${c2} 671 ${c2} 732 ${c1} C 793 ${c2} 793 ${c2} 854 ${c1}  L 854 0 L 0 0 L 0 305 `;
 }
 
-const render = (color, height) => {
-    return `<path fill="${color}" fill-opacity="1" d="${path(height)}"></path>`;
+const render = (section, color, height) => {
+    section = checkSection(section);
+
+    return `<path fill="${color}" ${section} fill-opacity="1" d="${path(height)}"></path>`;
 }
 
 module.exports = { render };

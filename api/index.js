@@ -34,7 +34,7 @@ module.exports = (req, res) => {
         </style>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854 ${height}">
             ${model.gradientDef(color)}
-            ${model[regexData(type)].render(checkColor(color), height)}
+            ${model[regexData(type)].render(section, checkColor(color), height)}
         </svg>
 		${ textBg === 'true'
 			 ? model.textBg(fontColor, fontAlign, fontAlignY, fontSize, text)
