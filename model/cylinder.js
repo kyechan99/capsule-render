@@ -1,4 +1,4 @@
-const { checkSection } = require('../src/util');
+const { checkReversal } = require('../src/util');
 
 const path = (height) => {
     height = Number(height);
@@ -7,10 +7,10 @@ const path = (height) => {
     return `M 61 0 L ${854 - per} 0 A 50 50 0 1 1 ${854 - per} ${height} L ${per} ${height} A 50 50 0 1 1 ${per} 0 `;
 }
 
-const render = (section, color, height) => {
-    section = checkSection(section);
-    
-    return `<path fill="${color}" ${section} fill-opacity="1" d="${path(height)}"></path>`;
+const render = (reversal, color, height) => {
+    reversal = checkReversal(reversal);
+
+    return `<path fill="${color}" ${reversal} fill-opacity="1" d="${path(height)}"></path>`;
 }
 
 module.exports = { render };

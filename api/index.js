@@ -13,6 +13,7 @@ module.exports = (req, res) => {
         fontAlign = 50,
 		fontAlignY = 50,
 		animation,
+		reversal = 'false',
 		rotate = 0
     } = req.query;
     let color = req.query.color;
@@ -34,7 +35,7 @@ module.exports = (req, res) => {
         </style>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854 ${height}">
             ${model.gradientDef(color)}
-            ${model[regexData(type)].render(section, checkColor(color), height)}
+            ${model[regexData(type)].render(reversal, checkColor(color), height)}
         </svg>
 		${ textBg === 'true'
 			 ? model.textBg(fontColor, fontAlign, fontAlignY, fontSize, text)

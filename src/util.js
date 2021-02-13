@@ -41,15 +41,8 @@ function randomizedByTime(colorData, fontColor) {
     return [colorData[diffMinute].color, fontColor ? fontColor : colorData[diffMinute].text];
 }
 
-function checkSection(section) {
-    if (section === 'footer') {
-        return `path {
-                    transform: rotate(180deg);
-                    transform-origin: 50% 50%;
-                }`;
-    }
-
-    if (section === 'reversal') {
+function checkReversal(reversal) {
+    if (reversal === 'true') {
         return `transform="scale (-1, 1)" transform-origin="center"`;
     }
 
@@ -75,4 +68,4 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
 }
 
 
-module.exports = { generateAutoColor, generateAutoGradient, generateAutoByTime, checkSection, checkColor, checkText };
+module.exports = { generateAutoColor, generateAutoGradient, generateAutoByTime, checkReversal, checkColor, checkText };
