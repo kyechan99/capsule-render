@@ -17,6 +17,7 @@
 - [rect](#rect)
 - [rounded](#rounded)
 - [cylinder](#cylinder)
+- [waving](#waving)
 
 Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 
@@ -46,6 +47,7 @@ Type data makes to change Background Image.
 - [soft](#soft)
 - [rounded](#rounded)
 - [cylinder](#cylinder)
+- [waving](#waving)
 
 Write `&type= ` on the URL
 ```
@@ -127,8 +129,8 @@ This is because background-size depends on the length of the english-text. (%20 
 ![header](https://capsule-render.vercel.app/api?type=rounded&color=gradient&text=%20asdf%20&height=300&fontSize=100&textBg=true)
 ```
 
-## Animation
-Text animation.
+## Text Animation
+Make the text dynamic.
 
 Write `&animation= `, if you want to use.
 
@@ -218,6 +220,9 @@ You can also use negative number.
 
 ## Cylinder <a id="cylinder">
 ![cylinder](https://capsule-render.vercel.app/api?type=cylinder&color=auto&text=Cylinder&fontAlignY=50&fontSize=40&height=150&animation=blinking)
+
+## Waving <a id="waving">
+![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=Waving!&fontAlign=80&fontAlignY=40&color=gradient)
 
 
 <hr/>

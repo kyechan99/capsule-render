@@ -6,6 +6,7 @@ const sharkModel = require('../model/shark');
 const roundedModel = require('../model/rounded');
 const softModel = require('../model/soft');
 const cylinderModel = require('../model/cylinder');
+const wavingModel = require('../model/animationModel/waving');
 const { isGradientColor } = require('../src/verification');
 
 const models = {
@@ -17,6 +18,7 @@ const models = {
     slice : { render: sliceModel.render },
     soft : { render: softModel.render },
     wave : { render: waveModel.render },
+    waving : { render: wavingModel.render },
     style : function (section, fontSize = '80', rotate) {
         let css = 	`.text {
 						font-size: ${fontSize}px;

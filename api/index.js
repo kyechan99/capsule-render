@@ -19,6 +19,8 @@ module.exports = (req, res) => {
     let color = req.query.color;
     let fontColor = req.query.fontColor;
 
+    
+    //- Color Verify
     if (color === 'auto')
         [color, fontColor] = generateAutoColor(fontColor);
     else if (color === 'gradient')
@@ -26,24 +28,46 @@ module.exports = (req, res) => {
     else if (color === 'timeAuto' || color === 'timeGradient')
         [color, fontColor] = generateAutoByTime(color, fontColor);
 
-    res.setHeader("Content-Type", "image/svg+xml");
-    res.send(`
-    <svg width="854" height="${height}" viewBox="0 0 854 ${height}" xmlns="http://www.w3.org/2000/svg">
-        <style>
-            ${model.style(section, fontSize, rotate)}
-            ${model.animation(animation, fontAlign, fontAlignY)}
-        </style>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854 ${height}">
-            ${model.gradientDef(color)}
-            ${model[regexData(type)].render(reversal, checkColor(color), height)}
-        </svg>
-		${ textBg === 'true'
-			 ? model.textBg(fontColor, fontAlign, fontAlignY, fontSize, text)
-			 : '' }
-		${ textBg === 'true'
-			 ? checkText(text, '000000', fontAlign, fontAlignY)
-			 : checkText(text, fontColor, fontAlign, fontAlignY) }
-    </svg>
-    `);
 
+    //- Layout
+    let styleScript =   `<style>
+                            ${model.style(section, fontSize, rotate)}
+                            ${model.animation(animation, fontAlign, fontAlignY)}
+                        </style>`;
+    let svgContentScript = `${model.gradientDef(color)}
+                            ${model[regexData(type)].render(reversal, checkColor(color), height)}`;
+    let textScript =    `${ textBg === 'true'
+                            ? model.textBg(fontColor, fontAlign, fontAlignY, fontSize, text)
+                            : '' }
+                        ${ textBg === 'true'
+                            ? checkText(text, '000000', fontAlign, fontAlignY)
+                            : checkText(text, fontColor, fontAlign, fontAlignY) }`;
+
+
+    res.setHeader("Content-Type", "image/svg+xml");
+
+
+    if (type == 'waving') {
+        // animation types
+        res.send(`
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="z-index:1;position:relative" width="854" height="${height}" viewBox="0 0 854 ${height}">
+                ${styleScript}
+                <g transform="translate(427, ${height/2}) scale(1, 1) translate(-427, -${height/2})">
+                    ${svgContentScript}
+                </g>
+                ${textScript}
+            </svg>
+        `);
+    } else {
+        // static types
+        res.send(`
+            <svg width="854" height="${height}" viewBox="0 0 854 ${height}" xmlns="http://www.w3.org/2000/svg">
+                ${styleScript}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 854 ${height}">
+                    ${svgContentScript}
+                </svg>
+                ${textScript}
+            </svg>
+        `);
+    }
 };
