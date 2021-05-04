@@ -19,15 +19,20 @@ const models = {
     soft : { render: softModel.render },
     wave : { render: waveModel.render },
     waving : { render: wavingModel.render },
-    style : function (section, fontSize = '80', rotate) {
+    style : function (section, fontSize = '70', descSize = 20, rotate = 0) {
         let css = 	`.text {
 						font-size: ${fontSize}px;
 						font-weight: 700;
 						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: ${descSize}px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 					}`;
 		
 		if (rotate !== 0)
-			css +=	`.text {
+			css +=	`.text, .desc {
 						transform-origin: center center;
 						transform:rotate(${rotate}deg);
 					}`;
@@ -72,7 +77,7 @@ const models = {
 		let css = '';
 		switch (animation) {
 			case 'fadeIn':
-				css += `.text {
+				css += `.text, .desc {
 							animation: fadeIn 1.2s ease-in-out forwards;
 						}`;
 				css += `@keyframes fadeIn {
@@ -85,7 +90,7 @@ const models = {
 						};`;
 			break;
 			case 'scaleIn':
-				css += `.text {
+				css += `.text, .desc {
 							animation: scaleIn .8s ease-in-out forwards;
 						}`;
 				css += `@keyframes scaleIn {
@@ -98,7 +103,7 @@ const models = {
 						};`;
 			break;
 			case 'blinking':
-				css += `.text {
+				css += `.text, .desc {
 							animation: blinking 1.6s step-start 0s infinite;
 						}`;
 				css += `@keyframes blinking {
@@ -108,7 +113,7 @@ const models = {
 						};`;
 			break;
 			case 'blink':
-				css += `.text {
+				css += `.text, .desc {
 							animation: blink .6s step-start 0s backwards;
 						}`;
 				css += `@keyframes blink {
@@ -121,7 +126,7 @@ const models = {
 						};`;
 			break;
 			case 'twinkling':
-				css += `.text {
+				css += `.text, .desc {
 							animation: twinkling 4s ease-in-out infinite;
 						}`;
 				css += `@keyframes twinkling {

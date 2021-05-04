@@ -13,12 +13,12 @@ function generateRandomColor() {
 
 function generateAutoColor(fontColor) {
     const auto = pallete[Math.floor(Math.random() * pallete.length)];
-    return [auto.color, fontColor ? fontColor : auto.text ];
+    return [auto.color, fontColor ? fontColor : auto.text, auto.textBg ];
 }
 
 function generateAutoGradient(fontColor) {
     const auto = gradient[Math.floor(Math.random() * gradient.length)];
-    return [auto.color, fontColor ? fontColor : auto.text ];
+    return [auto.color, fontColor ? fontColor : auto.text, auto.textBg ];
 }
 
 function generateAutoByTime(queryColor, fontColor) {
@@ -38,7 +38,7 @@ function randomizedByTime(colorData, fontColor) {
     if (diffMinute >= colorData.length)
         diffMinute %= colorData.length;
 
-    return [colorData[diffMinute].color, fontColor ? fontColor : colorData[diffMinute].text];
+    return [colorData[diffMinute].color, fontColor ? fontColor : colorData[diffMinute].text, colorData[diffMinute].textBg];
 }
 
 function checkReversal(reversal) {
@@ -67,5 +67,13 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY}%" class="text" style="fill:#${fontColor};">${text}</text>`;
 }
 
+function checkDesc(desc, descColor = '000000', descAlign = '50', descAlignY = '60') {
+    if (desc === '' || desc === undefined)
+        return '';
 
-module.exports = { generateAutoColor, generateAutoGradient, generateAutoByTime, checkReversal, checkColor, checkText };
+    // debate : adjustable text-anchor|pos-y. not only pos-x
+    return `<text text-anchor="middle" alignment-baseline="middle" x="${descAlign}%" y="${descAlignY}%" class="desc" style="fill:#${descColor};">${desc}</text>`;
+}
+
+
+module.exports = { generateAutoColor, generateAutoGradient, generateAutoByTime, checkReversal, checkColor, checkText, checkDesc };
