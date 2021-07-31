@@ -41,8 +41,8 @@ module.exports = (req, res) => {
                             ${model.animation(animation, fontAlign, fontAlignY)}
                         </style>`;
     // Get the svg contents of the corresponding model
-    let svgContentScript = `${model.gradientDef(color)}
-                            ${model[regexData(type)].render(reversal, checkColor(color), height)}`;
+    let svgContentScript = type !== 'transparent' ? `${model.gradientDef(color)}
+                            ${model[regexData(type)].render(reversal, checkColor(color), height)}` : ``;
 
     // set 'text' - The layout changes depending on whether or not 'textBg' is used.
     let textScript =    `${ textBg === 'true'

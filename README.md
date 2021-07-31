@@ -9,15 +9,26 @@
   </a>
 </p>
 
-## Types
-- [wave](#wave)
-- [egg](#egg)
-- [shark](#shark)
-- [slice](#slice)
-- [rect](#rect)
-- [rounded](#rounded)
-- [cylinder](#cylinder)
-- [waving](#waving)
+## Navigation
+1. [How to Use](#how-to-use)
+2. [Types](#types)
+3. [Color](#color)
+4. [Section](#section)
+5. [Reversal](#reversal)
+6. [Height](#height)
+7. [Text](#text)
+8. [Desc](#desc)
+9. [Text Background](#text-background)
+10. [Text Animation](#text-animation)
+11. [Font Color](#fontcolor)
+12. [Font Size](#fontsize)
+13. [Font Align - X](#fontalign)
+13. [Font Align - Y](#fontaligny)
+14. [Desc Size](#descsize)
+15. [Desc Align - X](#descalign)
+16. [Desc Align - Y](#descaligny)
+17. [Rotate](#rotate)
+18. [Demo](#demo)
 
 Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 
@@ -37,7 +48,7 @@ HTML:
 <img src="https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90" />
 ```
 
-## Type
+## Types
 Type data makes to change Background Image.
 - [wave](#wave) : default
 - [egg](#egg)
@@ -48,6 +59,7 @@ Type data makes to change Background Image.
 - [rounded](#rounded)
 - [cylinder](#cylinder)
 - [waving](#waving)
+- [transparent](#transparent)
 
 Write `&type= ` on the URL
 ```
@@ -269,6 +281,10 @@ You can also use negative number.
 
 ## Waving <a id="waving">
 ![waving](https://capsule-render.vercel.app/api?type=waving&height=200&text=Waving!&fontAlign=80&fontAlignY=40&color=gradient)
+
+## Transparent <a id="transparent">
+![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=Transparent&height=150&fontSize=60&desc=Only%20Use%20Text&descAlignY=75&descAlign=60)
+
 
 
 <hr/>
