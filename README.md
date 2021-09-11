@@ -13,22 +13,23 @@
 1. [How to Use](#how-to-use)
 2. [Types](#types)
 3. [Color](#color)
-4. [Section](#section)
-5. [Reversal](#reversal)
-6. [Height](#height)
-7. [Text](#text)
-8. [Desc](#desc)
-9. [Text Background](#text-background)
-10. [Text Animation](#text-animation)
-11. [Font Color](#fontcolor)
-12. [Font Size](#fontsize)
-13. [Font Align - X](#fontalign)
-13. [Font Align - Y](#fontaligny)
-14. [Desc Size](#descsize)
-15. [Desc Align - X](#descalign)
-16. [Desc Align - Y](#descaligny)
-17. [Rotate](#rotate)
-18. [Demo](#demo)
+4. [Custom Color List](#custom-color-list)
+5. [Section](#section)
+6. [Reversal](#reversal)
+7. [Height](#height)
+8. [Text](#text)
+9. [Desc](#desc)
+10. [Text Background](#text-background)
+11. [Text Animation](#text-animation)
+12. [Font Color](#fontcolor)
+13. [Font Size](#fontsize)
+14. [Font Align - X](#fontalign)
+15. [Font Align - Y](#fontaligny)
+16. [Desc Size](#descsize)
+17. [Desc Align - X](#descalign)
+18. [Desc Align - Y](#descaligny)
+19. [Rotate](#rotate)
+20. [Demo](#demo)
 
 Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 
@@ -86,6 +87,24 @@ If you use `auto` mode. no need to change `fontColor`.
 > When use `timeAuto` and `timeGradient`?
 >
 > Used section `header` and `footer` at the same time. 
+
+## Custom Color List
+You can **customize the list of colors** that will appear randomly only for `&color=auto` and `&color=gradient`.
+
+Write `&customColorList= ` on the URL.
+
+- If you use `&color=auto`, look at [pallete list](https://github.com/kyechan99/capsule-render/blob/master/src/pallete.json).
+- If you use `&color=gradient`, look at [gradient list](https://github.com/kyechan99/capsule-render/blob/master/src/gradient.json).
+
+Pick the color patterns you want and remember the `idx` value.
+
+For example, if the idx values ​​are 0, 2, and 3, write: `&customColorList=0,2,3`
+
+If you want to make many apperances of `idx=2`, you can write them repeatedly. (e.g. `&customColorList=0,2,2,2,2,3`)
+
+```
+![header](https://capsule-render.vercel.app/api?color=gradient&customColorList=0,2,2,5,30)
+```
 
 ## Section
 Section data makes reverse Background Image.

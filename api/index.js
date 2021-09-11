@@ -19,7 +19,8 @@ module.exports = (req, res) => {
 		descAlignY = 60,
 		animation,
 		reversal = 'false',
-		rotate = 0
+		rotate = 0,
+        customColorList = ''    // Select only the ones you want from the set color list.   ex) "0,1,5,6"
     } = req.query;
     let color = req.query.color;
     let fontColor = req.query.fontColor;
@@ -27,9 +28,9 @@ module.exports = (req, res) => {
     
     //- Color Verify --------------------------------------------------------------------------------------------------
     if (color === 'auto')
-        [color, fontColor, textBgColor] = generateAutoColor(fontColor);
+        [color, fontColor, textBgColor] = generateAutoColor(fontColor, customColorList);
     else if (color === 'gradient')
-        [color, fontColor, textBgColor] = generateAutoGradient(fontColor);
+        [color, fontColor, textBgColor] = generateAutoGradient(fontColor, customColorList);
     else if (color === 'timeAuto' || color === 'timeGradient')
         [color, fontColor, textBgColor] = generateAutoByTime(color, fontColor);
 

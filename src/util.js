@@ -11,12 +11,28 @@ function generateRandomColor() {
     return color;
 }
 
-function generateAutoColor(fontColor) {
+function generateSelectColor(list, fontColor, customColorList) {
+    customColorList = customColorList.split(',').filter(e => (
+        !isNaN(e) && 
+        e !== '' && 
+        0 <= e && e < list.length
+    ));
+    const auto = list[customColorList[Math.floor(Math.random() * customColorList.length)]];
+    return [auto.color, fontColor ? fontColor : auto.text, auto.textBg ];
+}
+
+function generateAutoColor(fontColor, customColorList = '') {
+    if (customColorList !== '') 
+        return generateSelectColor(pallete, fontColor, customColorList);
+
     const auto = pallete[Math.floor(Math.random() * pallete.length)];
     return [auto.color, fontColor ? fontColor : auto.text, auto.textBg ];
 }
 
-function generateAutoGradient(fontColor) {
+function generateAutoGradient(fontColor, customColorList = '') {
+    if (customColorList !== '') 
+        return generateSelectColor(gradient, fontColor, customColorList);
+
     const auto = gradient[Math.floor(Math.random() * gradient.length)];
     return [auto.color, fontColor ? fontColor : auto.text, auto.textBg ];
 }
