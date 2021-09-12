@@ -1,12 +1,14 @@
-const waveModel = require('../model/wave');
-const rectModel = require('../model/rect');
-const sliceModel = require('../model/slice');
-const eggModel = require('../model/egg');
-const sharkModel = require('../model/shark');
-const roundedModel = require('../model/rounded');
-const softModel = require('../model/soft');
-const cylinderModel = require('../model/cylinder');
-const wavingModel = require('../model/animationModel/waving');
+const waveModel = require('./normalModel/wave');
+const rectModel = require('./normalModel/rect');
+const sliceModel = require('./normalModel/slice');
+const eggModel = require('./normalModel/egg');
+const sharkModel = require('./normalModel/shark');
+const roundedModel = require('./normalModel/rounded');
+const softModel = require('./normalModel/soft');
+const cylinderModel = require('./normalModel/cylinder');
+
+const wavingModel = require('./animationModel/waving');
+
 const { isGradientColor } = require('../src/verification');
 
 const models = {
@@ -46,9 +48,9 @@ const models = {
         return css;
     },
     gradientDef : function (color) {
-        if (!isGradientColor(color))
+		if (!isGradientColor(color))
             return '';
-        
+			
         let offset = '';
         for (key in color) {
             offset += `<stop offset="${key}%" stop-color="#${color[key]}"/>`;
