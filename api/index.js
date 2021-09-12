@@ -1,6 +1,6 @@
 const model = require('../model/index');
 const { generateAutoColor, generateAutoGradient, generateAutoByTime, checkColor, checkText, checkDesc } = require('../src/util');
-const { regexData } = require('../src/verification');
+const { regexData, checkCustomColor } = require('../src/verification');
 
 module.exports = (req, res) => {
     //- Default Query --------------------------------------------------------------------------------------------------
@@ -33,7 +33,8 @@ module.exports = (req, res) => {
         [color, fontColor, textBgColor] = generateAutoGradient(fontColor, customColorList);
     else if (color === 'timeAuto' || color === 'timeGradient')
         [color, fontColor, textBgColor] = generateAutoByTime(color, fontColor);
-
+    else
+        color = checkCustomColor(color);
 
     //- Layout --------------------------------------------------------------------------------------------------------
     // Default style values ​​such as font style or animation
@@ -42,8 +43,11 @@ module.exports = (req, res) => {
                             ${model.animation(animation, fontAlign, fontAlignY)}
                         </style>`;
     // Get the svg contents of the corresponding model
-    let svgContentScript = type !== 'transparent' ? `${model.gradientDef(color)}
-                            ${model[regexData(type)].render(reversal, checkColor(color), height)}` : ``;
+    let svgContentScript = type !== 'transparent'
+                            ? `
+                                ${model.gradientDef(color)}
+                                ${model[regexData(type)].render(reversal, checkColor(color), height)}`
+                            : ``;
 
     // set 'text' - The layout changes depending on whether or not 'textBg' is used.
     let textScript =    `${ textBg === 'true'

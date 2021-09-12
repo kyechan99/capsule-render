@@ -75,6 +75,7 @@ Change Background Image!
 - `&color=gradient` : Proven random gradient. List are [here](https://github.com/kyechan99/capsule-render/blob/master/src/gradient.json)
 - `&color=timeGradient` : Proven random gradient, but is decided by time.
 - `&color=_hexcode` : default(#B897FF)
+- `&color=_custom_gradient` : Custom gradient. If write as `&color=0:EEFF00,100:a82da8`, it will be converted to { 0%: 'EEFF00', 100%: 'a82da8' }. (e.g. [DEMO](https://capsule-render.vercel.app/api?type=rect&color=0:EEFF00,100:a82da8))
 
 If you use `auto` mode. no need to change `fontColor`. 
 `auto` also change fontColor auto.
