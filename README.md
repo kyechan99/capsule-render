@@ -127,7 +127,7 @@ Reverse the image left and right. (Color at the same time)
 ```
 
 ## Height
-Change Image Size. Default value is 200.
+Change Image Size. Default value is 120.
 
 Write `&height= ` on the URL
 ```
