@@ -20,11 +20,13 @@ module.exports = (req, res) => {
 		animation,
 		reversal = 'false',
 		rotate = 0,
-        customColorList = ''    // Select only the ones you want from the set color list.   ex) "0,1,5,6"
+        customColorList = ''    // Select only the ones you want from the set color list.   ex) "0,1,5,6",
     } = req.query;
     let color = req.query.color || 'B897FF';
     let fontColor = req.query.fontColor;
     let textBgColor = '#ffffff';
+    let stroke = req.query.stroke || (req.query.strokeWidth ? 'B897FF' : 'none');
+    let strokeWidth = req.query.strokeWidth || (req.query.stroke === 'none' ? '0' : '1');
     
     //- Color Verify --------------------------------------------------------------------------------------------------
     if (color === 'auto')
@@ -55,8 +57,8 @@ module.exports = (req, res) => {
                             ? model.textBg(fontColor, fontAlign, fontAlignY, fontSize, text)
                             : '' }
                         ${ textBg === 'true'
-                            ? checkText(text, textBgColor, fontAlign, fontAlignY)
-                            : checkText(text, fontColor, fontAlign, fontAlignY) }`;
+                            ? checkText(text, textBgColor, fontAlign, fontAlignY, stroke, strokeWidth)
+                            : checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth) }`;
     // set 'desc' - Always have the color of 'fontColor'.
     let descScript =    `${ checkDesc(desc, fontColor, descAlign, descAlignY) } `;
 

@@ -194,7 +194,8 @@ Write `&animation= `, if you want to use.
 ```
 
 ## FontColor
-Change text color. Default value is 000000
+Change text color. Default value is 000000.
+
 Value should be Hex code with erased '#'
 
 Write `&fontColor= ` behind **Text** query
@@ -272,6 +273,35 @@ You can also use negative number.
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontSize=20&rotate=-30)
 ```
 
+## Stroke
+Change text stroke.
+
+Write `&stroke=` behind query
+
+Value should be Hex code with erased '#'
+
+```
+![header](https://capsule-render.vercel.app/api?type=rect&height=200&text=Stroke%20Test&fontAlign=70&stroke=00FF00)
+```
+
+> Recommended to use with `strokeWidth`.
+>
+> When used alone, strokeWidth defaults to 1.
+
+## Stroke-width
+Change text stroke width.
+
+Write `&strokeWidth=` behind stroke query
+
+Value must be greater than or equal to 0.
+
+```
+![header](https://capsule-render.vercel.app/api?type=rect&height=200&text=Stroke%20Test&fontAlign=70&stroke=00FF00&strokeWidth=3)
+```
+
+> Recommended to use with `stroke`.
+>
+> When used alone, stroke defaults to 'B897FF'.
 
 # Demo <a id="demo">
 
@@ -294,7 +324,7 @@ You can also use negative number.
 ![soft](https://capsule-render.vercel.app/api?type=soft&color=auto&text=Good%20to%20use%20with%20other%20readme&fontSize=40&animation=twinkling)
 
 ## Rounded <a id="rounded">
-![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded&fontAlignY=50&fontSize=40&height=200)
+![rounded](https://capsule-render.vercel.app/api?type=rounded&color=timeAuto&text=Rounded%20with%20stroke&fontAlignY=50&fontSize=40&height=200&stroke=000000&strokeWidth=2)
 
 ## Cylinder <a id="cylinder">
 ![cylinder](https://capsule-render.vercel.app/api?type=cylinder&color=auto&text=Cylinder&fontAlignY=45&fontSize=40&height=150&animation=blinking&desc=desc%20is%20also%20animated&descAlignY=70)
