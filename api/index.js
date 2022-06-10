@@ -1,5 +1,10 @@
 const model = require('../model/index');
-const { generateAutoColor, generateAutoGradient, generateAutoByTime, checkColor, checkText, checkDesc } = require('../src/util');
+const { 
+    generateAutoColor, 
+    generateAutoGradient, 
+    generateAutoByTime, 
+    generateThemeColor, 
+    checkThemeColor, checkColor, checkText, checkDesc } = require('../src/util');
 const { regexData, checkCustomColor } = require('../src/verification');
 
 module.exports = (req, res) => {
@@ -20,23 +25,32 @@ module.exports = (req, res) => {
 		animation,
 		reversal = 'false',
 		rotate = 0,
-        customColorList = ''    // Select only the ones you want from the set color list.   ex) "0,1,5,6",
+        customColorList = '',    // Select only the ones you want from the set color list.   ex) "0,1,5,6",
+        theme = 'none'
     } = req.query;
     let color = req.query.color || 'B897FF';
     let fontColor = req.query.fontColor;
+    let descColor = req.query.fontColor;
     let textBgColor = '#ffffff';
     let stroke = req.query.stroke || (req.query.strokeWidth ? 'B897FF' : 'none');
     let strokeWidth = req.query.strokeWidth || (req.query.stroke === 'none' ? '0' : '1');
     
     //- Color Verify --------------------------------------------------------------------------------------------------
-    if (color === 'auto')
-        [color, fontColor, textBgColor] = generateAutoColor(fontColor, customColorList);
-    else if (color === 'gradient')
-        [color, fontColor, textBgColor] = generateAutoGradient(fontColor, customColorList);
-    else if (color === 'timeAuto' || color === 'timeGradient')
-        [color, fontColor, textBgColor] = generateAutoByTime(color, fontColor);
-    else
-        color = checkCustomColor(color);
+    if (theme !== 'none' && checkThemeColor(theme)) {     // theme has the highest priority
+        [color, fontColor, textBgColor] = generateThemeColor(theme);
+        descColor = textBgColor;
+    }
+    else {
+        if (color === 'auto')
+            [color, fontColor, textBgColor] = generateAutoColor(fontColor, customColorList);
+        else if (color === 'gradient')
+            [color, fontColor, textBgColor] = generateAutoGradient(fontColor, customColorList);
+        else if (color === 'timeAuto' || color === 'timeGradient')
+            [color, fontColor, textBgColor] = generateAutoByTime(color, fontColor);
+        else
+            color = checkCustomColor(color);
+        descColor = fontColor;
+    }
 
     //- Layout --------------------------------------------------------------------------------------------------------
     // Default style values ​​such as font style or animation
@@ -60,7 +74,7 @@ module.exports = (req, res) => {
                             ? checkText(text, textBgColor, fontAlign, fontAlignY, stroke, strokeWidth)
                             : checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth) }`;
     // set 'desc' - Always have the color of 'fontColor'.
-    let descScript =    `${ checkDesc(desc, fontColor, descAlign, descAlignY) } `;
+    let descScript =    `${ checkDesc(desc, descColor, descAlign, descAlignY) } `;
 
 
     res.setHeader("Content-Type", "image/svg+xml");

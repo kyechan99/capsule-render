@@ -1,6 +1,7 @@
 const { isGradientColor } = require('./verification');
 const pallete = require('./pallete.json');
 const gradient = require('./gradient.json');
+const pallete_theme = require('./pallete_theme.json');
 
 function generateRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -42,6 +43,13 @@ function generateAutoByTime(queryColor, fontColor) {
         return randomizedByTime(pallete, fontColor);
     // else 'timeGradient'
     return randomizedByTime(gradient, fontColor);
+}
+
+function checkThemeColor(stats) {
+    return pallete_theme[stats];
+}
+function generateThemeColor(stats) {
+    return [pallete_theme[stats].color, pallete_theme[stats].text, pallete_theme[stats].textBg];
 }
 
 function randomizedByTime(colorData, fontColor) {
@@ -92,4 +100,4 @@ function checkDesc(desc, descColor = '000000', descAlign = '50', descAlignY = '6
 }
 
 
-module.exports = { generateAutoColor, generateAutoGradient, generateAutoByTime, checkReversal, checkColor, checkText, checkDesc };
+module.exports = { generateAutoColor, generateAutoGradient, generateAutoByTime, checkThemeColor, generateThemeColor, checkReversal, checkColor, checkText, checkDesc };

@@ -1,0 +1,47 @@
+{
+    "default" : {
+        "color": "fffefe",
+        "text": "4f94ef",
+        "textBg": "434d58"
+    },
+    "dark" : {
+        "color": "151515",
+        "text": "dadada",
+        "textBg": "9f9f9f"
+    },
+    "radical" : {
+        "color": "141321",
+        "text": "d83a7c",
+        "textBg": "a9fef7"
+    },
+    "merko" : {
+        "color": "0a0f0b",
+        "text": "90b302",
+        "textBg": "68b587"
+    },
+    "gruvbox" : {
+        "color": "282828",
+        "text": "d8a52d",
+        "textBg": "8ec07c"
+    },
+    "gruvbox_light" : {
+        "color": "fbf1c7",
+        "text": "bf8930",
+        "textBg": "427b58"
+    },
+    "tokyonight" : {
+        "color": "1a1b27",
+        "text": "628fda",
+        "textBg": "38bdae"
+    },
+    "onedark" : {
+        "color": "282c34",
+        "text": "c6a76e",
+        "textBg": "df6d74"
+    },
+    "cobalt" : {
+        "color": "193549",
+        "text": "c576c1",
+        "textBg": "75eeb2"
+    }
+}
