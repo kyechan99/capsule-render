@@ -97,7 +97,6 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
 
     // debate : adjustable text-anchor|pos-y. not only pos-x
     return lines.map((line, i) => {
-        let alignY;
         if (!fontAlignY[i]) {
             const pos = (fontAlignY[i-1] || firstAlignY) + lineSpace;
             if (typeof firstAlignY === 'string') {
@@ -107,7 +106,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
             }
         }
         
-        return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY + i*lineSpace}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
+        return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
     })
     .join('');
 }
