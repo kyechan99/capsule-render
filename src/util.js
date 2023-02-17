@@ -94,19 +94,15 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
         firstAlignY = 56/lines.length;
         lineSpace = 90/lines.length;
     }
+    
+    let alignY = [];
 
     // debate : adjustable text-anchor|pos-y. not only pos-x
     return lines.map((line, i) => {
-        if (!fontAlignY[i]) {
-            const pos = (fontAlignY[i-1] || firstAlignY) + lineSpace;
-            if (typeof firstAlignY === 'string') {
-                fontAlignY = [fontAlignY, pos];
-            } else {
-                fontAlignY[i] = pos;
-            }
-        }
+        (fontAlignY[0] || fontAlignY || firstAlignY)
+        alignY.push(fontAlignY[i] || ((alignY[i-1] || firstAlignY) + lineSpace));
         
-        return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
+        return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
     })
     .join('');
 }
