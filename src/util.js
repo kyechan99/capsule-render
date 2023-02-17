@@ -99,7 +99,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     return lines.map((line, i) => {
         let alignY;
         if (!fontAlignY[i] && firstAlignY) {
-            [fontAlignY].flat().push((fontAlignY[i-1] || firstAlignY) + lineSpace);
+            fontAlignY[i] = (fontAlignY[i-1] || firstAlignY) + lineSpace;
         }
         
         return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY + i*lineSpace}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
