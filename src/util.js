@@ -97,7 +97,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     const textLines = lines.map((line, i) => {
         console.log(line, i);
         console.log(fontAlignY[i] + 25*i);
-        const lineText = `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
+        const lineText = `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY + i*25}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
         console.log(lineText);
         return lineText;
     });
