@@ -90,8 +90,8 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     // const linePos = fontAlignY.split(',');
     const lines = text.split('-nl-');
     let lineSpace = 45;
-    if (lines.length > 1) {
-        fontAlignY = 50/lines.length;
+    if (lines.length > 1 && !fontAlignY.length) {
+        fontAlignY = 56/lines.length;
         lineSpace = 90/lines.length;
     }
 
