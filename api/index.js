@@ -17,7 +17,7 @@ module.exports = (req, res) => {
         desc,
 		textBg = 'false',   // It Means to activate the text background color. text-color -> text-background-color.
         fontSize = 70,
-        fontAlign = 50,
+        fontAlign = 0,
 		fontAlignY = 0,
         descSize = 20,
         descAlign = 50,
