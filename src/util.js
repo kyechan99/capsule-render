@@ -100,7 +100,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     // debate : adjustable text-anchor|pos-y. not only pos-x
     return lines.map((line, i) => {
         (fontAlignY[0] || fontAlignY || firstAlignY)
-        alignY.push(fontAlignY[i] || ((alignY[i-1] || firstAlignY) + lineSpace));
+        alignY.push(fontAlignY[i] || (Number(alignY[i-1] || firstAlignY) + lineSpace));
         
         return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
     })
