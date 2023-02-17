@@ -83,12 +83,38 @@ function checkColor(color) {
     return '#B897FF';
 }
 
-function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '50', stroke = 'B897FF', strokeWidth = '0') {
+function checkText(text, fontColor = '000000', fontAlign = 0, fontAlignY = 0, stroke = 'B897FF', strokeWidth = '0') {
     if (text === '' || text === undefined)
         return '';
+    
+    const lines = text.split('-nl-');
+    let lineSpace;
+    let firstAlignY;
+    if (lines.length > 1) {
+        firstAlignY = fontAlignY || 58/lines.length;
+        lineSpace = 90/lines.length;
+    } else {
+        firstAlignY = fontAlignY || '50';
+    }
+    
+    let alignX = [typeof fontAlign === 'string' ? fontAlign : fontAlign[0] || 50]
+    let alignY = [];
 
-    // debate : adjustable text-anchor|pos-y. not only pos-x
-    return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${text}</text>`;
+    return lines.map((line, i) => {
+        
+        if (i > 0) alignX.push(
+            typeof fontAlign !== 'string' && typeof fontAlign !== 'number' && fontAlign[i] ? fontAlign[i] 
+            : 50
+        );
+        alignY.push(
+            typeof fontAlignY !== 'string' && fontAlignY[i] ? fontAlignY[i] 
+            : alignY[i-1] ? (Number(alignY[i-1]) + lineSpace) 
+            : firstAlignY
+        );
+        
+        // debate : adjustable text-anchor|pos-y. not only pos-x
+        return `<text text-anchor="middle" alignment-baseline="middle" x="${alignX[i]}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
+    }).join('');
 }
 
 function checkDesc(desc, descColor = '000000', descAlign = '50', descAlignY = '60') {
