@@ -90,7 +90,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     const lines = text.split('-nl-');
     let lineSpace;
     let firstAlignY;
-    if (lines.length > 1) {
+    if (lines.isArray() > 1) {
         firstAlignY = 56/lines.length;
         lineSpace = 90/lines.length;
     }
@@ -100,7 +100,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
         let alignY;
         if (!fontAlignY[i]) {
             const pos = (fontAlignY[i-1] || firstAlignY) + lineSpace;
-            if (firstAlignY.length) {
+            if (firstAlignY.isArray()) {
                 fontAlignY[i] = pos;
             } else {
                 fontAlignY = [fontAlignY, pos];
