@@ -87,15 +87,15 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     if (text === '' || text === undefined)
         return '';
     
-    const linePos = fontAlign.split(',');
+    console.log(fontAlignY)
+    // const linePos = fontAlignY.split(',');
     const lines = text.split('%0');
+    console.log(lines)
 
     // debate : adjustable text-anchor|pos-y. not only pos-x
-    const textLines = lines.forEach((line, i) => `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${linePos[i] || linePos[0] + i*20}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`)
+    const textLines = lines.forEach((line, i) => `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY[0] + i*20}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`)
     .join();
     
-    console.log(linePos)
-    console.log(lines)
     console.log(textLines)
     
     return textLines
