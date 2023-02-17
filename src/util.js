@@ -90,12 +90,16 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = ''
     const lines = text.split('-nl-');
     let lineSpace;
     let firstAlignY;
+    console.log('before', firstAlignY)
     if (lines.length > 1) {
         firstAlignY = fontAlignY || 56/lines.length;
         lineSpace = 90/lines.length;
+        console.log(1)
     } else {
         firstAlignY = fontAlignY || '50';
+        console.log(1)
     }
+    console.log('after', firstAlignY)
     
     let alignY = [];
 
