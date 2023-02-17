@@ -97,14 +97,15 @@ function checkText(text, fontColor = '000000', fontAlign = 0, fontAlignY = 0, st
         firstAlignY = fontAlignY || '50';
     }
     
-    let alignX = [];
+    let alignX = [typeof fontAlign === 'string' ? fontAlign : fontAlign[i] || 50]
     let alignY = [];
 
     return lines.map((line, i) => {
-        alignX.push(
-            typeof fontAlign !== 'string' && fontAlign[i] ? fontAlign[i] 
+        
+        if (i > 0) alignX.push(
+            fontAlign[i] ? fontAlign[i] 
             : alignX[i-1] ? alignX[i-1]
-            : fontAlign || 50
+            : 50
         );
         alignY.push(
             typeof fontAlignY !== 'string' && fontAlignY[i] ? fontAlignY[i] 
