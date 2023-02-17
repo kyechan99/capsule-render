@@ -96,7 +96,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = nu
         lineSpace = 90/lines.length;
         console.log(1)
     } else {
-        firstAlignY = fontAlignY || '50';
+        firstAlignY = fontAlignY || '99';
         console.log(1)
     }
     console.log('after', firstAlignY)
