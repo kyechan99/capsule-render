@@ -89,7 +89,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     
     // const linePos = fontAlignY.split(',');
     const lines = text.split('-nl-');
-    console.log('type is ', typeof fontAlignY)
+    console.error('type is ', typeof fontAlignY)
     console.log('lines:', lines)
     console.log('lines length:', lines.length)
 
