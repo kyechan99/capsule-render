@@ -101,8 +101,8 @@ function checkText(text, fontColor = '000000', fontAlign = 0, fontAlignY = 0, st
     let alignY = [];
 
     return lines.map((line, i) => {
-        alignY.push(
-            typeof fontAlign !== 'string' && fontAlign[i] ? fontAlign[i] 
+        alignX.push(
+            fontAlign && fontAlign[i] ? fontAlign[i] 
             : alignX[i-1] ? alignX[i-1]
             : 50
         );
