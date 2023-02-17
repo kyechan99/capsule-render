@@ -107,7 +107,7 @@ function checkText(text, fontColor = '000000', fontAlign = 0, fontAlignY = 0, st
             : 50
         );
         alignY.push(
-            typeof fontAlignY !== 'string' && fontAlignY[i] ? fontAlignY[i] 
+            typeof fontAlignY !== 'string' && typeof fontAlignY !== 'number' && fontAlignY[i] ? fontAlignY[i] 
             : alignY[i-1] ? (Number(alignY[i-1]) + lineSpace) 
             : firstAlignY
         );
