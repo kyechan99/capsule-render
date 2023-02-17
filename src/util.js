@@ -104,7 +104,7 @@ function checkText(text, fontColor = '000000', fontAlign = 0, fontAlignY = 0, st
         alignX.push(
             typeof fontAlign !== 'string' && fontAlign[i] ? fontAlign[i] 
             : alignX[i-1] ? alignX[i-1]
-            : 50
+            : fontAlign || 50
         );
         alignY.push(
             typeof fontAlignY !== 'string' && fontAlignY[i] ? fontAlignY[i] 
