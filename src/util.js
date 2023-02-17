@@ -97,14 +97,15 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     const textLines = lines.map((line, i) => {
         console.log(line, i);
         console.log(fontAlignY[i] + 25*i);
-        const lineText = `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${(fontAlignY[i] + 25*i) || fontAlignY}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
+        const lineText = `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
         console.log(lineText);
+        fontAlignY = fontAlignY + 25;
         return lineText;
     });
 
     console.log('textLines:', textLines)
     
-    return textLines.join();
+    return textLines.join('');
 }
 
 function checkDesc(desc, descColor = '000000', descAlign = '50', descAlignY = '60') {
