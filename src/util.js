@@ -108,7 +108,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = ''
         alignY.push(
             typeof fontAlignY !== 'string' && fontAlignY[i] ? fontAlignY[i] 
             : alignY[i-1] ? (Number(alignY[i-1]) + lineSpace) 
-            : firstAlignY
+            : firstAlignY;
         );
         
         return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
