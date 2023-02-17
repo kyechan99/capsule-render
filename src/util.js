@@ -89,10 +89,14 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     
     // const linePos = fontAlignY.split(',');
     const lines = text.split('-nl-');
-    if (lines.length > 1) fontAlignY = 25;
+    let lineSpace = 45;
+    if (lines.length > 1) {
+        fontAlignY = 50/lines.length;
+        lineSpace = 90/lines.length;
+    }
 
     // debate : adjustable text-anchor|pos-y. not only pos-x
-    return lines.map((line, i) => `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY + i*45}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`)
+    return lines.map((line, i) => `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY + i*lineSpace}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`)
     .join('');
 }
 
