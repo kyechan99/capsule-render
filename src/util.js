@@ -87,16 +87,23 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     if (text === '' || text === undefined)
         return '';
     
-    // const linePos = fontAlignY.split(',');
     const lines = text.split('-nl-');
-    let lineSpace = 45;
-    if (lines.length > 1 && !fontAlignY.length) {
-        fontAlignY = 56/lines.length;
+    let lineSpace;
+    let firstAlignY;
+    if (lines.length > 1) {
+        firstAlignY = 56/lines.length;
         lineSpace = 90/lines.length;
     }
 
     // debate : adjustable text-anchor|pos-y. not only pos-x
-    return lines.map((line, i) => `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY + i*lineSpace}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`)
+    return lines.map((line, i) => {
+        let alignY;
+        if (!fontAlignY[i] && firstAlignY) {
+            fontAlignY.push((fontAlignY[i-1] || firstAlignY) + i*lineSpace);
+        }
+        
+        return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY + i*lineSpace}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
+    })
     .join('');
 }
 
