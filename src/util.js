@@ -93,7 +93,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     console.log(lines)
 
     // debate : adjustable text-anchor|pos-y. not only pos-x
-    const textLines = lines.forEach((line, i) => `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY + i*20 : fontAlignY}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`);
+    const textLines = lines.forEach((line, i) => `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY + i*20}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`);
 
     console.log(textLines)
     
