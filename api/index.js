@@ -67,15 +67,15 @@ module.exports = (req, res) => {
     console.log(svgContentScript);
 
     // set 'text' - The layout changes depending on whether or not 'textBg' is used.
-    console.log(text);
-    console.log(fontAlignY);
+    console.log('given text:', text);
+    console.log('fontAlignY:', fontAlignY);
     let textScript =    `${ textBg === 'true'
                             ? model.textBg(fontColor, fontAlign, fontAlignY, fontSize, text)
                             : '' }
                         ${ textBg === 'true'
                             ? checkText(text, textBgColor, fontAlign, fontAlignY, stroke, strokeWidth)
                             : checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth) }`;
-    console.log(textScript);
+    console.log('textScript:', textScript);
     // set 'desc' - Always have the color of 'fontColor'.
     let descScript =    `${ checkDesc(desc, descColor, descAlign, descAlignY) } `;
 
