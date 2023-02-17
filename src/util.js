@@ -88,14 +88,14 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
         return '';
     
     // const linePos = fontAlignY.split(',');
-    const lines = text.split('nl');
+    const lines = text.split('%%');
     console.log('lines:', lines)
     console.log('lines length:', lines.length)
 
     // debate : adjustable text-anchor|pos-y. not only pos-x
     const textLines = lines.forEach((line, i) => {
         console.log(line, i);
-        return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY + i*20}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
+        return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
     });
 
     console.log('textLines:', textLines)
