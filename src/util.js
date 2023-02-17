@@ -99,7 +99,6 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
         console.log(fontAlignY[i] + 25*i);
         const lineText = `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
         console.log(lineText);
-        fontAlignY = fontAlignY + 25;
         return lineText;
     });
 
