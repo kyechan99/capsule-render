@@ -92,7 +92,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = nu
     let firstAlignY;
     console.log('before', firstAlignY)
     if (lines.length > 1) {
-        firstAlignY = fontAlignY || 56/lines.length;
+        firstAlignY = fontAlignY || 75;
         lineSpace = 90/lines.length;
         console.log(1)
     } else {
