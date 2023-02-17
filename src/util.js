@@ -97,7 +97,7 @@ function checkText(text, fontColor = '000000', fontAlign = 0, fontAlignY = 0, st
         firstAlignY = fontAlignY || '50';
     }
     
-    let alignX = [typeof fontAlign === 'string' ? fontAlign : fontAlign[i] || 50]
+    let alignX = [typeof fontAlign === 'string' ? fontAlign : fontAlign[0] || 50]
     let alignY = [];
 
     return lines.map((line, i) => {
