@@ -89,11 +89,11 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     
     const lines = text.split('-nl-');
     let lineSpace;
+    let firstAlignY;
     if (lines.length > 1) {
+        firstAlignY = 56/lines.length;
         lineSpace = 90/lines.length;
     }
-    
-    console.log(fontAlignY);
     
     let alignY = [];
 
@@ -102,7 +102,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
         alignY.push(
             typeof fontAlignY !== 'string' && fontAlignY[i] ? fontAlignY[i] 
             : alignY[i-1] ? (Number(alignY[i-1]) + lineSpace) 
-            : fontAlignY
+            : firstAlignY || fontAlignY
         );
         
         return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
