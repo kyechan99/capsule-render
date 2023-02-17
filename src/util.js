@@ -88,7 +88,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
         return '';
     
     // debate : adjustable text-anchor|pos-y. not only pos-x
-    return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${text.replaceAll('%0', '<br>')}</text>`;
+    return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${text.replace(/%0/g, '<br>')}</text>`;
 }
 
 function checkDesc(desc, descColor = '000000', descAlign = '50', descAlignY = '60') {
