@@ -89,22 +89,11 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '5
     
     // const linePos = fontAlignY.split(',');
     const lines = text.split('-nl-');
-    console.error('type is ', typeof fontAlignY)
-    console.log('lines:', lines)
-    console.log('lines length:', lines.length)
+    if (lines.length > 1) fontAlignY = 25;
 
     // debate : adjustable text-anchor|pos-y. not only pos-x
-    const textLines = lines.map((line, i) => {
-        console.log(line, i);
-        console.log(fontAlignY[i] + 25*i);
-        const lineText = `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY + i*30}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
-        console.log(lineText);
-        return lineText;
-    });
-
-    console.log('textLines:', textLines)
-    
-    return textLines.join('');
+    return lines.map((line, i) => `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${fontAlignY[i] || fontAlignY + i*45}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`)
+    .join('');
 }
 
 function checkDesc(desc, descColor = '000000', descAlign = '50', descAlignY = '60') {
