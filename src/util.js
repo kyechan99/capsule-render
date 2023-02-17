@@ -83,7 +83,7 @@ function checkColor(color) {
     return '#B897FF';
 }
 
-function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = 0, stroke = 'B897FF', strokeWidth = '0') {
+function checkText(text, fontColor = '000000', fontAlign = 0, fontAlignY = 0, stroke = 'B897FF', strokeWidth = '0') {
     if (text === '' || text === undefined)
         return '';
     
@@ -97,9 +97,15 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = 0,
         firstAlignY = fontAlignY || '50';
     }
     
+    let alignX = [];
     let alignY = [];
 
     return lines.map((line, i) => {
+        alignY.push(
+            typeof fontAlign !== 'string' && fontAlign[i] ? fontAlign[i] 
+            : alignX[i-1] ? alignX[i-1]
+            : 50
+        );
         alignY.push(
             typeof fontAlignY !== 'string' && fontAlignY[i] ? fontAlignY[i] 
             : alignY[i-1] ? (Number(alignY[i-1]) + lineSpace) 
@@ -107,7 +113,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = 0,
         );
         
         // debate : adjustable text-anchor|pos-y. not only pos-x
-        return `<text text-anchor="middle" alignment-baseline="middle" x="${fontAlign}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
+        return `<text text-anchor="middle" alignment-baseline="middle" x="${alignX[i]}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`
     }).join('');
 }
 
