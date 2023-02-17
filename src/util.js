@@ -83,7 +83,7 @@ function checkColor(color) {
     return '#B897FF';
 }
 
-function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = '', stroke = 'B897FF', strokeWidth = '0') {
+function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = null, stroke = 'B897FF', strokeWidth = '0') {
     if (text === '' || text === undefined)
         return '';
     
@@ -92,7 +92,7 @@ function checkText(text, fontColor = '000000', fontAlign = '50', fontAlignY = ''
     let firstAlignY;
     console.log('before', firstAlignY)
     if (lines.length > 1) {
-        firstAlignY = fontAlignY ? fontAlignY : 56/lines.length;
+        firstAlignY = fontAlignY || 56/lines.length;
         lineSpace = 90/lines.length;
         console.log(1)
     } else {
