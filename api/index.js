@@ -17,8 +17,8 @@ module.exports = (req, res) => {
         desc,
 		textBg = 'false',   // It Means to activate the text background color. text-color -> text-background-color.
         fontSize = 70,
-        fontAlign = 50,
-		fontAlignY = 50,
+        fontAlign = 0,
+		fontAlignY = 0,
         descSize = 20,
         descAlign = 50,
 		descAlignY = 60,
@@ -68,7 +68,7 @@ module.exports = (req, res) => {
 
     // set 'text' - The layout changes depending on whether or not 'textBg' is used.
     let textScript =    `${ textBg === 'true'
-                            ? model.textBg(fontColor, fontAlign, fontAlignY, fontSize, text)
+                            ? model.textBg(fontColor, fontAlign || 50, fontAlignY || 50, fontSize, text)
                             : '' }
                         ${ textBg === 'true'
                             ? checkText(text, textBgColor, fontAlign, fontAlignY, stroke, strokeWidth)
