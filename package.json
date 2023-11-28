@@ -17,5 +17,8 @@
   },
   "dependencies": {
     "vercel": "^28.15.3"
+  },
+  "devDependencies": {
+    "prettier": "3.1.0"
   }
 }
