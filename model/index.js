@@ -8,6 +8,7 @@ const softModel = require("./normalModel/soft");
 const cylinderModel = require("./normalModel/cylinder");
 
 const wavingModel = require("./animationModel/waving");
+const venomModel = require("./animationModel/venom");
 
 const { isGradientColor } = require("../src/verification");
 
@@ -20,7 +21,10 @@ const models = {
   slice: { render: sliceModel.render },
   soft: { render: softModel.render },
   wave: { render: waveModel.render },
+
   waving: { render: wavingModel.render },
+  venom: { render: venomModel.render },
+
   style: function (section, fontSize = "70", descSize = 20, rotate = 0) {
     let css = `.text {
 						font-size: ${fontSize}px;
@@ -50,17 +54,15 @@ const models = {
   gradientDef: function (color) {
     if (!isGradientColor(color)) return "";
 
-    let offset = "";
-    for (key in color) {
-      offset += `<stop offset="${key}%" stop-color="#${color[key]}"/>`;
-    }
+    const offset = Object.entries(color)
+      .map(([key, value]) => `<stop offset="${key}%" stop-color="#${value}"/>`)
+      .join("");
 
     return `<defs>
-					<linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-						${offset}
-					</linearGradient>
-				</defs>
-				`;
+              <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                ${offset}
+              </linearGradient>
+            </defs>`;
   },
   textBg: function (bgColor, posX, posY, fontHeight, text) {
     // 40 : padding value

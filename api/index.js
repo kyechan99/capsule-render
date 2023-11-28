@@ -10,6 +10,7 @@ const {
   checkDesc,
 } = require("../src/util");
 const { regexData, checkCustomColor } = require("../src/verification");
+const { ANIMATION_MODELS } = require("../constants/model");
 
 module.exports = (req, res) => {
   //- Default Query --------------------------------------------------------------------------------------------------
@@ -56,27 +57,26 @@ module.exports = (req, res) => {
   //- Layout --------------------------------------------------------------------------------------------------------
   // Default style values ​​such as font style or animation
   let styleScript = `<style>
-                            ${model.style(section, fontSize, descSize, rotate)}
-                            ${model.animation(animation, fontAlign, fontAlignY)}
-                        </style>`;
+                        ${model.style(section, fontSize, descSize, rotate)}
+                        ${model.animation(animation, fontAlign, fontAlignY)}
+                     </style>`;
+
   // Get the svg contents of the corresponding model
   let svgContentScript =
     type !== "transparent"
-      ? `
-                                ${model.gradientDef(color)}
-                                ${model[regexData(type)].render(reversal, checkColor(color), height)}`
+      ? `${model.gradientDef(color)}
+         ${model[regexData(type)].render(reversal, checkColor(color), height)}`
       : ``;
-  console.log(svgContentScript);
 
   // set 'text' - The layout changes depending on whether or not 'textBg' is used.
-  let textScript = `${
-    textBg === "true" ? model.textBg(fontColor, fontAlign || 50, fontAlignY || 50, fontSize, text) : ""
-  }
-                        ${
-                          textBg === "true"
-                            ? checkText(text, textBgColor, fontAlign, fontAlignY, stroke, strokeWidth)
-                            : checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth)
-                        }`;
+  let textScript = `
+    ${textBg === "true" ? model.textBg(fontColor, fontAlign || 50, fontAlignY || 50, fontSize, text) : ""} 
+    ${
+      textBg === "true"
+        ? checkText(text, textBgColor, fontAlign, fontAlignY, stroke, strokeWidth)
+        : checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth)
+    }`;
+
   // set 'desc' - Always have the color of 'fontColor'.
   let descScript = `${checkDesc(desc, descColor, descAlign, descAlignY)} `;
 
@@ -84,14 +84,12 @@ module.exports = (req, res) => {
 
   //- Drawing -------------------------------------------------------------------------------------------------------
   // 'waving' is an exception because it uses a special layout.
-  if (type == "waving") {
+  if (ANIMATION_MODELS.includes(type)) {
     // animation types
     res.send(`
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="z-index:1;position:relative" width="854" height="${height}" viewBox="0 0 854 ${height}">
                 ${styleScript}
-                <g transform="translate(427, ${height / 2}) scale(1, 1) translate(-427, -${height / 2})">
                     ${svgContentScript}
-                </g>
                 ${textScript}
                 ${descScript}
             </svg>

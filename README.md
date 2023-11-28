@@ -68,6 +68,7 @@ Type data makes to change Background Image.
 - [rounded](#rounded)
 - [cylinder](#cylinder)
 - [waving](#waving)
+- [venom](#venom)
 - [transparent](#transparent)
 
 Write `&type= ` on the URL
@@ -372,7 +373,7 @@ Value must be greater than or equal to 0.
 
 ## Slice <a id="slice">
 
-![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=70&rotate=13&fontAlignY=25&desc=desc%20function%20is%20also%20rotated.&descAlign=70.&descAlignY=44)
+![slice](https://capsule-render.vercel.app/api?type=slice&color=auto&height=200&text=SLICE&fontAlign=70&rotate=13&fontAlignY=25&desc=desc%20function%20is%20also%20rotated.&descAlign=60&descAlignY=44)
 
 ## Rect <a id="rect">
 
@@ -397,6 +398,10 @@ Value must be greater than or equal to 0.
 ## Transparent <a id="transparent">
 
 ![transparent](https://capsule-render.vercel.app/api?type=transparent&fontColor=703ee5&text=Transparent&height=150&fontSize=60&desc=Only%20Use%20Text&descAlignY=75&descAlign=60)
+
+## Venom <a id="venom">
+
+![venom](https://capsule-render.vercel.app/api?type=venom&height=200&text=I%20am%20Venom.&fontSize=70&color=0:8871e5,100:b678c4)
 
 <hr/>
 
