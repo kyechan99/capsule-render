@@ -1,16 +1,15 @@
-function isGradientColor(color) {
+export const isGradientColor = color => {
   if (typeof color === "object") return true;
-
   return false;
-}
+};
 
-function regexData(data) {
+export const regexData = data => {
   return String(data)
     .toLowerCase()
     .replace(/[^a-z]/g, "");
-}
+};
 
-function checkCustomColor(color) {
+export const checkCustomColor = color => {
   if (color.split(",").length > 1) {
     let temp = color;
     color = {};
@@ -21,6 +20,4 @@ function checkCustomColor(color) {
   }
 
   return color;
-}
-
-module.exports = { isGradientColor, regexData, checkCustomColor };
+};

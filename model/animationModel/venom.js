@@ -1,4 +1,4 @@
-const { checkReversal } = require("../../src/util");
+import { checkReversal } from "../../src/util";
 
 const render = (reversal, color, height) => {
   reversal = checkReversal(reversal);
@@ -14,7 +14,7 @@ const render = (reversal, color, height) => {
     <g transform="translate(${width / 2}, ${height / 2})">
       <path id="myPath" fill="${color}" d="${PATHS[0]}" ${reversal}>
         <animate attributeName="d" dur="10s" values="
-          ${PATHS.join('; ')};
+          ${PATHS.join("; ")};
           ${PATHS[0]}"
           repeatCount="indefinite"
         />
@@ -22,4 +22,4 @@ const render = (reversal, color, height) => {
     </g>`;
 };
 
-module.exports = { render };
+export default render;

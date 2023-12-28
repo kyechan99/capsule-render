@@ -1,29 +1,13 @@
-const waveModel = require("./normalModel/wave");
-const rectModel = require("./normalModel/rect");
-const sliceModel = require("./normalModel/slice");
-const eggModel = require("./normalModel/egg");
-const sharkModel = require("./normalModel/shark");
-const roundedModel = require("./normalModel/rounded");
-const softModel = require("./normalModel/soft");
-const cylinderModel = require("./normalModel/cylinder");
+import normalModels from "./normalModel/index";
+import animationModels from "./animationModel";
 
-const wavingModel = require("./animationModel/waving");
-const venomModel = require("./animationModel/venom");
-
-const { isGradientColor } = require("../src/verification");
+import { isGradientColor } from "../src/verification";
 
 const models = {
-  cylinder: { render: cylinderModel.render },
-  egg: { render: eggModel.render },
-  shark: { render: sharkModel.render },
-  rect: { render: rectModel.render },
-  rounded: { render: roundedModel.render },
-  slice: { render: sliceModel.render },
-  soft: { render: softModel.render },
-  wave: { render: waveModel.render },
-
-  waving: { render: wavingModel.render },
-  venom: { render: venomModel.render },
+  render: {
+    ...normalModels,
+    ...animationModels,
+  },
 
   style: function (section, fontSize = "70", descSize = 20, rotate = 0) {
     let css = `.text {
@@ -148,4 +132,4 @@ const models = {
   },
 };
 
-module.exports = models;
+export default models;

@@ -1,4 +1,4 @@
-const { checkReversal } = require("../../src/util");
+import { checkReversal } from "../../src/util";
 
 const path = height => {
   height = Number(height);
@@ -13,4 +13,4 @@ const render = (reversal, color, height) => {
   return `<path fill="${color}" ${reversal} fill-opacity="1" d="${path(height)}"></path>`;
 };
 
-module.exports = { render };
+export default render;

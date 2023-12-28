@@ -1,4 +1,4 @@
-const { checkReversal } = require("../../src/util");
+import { checkReversal } from "../../src/util";
 
 const render = (reversal, color, height) => {
   reversal = checkReversal(reversal);
@@ -41,10 +41,12 @@ const render = (reversal, color, height) => {
             height - 60
           }L ${width} 0 Z;M0 0L 0 ${height - 55}Q 213.5 ${height - 75} 427 ${height - 50}T ${width} ${
             height - 35
-          }L ${width} 0 Z;M0 0L 0 ${height - 65}Q 213.5 ${height - 20} 427 ${height - 50}T ${width} ${height - 40}L ${width} 0 Z">
+          }L ${width} 0 Z;M0 0L 0 ${height - 65}Q 213.5 ${height - 20} 427 ${height - 50}T ${width} ${
+            height - 40
+          }L ${width} 0 Z">
         </animate>
       </path>
     </g>`;
 };
 
-module.exports = { render };
+export default render;
