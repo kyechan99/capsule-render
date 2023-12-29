@@ -83,7 +83,7 @@ module.exports = (req, res) => {
   res.setHeader("Content-Type", "image/svg+xml");
 
   //- Drawing -------------------------------------------------------------------------------------------------------
-  // 'waving' is an exception because it uses a special layout.
+  // 'animation' is an exception because it uses a special layout.
   if (ANIMATION_MODELS.includes(type)) {
     // animation types
     res.send(`

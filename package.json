@@ -16,6 +16,8 @@
     "url": "https://github.com/kyechan99/capsule-render.git"
   },
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "vercel": "^28.15.3"
   },
   "devDependencies": {
