@@ -1,5 +1,5 @@
-const model = require("../model/index");
-const {
+import model from "../model/index";
+import {
   generateAutoColor,
   generateAutoGradient,
   generateAutoByTime,
@@ -8,9 +8,9 @@ const {
   checkColor,
   checkText,
   checkDesc,
-} = require("../src/util");
-const { regexData, checkCustomColor } = require("../src/verification");
-const { ANIMATION_MODELS } = require("../constants/model");
+} from "../src/util";
+import { regexData, checkCustomColor } from "../src/verification";
+import { ANIMATION_MODELS } from "../constants/model";
 
 module.exports = (req, res) => {
   //- Default Query --------------------------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ module.exports = (req, res) => {
   let svgContentScript =
     type !== "transparent"
       ? `${model.gradientDef(color)}
-         ${model[regexData(type)].render(reversal, checkColor(color), height)}`
+         ${model.render[regexData(type)](reversal, checkColor(color), height)}`
       : ``;
 
   // set 'text' - The layout changes depending on whether or not 'textBg' is used.
@@ -83,7 +83,7 @@ module.exports = (req, res) => {
   res.setHeader("Content-Type", "image/svg+xml");
 
   //- Drawing -------------------------------------------------------------------------------------------------------
-  // 'waving' is an exception because it uses a special layout.
+  // 'animation' is an exception because it uses a special layout.
   if (ANIMATION_MODELS.includes(type)) {
     // animation types
     res.send(`
