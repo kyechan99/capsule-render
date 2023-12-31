@@ -2,8 +2,7 @@
 <p align='center'>
     <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Decorate%20GitHub%20Profile%20or%20any%20Repo%20like%20me!&descAlignY=51&descAlign=62"/>
 </p>
-  
-<p align='center'> Decorate GitHub Profile or any Repo like me! </p>
+
 <p align='center'>
   <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
     <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
@@ -11,10 +10,20 @@
   <a href="#demo">
     <img src="https://img.shields.io/badge/DEMO%20-%234FC08D.svg?&style=for-the-badge&&logoColor=white"/>
   </a>
+  <a href="https://capsule-render.vercel.app/">
+    <img src="https://img.shields.io/badge/Generator%20-%235c86fa.svg?&style=for-the-badge&&logoColor=white"/>
+  </a>
+</p> 
+<p align="center"> 
+  <a href="readme.md">English</a> 
+  ·
+  <a href="/docs/readme_kr.md">한국어</a> 
 </p>
+<br/>
+
+> Looking for someone to translate this README.
 
 > Supports simple [Generator](https://capsule-render.vercel.app/).
-> 
 > However, we recommend reading the README for more detailed adjustments.
 
 ## Navigation
@@ -411,13 +420,3 @@ Value must be greater than or equal to 0.
 ![venom](https://capsule-render.vercel.app/api?type=venom&height=200&text=I%20am%20Venom.&fontSize=70&color=0:8871e5,100:b678c4&stroke=b678c4)
 
 <hr/>
-
-# Things that helped contribute
-
-
-> Looking for someone to translate this README.
-
-- SVG Path Easy Maker [Codepen](https://codepen.io/kyechan99/pen/yLeQVBa)
-- SVG Path draw [mavo.io](https://mavo.io/demos/svgpath/)
-
-![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=200&section=footer&text=Now%20Use%20me!&fontSize=90)
