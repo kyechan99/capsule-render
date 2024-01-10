@@ -2,26 +2,23 @@
 name: Bug report
 about: Report a bug
 title: "[BUG]"
-labels: 버그
+labels: bug
 assignees: ''
 
 ---
 
-### **버그 내용**
+### **Bug**
 
-<!-- 발생한 버그를 자세히 설명해주세요. -->
-<!-- 특수한 조건이 있는 경우 이미지나 영상이 있다면 더욱 빨리 해결 될 수 있어요. -->
+<!-- Please describe in detail the bug. -->
+<!-- Tt can be resolved more quickly if you send us an image or video. -->
 
-### **환경**
+### **Environment**
 
-version: 
-os: 
-browser: 
+- os: 
+- browser: 
 
-<!--사용 중인 환경을 작성해주세요. -->
+<!-- Please write the environment you are using. -->
 
-### **기타**
+### **Etc**
 
-<!--혹시 생각하신 해결 방법이나 대안책 같은게 있으시다면 공유해주세요. -->
-<!--참고에 큰 도움이 됩니다! -->
-<!--없으시다면 해당 항목은 삭제해주세요. -->
+<!-- If you have any solutions or alternatives, please share them. -->
