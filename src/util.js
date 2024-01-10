@@ -3,7 +3,7 @@ import pallete from "./pallete.json";
 import gradient from "./gradient.json";
 import pallete_theme from "./pallete_theme.json";
 
-export const generateRandomColor = () => {
+const generateRandomColor = () => {
   const letters = "0123456789ABCDEF";
   let color = "#";
   for (let i = 0; i < 6; i++) {
@@ -12,7 +12,7 @@ export const generateRandomColor = () => {
   return color;
 };
 
-export const generateSelectColor = (list, fontColor, customColorList) => {
+const generateSelectColor = (list, fontColor, customColorList) => {
   customColorList = customColorList.split(",").filter(e => !isNaN(e) && e !== "" && 0 <= e && e < list.length);
   const auto = list[customColorList[Math.floor(Math.random() * customColorList.length)]];
   return [auto.color, fontColor ? fontColor : auto.text, auto.textBg];
@@ -46,7 +46,7 @@ export const generateThemeColor = stats => {
   return [pallete_theme[stats].color, pallete_theme[stats].text, pallete_theme[stats].textBg];
 };
 
-export const randomizedByTime = (colorData, fontColor) => {
+const randomizedByTime = (colorData, fontColor) => {
   const buildDate = new Date("Wed Jul 22 2020 17:00:00");
   const nowDate = new Date();
   nowDate.setSeconds(0);

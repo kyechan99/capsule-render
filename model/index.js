@@ -4,9 +4,17 @@ import animationModels from "./animationModel";
 import { isGradientColor } from "../src/verification";
 
 const models = {
-  render: {
-    ...normalModels,
-    ...animationModels,
+  ...normalModels,
+  ...animationModels,
+};
+
+const Model = {
+  getModel: type => {
+    if (models.hasOwnProperty(type)) {
+      return models[type];
+    } else {
+      throw new Error(`The value of 'type=${type}' is invalide.`);
+    }
   },
 
   style: function (section, fontSize = "70", descSize = 20, rotate = 0) {
@@ -126,10 +134,11 @@ const models = {
 						};`;
         break;
       default:
+        throw new Error(`The value of 'animation=${animation}' is invalide.`);
     }
 
     return css;
   },
 };
 
-export default models;
+export default Model;

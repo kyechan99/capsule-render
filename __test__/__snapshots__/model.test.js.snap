@@ -1,0 +1,1196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Models cylinder model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+                    
+    <defs>
+      
+              
+      <lineargradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        
+                
+        <stop
+          offset="0%"
+          stop-color="#ddd6f3"
+        />
+        <stop
+          offset="100%"
+          stop-color="#faaca8"
+        />
+        
+              
+      </lineargradient>
+      
+            
+    </defs>
+    
+         
+    <path
+      d="M 61 0 L 704 0 A 50 50 0 1 1 704 300 L 150 300 A 50 50 0 1 1 150 0 "
+      fill="url(#linear)"
+      fill-opacity="1"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    />
+    
+                
+  </svg>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    cylinder
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    cylinder
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models egg model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+                    
+    <defs>
+      
+              
+      <lineargradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        
+                
+        <stop
+          offset="0%"
+          stop-color="#ddd6f3"
+        />
+        <stop
+          offset="100%"
+          stop-color="#faaca8"
+        />
+        
+              
+      </lineargradient>
+      
+            
+    </defs>
+    
+         
+    <path
+      d="M 427 300 Q 327 100 213.5 300 Q 100 100 0 300 Q 50 0 427 0 Q 750 0 854 300 Q 727 100 639.5 300 Q 527 100 427 300"
+      fill="url(#linear)"
+      fill-opacity="1"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    />
+    
+                
+  </svg>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    egg
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    egg
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models rect model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+                    
+    <defs>
+      
+              
+      <lineargradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        
+                
+        <stop
+          offset="0%"
+          stop-color="#ddd6f3"
+        />
+        <stop
+          offset="100%"
+          stop-color="#faaca8"
+        />
+        
+              
+      </lineargradient>
+      
+            
+    </defs>
+    
+         
+    <path
+      d="m 0 0 l 0 300 l 854 0 l 0 -300 z"
+      fill="url(#linear)"
+      fill-opacity="1"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    />
+    
+                
+  </svg>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    rect
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    rect
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models rounded model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+                    
+    <defs>
+      
+              
+      <lineargradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        
+                
+        <stop
+          offset="0%"
+          stop-color="#ddd6f3"
+        />
+        <stop
+          offset="100%"
+          stop-color="#faaca8"
+        />
+        
+              
+      </lineargradient>
+      
+            
+    </defs>
+    
+         
+    <path
+      d="M 61 0 L 793 0 Q 854 0 854 61 L 854 239 Q 854 300 793 300 L 61 300 Q 0 300 0 239 L 0 61 Q 0 0 61 0 z"
+      fill="url(#linear)"
+      fill-opacity="1"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    />
+    
+                
+  </svg>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    rounded
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    rounded
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models shark model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+                    
+    <defs>
+      
+              
+      <lineargradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        
+                
+        <stop
+          offset="0%"
+          stop-color="#ddd6f3"
+        />
+        <stop
+          offset="100%"
+          stop-color="#faaca8"
+        />
+        
+              
+      </lineargradient>
+      
+            
+    </defs>
+    
+         
+    <path
+      d="M 0 205 C 61 327 61 327 122 205 C 183 327 183 327 244 205 C 305 327 305 327 366 205 C 427 327 427 327 488 205 C 549 327 549 327 610 205 C 671 327 671 327 732 205 C 793 327 793 327 854 205  L 854 0 L 0 0 L 0 305 "
+      fill="url(#linear)"
+      fill-opacity="1"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    />
+    
+                
+  </svg>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    shark
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    shark
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models slice model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+                    
+    <defs>
+      
+              
+      <lineargradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        
+                
+        <stop
+          offset="0%"
+          stop-color="#ddd6f3"
+        />
+        <stop
+          offset="100%"
+          stop-color="#faaca8"
+        />
+        
+              
+      </lineargradient>
+      
+            
+    </defs>
+    
+         
+    <path
+      d="m 0 0 l 854 300 l 0 -300 l -854 0 z"
+      fill="url(#linear)"
+      fill-opacity="1"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    />
+    
+                
+  </svg>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    slice
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    slice
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models soft model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+                    
+    <defs>
+      
+              
+      <lineargradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        
+                
+        <stop
+          offset="0%"
+          stop-color="#ddd6f3"
+        />
+        <stop
+          offset="100%"
+          stop-color="#faaca8"
+        />
+        
+              
+      </lineargradient>
+      
+            
+    </defs>
+    
+         
+    <rect
+      fill="url(#linear)"
+      height="300"
+      rx="4.5"
+      stroke-opacity="1"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+      width="100%"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+    
+                
+  </svg>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    soft
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    soft
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models transparent model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+                    
+                
+  </svg>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    transparent
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    transparent
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models venom model 1`] = `
+<svg
+  height="300"
+  style="z-index:1;position:relative"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                    
+  <defs>
+    
+              
+    <lineargradient
+      id="linear"
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    >
+      
+                
+      <stop
+        offset="0%"
+        stop-color="#ddd6f3"
+      />
+      <stop
+        offset="100%"
+        stop-color="#faaca8"
+      />
+      
+              
+    </lineargradient>
+    
+            
+  </defs>
+  
+         
+    
+  <g
+    transform="translate(427, 150)"
+  >
+    
+      
+    <path
+      d="M52.8,-67C68,-61.6,79.7,-45.6,82.5,-28.7C85.4,-11.8,79.5,6,71.4,20.8C63.2,35.5,53,47.1,40.7,53.3C28.5,59.4,14.2,60,-2.1,63C-18.5,65.9,-37,71.2,-52.3,66C-67.6,60.9,-79.7,45.4,-81.5,29C-83.2,12.7,-74.6,-4.4,-68.7,-22.2C-62.8,-40.1,-59.5,-58.7,-48.4,-65.4C-37.4,-72.2,-18.7,-67.1,0,-67.1C18.8,-67.2,37.6,-72.4,52.8,-67Z"
+      fill="url(#linear)"
+      id="myPath"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    >
+      
+        
+      <animate
+        attributeName="d"
+        dur="10s"
+        repeatCount="indefinite"
+        values="
+          M52.8,-67C68,-61.6,79.7,-45.6,82.5,-28.7C85.4,-11.8,79.5,6,71.4,20.8C63.2,35.5,53,47.1,40.7,53.3C28.5,59.4,14.2,60,-2.1,63C-18.5,65.9,-37,71.2,-52.3,66C-67.6,60.9,-79.7,45.4,-81.5,29C-83.2,12.7,-74.6,-4.4,-68.7,-22.2C-62.8,-40.1,-59.5,-58.7,-48.4,-65.4C-37.4,-72.2,-18.7,-67.1,0,-67.1C18.8,-67.2,37.6,-72.4,52.8,-67Z; M42.3,-55.2C55.2,-48.7,66.6,-37,69.3,-23.7C72,-10.4,66,4.6,58.3,16.1C50.6,27.6,41.2,35.6,31.1,43.9C21.1,52.1,10.6,60.6,-1.3,62.5C-13.2,64.3,-26.4,59.4,-37.6,51.5C-48.8,43.6,-57.9,32.7,-61,20.5C-64.1,8.3,-61.1,-5.3,-57.9,-19.9C-54.7,-34.6,-51.3,-50.3,-41.6,-57.8C-32,-65.3,-16,-64.7,-0.7,-63.7C14.6,-62.8,29.3,-61.6,42.3,-55.2Z; M49.2,-63.6C62.2,-58.3,70.1,-41.8,74.6,-24.9C79.1,-8.1,80.3,9.2,76.5,26.2C72.8,43.2,64.2,59.9,50.7,68.4C37.1,76.9,18.5,77.2,2.3,74.1C-13.9,70.9,-27.9,64.2,-41.2,55.6C-54.6,47.1,-67.4,36.6,-74.5,22.4C-81.7,8.2,-83.2,-9.7,-74.7,-20.8C-66.3,-31.9,-47.9,-36.3,-33.8,-41.2C-19.7,-46.2,-9.8,-51.8,4.1,-57.5C18.1,-63.1,36.2,-68.9,49.2,-63.6Z;
+          M52.8,-67C68,-61.6,79.7,-45.6,82.5,-28.7C85.4,-11.8,79.5,6,71.4,20.8C63.2,35.5,53,47.1,40.7,53.3C28.5,59.4,14.2,60,-2.1,63C-18.5,65.9,-37,71.2,-52.3,66C-67.6,60.9,-79.7,45.4,-81.5,29C-83.2,12.7,-74.6,-4.4,-68.7,-22.2C-62.8,-40.1,-59.5,-58.7,-48.4,-65.4C-37.4,-72.2,-18.7,-67.1,0,-67.1C18.8,-67.2,37.6,-72.4,52.8,-67Z"
+      />
+      
+      
+    </path>
+    
+    
+  </g>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    venom
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    venom
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models wave model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+                    
+    <defs>
+      
+              
+      <lineargradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        
+                
+        <stop
+          offset="0%"
+          stop-color="#ddd6f3"
+        />
+        <stop
+          offset="100%"
+          stop-color="#faaca8"
+        />
+        
+              
+      </lineargradient>
+      
+            
+    </defs>
+    
+         
+    <path
+      d="m 0 0 T 0 250 Q 110 125 220 235 T 440 240 T 660 230 T 880 255 T 880 0 z"
+      fill="url(#linear)"
+      fill-opacity="1"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    />
+    
+                
+  </svg>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    wave
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    wave
+  </text>
+   
+            
+</svg>
+`;
+
+exports[`Test Models waving model 1`] = `
+<svg
+  height="300"
+  style="z-index:1;position:relative"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  
+                
+  <style>
+    
+                        .text {
+						font-size: 20px;
+						font-weight: 700;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}
+					.desc {
+						font-size: 30px;
+						font-weight: 500;
+						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+					}.text, .desc {
+						transform-origin: center center;
+						transform:rotate(1deg);
+					}
+                        
+                     
+  </style>
+  
+                    
+  <defs>
+    
+              
+    <lineargradient
+      id="linear"
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    >
+      
+                
+      <stop
+        offset="0%"
+        stop-color="#ddd6f3"
+      />
+      <stop
+        offset="100%"
+        stop-color="#faaca8"
+      />
+      
+              
+    </lineargradient>
+    
+            
+  </defs>
+  
+         
+    
+  <g
+    transform="translate(427, 150) scale(1, 1) translate(-427, -150)"
+  >
+    
+      
+    <path
+      d=""
+      fill="url(#linear)"
+      opacity="0.4"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    >
+      
+        
+      <animate
+        attributeName="d"
+        begin="0s"
+        calcmod="spline"
+        dur="20s"
+        keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
+        keyTimes="0;0.333;0.667;1"
+        repeatCount="indefinite"
+        values="M0 0L 0 220Q 213.5 260 427 230T 854 255L 854 0 Z;M0 0L 0 245Q 213.5 260 427 240T 854 230L 854 0 Z;M0 0L 0 265Q 213.5 235 427 265T 854 230L 854 0 Z;M0 0L 0 220Q 213.5 260 427 230T 854 255L 854 0 Z"
+      >
+        
+        
+      </animate>
+      
+      
+    </path>
+    
+      
+    <path
+      d=""
+      fill="url(#linear)"
+      opacity="0.4"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    >
+      
+        
+      <animate
+        attributeName="d"
+        begin="-10s"
+        calcmod="spline"
+        dur="20s"
+        keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1"
+        keyTimes="0;0.333;0.667;1"
+        repeatCount="indefinite"
+        values="M0 0L 0 235Q 213.5 280 427 250T 854 260L 854 0 Z;M0 0L 0 250Q 213.5 220 427 220T 854 240L 854 0 Z;M0 0L 0 245Q 213.5 225 427 250T 854 265L 854 0 Z;M0 0L 0 235Q 213.5 280 427 250T 854 260L 854 0 Z"
+      >
+        
+        
+      </animate>
+      
+      
+    </path>
+    
+    
+  </g>
+  
+                
+     
+    
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="50%"
+    y="50%"
+  >
+    waving
+  </text>
+  
+                
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    waving
+  </text>
+   
+            
+</svg>
+`;
