@@ -52,7 +52,7 @@ export default (req, res) => {
       else if (color === "timeAuto" || color === "timeGradient")
         [color, fontColor, textBgColor] = generateAutoByTime(color, fontColor);
       else color = checkCustomColor(color);
-      descColor = fontColor;
+      descColor = descColor ? descColor : fontColor;
     }
 
     //- Layout --------------------------------------------------------------------------------------------------------
@@ -72,9 +72,7 @@ export default (req, res) => {
     // set 'text' - The layout changes depending on whether or not 'textBg' is used.
     let textScript = `
     ${textBg === "true" ? Model.textBg(textBgColor, fontAlign || 50, fontAlignY || 50, fontSize, text) : ""} 
-    ${
-        checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth)
-    }`;
+    ${checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth)}`;
 
     // set 'desc' - Always have the color of 'fontColor'.
     let descScript = `${checkDesc(desc, descColor, descAlign, descAlignY)} `;
