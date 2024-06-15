@@ -17,7 +17,9 @@
 <p align="center"> 
   <a href="readme.md">English</a> 
   ·
-  <a href="/docs/readme_kr.md">한국어</a> 
+  <a href="/docs/readme_kr.md">한국어</a>  
+  .
+  <a href="/docs/README_fr.md">Français</a> 
 </p>
 <br/>
 
