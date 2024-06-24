@@ -19,7 +19,9 @@
   ·
   <a href="/docs/README_kr.md">한국어</a> 
   .
-  <a href="/docs/README_fr.md">Français</a> 
+  <a href="/docs/README_fr.md">Français</a>
+  .
+  <a href="/docs/README_de.md">Deutsch</a>
 </p>
 <br/>
 
