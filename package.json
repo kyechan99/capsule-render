@@ -34,7 +34,7 @@
     "@commitlint/cli": "^19.0.0",
     "@commitlint/config-conventional": "^19.0.0",
     "babel-jest": "^29.7.0",
-    "husky": "^8.0.0",
+    "husky": "^9.0.0",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.0",
     "prettier": "3.3.3",
