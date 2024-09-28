@@ -35,8 +35,8 @@ export default (req, res) => {
   } = req.query;
   let color = req.query.color || "B897FF";
   let fontColor = req.query.fontColor;
-  let descColor = req.query.fontColor;
-  let textBgColor = "#ffffff";
+  let descColor = req.query.descColor;
+  let textBgColor = req.query.textBgColor || "#ffffff";
   let stroke = req.query.stroke || (req.query.strokeWidth ? "B897FF" : "none");
   let strokeWidth = req.query.strokeWidth || (req.query.stroke === "none" ? "0" : "1");
 
@@ -52,7 +52,7 @@ export default (req, res) => {
       else if (color === "timeAuto" || color === "timeGradient")
         [color, fontColor, textBgColor] = generateAutoByTime(color, fontColor);
       else color = checkCustomColor(color);
-      descColor = fontColor;
+      descColor = descColor ? descColor : fontColor;
     }
 
     //- Layout --------------------------------------------------------------------------------------------------------
@@ -71,12 +71,8 @@ export default (req, res) => {
 
     // set 'text' - The layout changes depending on whether or not 'textBg' is used.
     let textScript = `
-    ${textBg === "true" ? Model.textBg(fontColor, fontAlign || 50, fontAlignY || 50, fontSize, text) : ""} 
-    ${
-      textBg === "true"
-        ? checkText(text, textBgColor, fontAlign, fontAlignY, stroke, strokeWidth)
-        : checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth)
-    }`;
+    ${textBg === "true" ? Model.textBg(textBgColor, fontAlign || 50, fontAlignY || 50, fontSize, text) : ""} 
+    ${checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth)}`;
 
     // set 'desc' - Always have the color of 'fontColor'.
     let descScript = `${checkDesc(desc, descColor, descAlign, descAlignY)} `;
