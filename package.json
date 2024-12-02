@@ -26,7 +26,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vercel": "^33.0.0",
-    "xmldom": "^0.6.0"
+    "@xmldom/xmldom": "^0.7.5"
   },
   "devDependencies": {
     "@babel/core": "^7.23.7",
