@@ -1,8 +1,8 @@
- 
+
 <p align='center'>
     <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Decorate%20GitHub%20Profile%20or%20any%20Repo%20like%20me!&descAlignY=51&descAlign=62"/>
 </p>
-  
+
 <p align='center'>
   <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
     <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
@@ -20,6 +20,14 @@
   <a href="/docs/readme_kr.md">한국어</a>  
   .
   <a href="/docs/README_fr.md">Français</a> 
+  .
+  <a href="/docs/README_de.md">Deutsch</a>
+  .
+  <a href="/docs/README_zh-cn.md">简体中文</a>  
+  .
+  <a href="/docs/README_zh-tw.md">繁體中文</a>
+  .
+  <a href="/docs/README_zh-hk.md">繁體粤语</a>
 </p>
 <br/>
 
@@ -160,7 +168,7 @@ Type 데이터는 배경 이미지를 변경합니다.
 
 - `&section=header` : (default)
 - `&section=footer`
- 
+
 
 ```
 ![footer](https://capsule-render.vercel.app/api?section=footer)
@@ -411,4 +419,3 @@ stroke의 굵기를 변경합니다.
 ![venom](https://capsule-render.vercel.app/api?type=venom&height=200&text=I%20am%20Venom.&fontSize=70&color=0:8871e5,100:b678c4&stroke=b678c4)
 
 <hr/>
- 
