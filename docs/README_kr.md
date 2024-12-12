@@ -1,8 +1,8 @@
- 
+
 <p align='center'>
     <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Decorate%20GitHub%20Profile%20or%20any%20Repo%20like%20me!&descAlignY=51&descAlign=62"/>
 </p>
-  
+
 <p align='center'>
   <a href="https://github.com/kyechan99/capsule-render/labels/Idea">
     <img src="https://img.shields.io/badge/IDEA%20ISSUE%20-%23F7DF1E.svg?&style=for-the-badge&&logoColor=white"/>
@@ -38,40 +38,26 @@
 
 ## Navigation
 
-- [사용법](#사용법)
-  - [Types](#types)
-  - [Color](#color)
-  - [Custom Color List](#custom-color-list)
-  - [Theme](#theme)
-  - [Section](#section)
-  - [Reversal](#reversal)
-  - [Height](#height)
-  - [Text](#text)
-  - [Desc](#desc)
-  - [Text Background](#text-background)
-  - [Text Animation](#text-animation)
-  - [FontColor](#fontcolor)
-  - [FontSize](#fontsize)
-  - [FontAlign](#fontalign)
-  - [FontAlignY](#fontaligny)
-  - [DescSize](#descsize)
-  - [DescAlign](#descalign)
-  - [DescAlignY](#descaligny)
-  - [Rotate](#rotate)
-  - [Stroke](#stroke)
-  - [Stroke-width](#stroke-width)
-- [Demo ](#demo-)
-  - [Wave ](#wave-)
-  - [Egg ](#egg-)
-  - [Shark ](#shark-)
-  - [Slice ](#slice-)
-  - [Rect ](#rect-)
-  - [Soft ](#soft-)
-  - [Rounded ](#rounded-)
-  - [Cylinder ](#cylinder-)
-  - [Waving ](#waving-)
-  - [Transparent ](#transparent-)
-  - [Venom ](#venom-)
+1. [How to Use](#how-to-use)
+2. [Types](#types)
+3. [Color](#color)
+4. [Custom Color List](#custom-color-list)
+5. [Section](#section)
+6. [Reversal](#reversal)
+7. [Height](#height)
+8. [Text](#text)
+9. [Desc](#desc)
+10. [Text Background](#text-background)
+11. [Text Animation](#text-animation)
+12. [Font Color](#fontcolor)
+13. [Font Size](#fontsize)
+14. [Font Align - X](#fontalign)
+15. [Font Align - Y](#fontaligny)
+16. [Desc Size](#descsize)
+17. [Desc Align - X](#descalign)
+18. [Desc Align - Y](#descaligny)
+19. [Rotate](#rotate)
+20. [Demo](#demo)
 
 기능 및 아이디어 제보 -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 
@@ -182,7 +168,7 @@ Type 데이터는 배경 이미지를 변경합니다.
 
 - `&section=header` : (default)
 - `&section=footer`
- 
+
 
 ```
 ![footer](https://capsule-render.vercel.app/api?section=footer)
@@ -433,4 +419,3 @@ stroke의 굵기를 변경합니다.
 ![venom](https://capsule-render.vercel.app/api?type=venom&height=200&text=I%20am%20Venom.&fontSize=70&color=0:8871e5,100:b678c4&stroke=b678c4)
 
 <hr/>
- 
