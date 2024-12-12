@@ -22,6 +22,12 @@
   <a href="/docs/README_fr.md">Français</a> 
   .
   <a href="/docs/README_de.md">Deutsch</a>
+  .
+  <a href="/docs/README_zh-cn.md">简体中文</a>  
+  .
+  <a href="/docs/README_zh-tw.md">繁體中文</a>
+  .
+  <a href="/docs/README_zh-hk.md">繁體粤语</a>
 </p>
 <br/>
 
@@ -32,26 +38,40 @@
 
 ## Navigation
 
-1. [Anleitung](#how-to-use)
-2. [Arten](#arten)
-3. [Farben](#color)
-4. [Benutzerdefinierte Farbliste](#benutzerdefinierte-farbliste)
-5. [Abschnitte](#abschnitt)
-6. [Reversal](#reversal)
-7. [Höhe](#höhe)
-8. [Text](#text)
-9. [Beschreibung](#beschreibung)
-10. [Text Hintergrund](#text-hintergrund)
-11. [Text Animation](#text-animation)
-12. [Textfarbe](#fontcolor)
-13. [Textgröße](#fontsize)
-14. [Textausrichtung - X](#fontalign)
-15. [Textausrichtung - Y](#fontaligny)
-16. [Größe der Beschreibung](#descsize)
-17. [Beschreibung Ausrichtung - X](#descalign)
-18. [Beschreibung Ausrichtung - Y](#descaligny)
-19. [Drehen](#rotate)
-20. [Demo](#demo)
+- [How to Use](#how-to-use)
+  - [Arten](#arten)
+  - [Farben](#farben)
+  - [Benutzerdefinierte Farbliste](#benutzerdefinierte-farbliste)
+  - [Theme](#theme)
+  - [Abschnitt](#abschnitt)
+  - [Reversal](#reversal)
+  - [Höhe](#höhe)
+  - [Text](#text)
+  - [Beschreibung](#beschreibung)
+  - [Text Hintergrund](#text-hintergrund)
+  - [Text Animation](#text-animation)
+  - [FontColor](#fontcolor)
+  - [FontSize](#fontsize)
+  - [FontAlign](#fontalign)
+  - [FontAlignY](#fontaligny)
+  - [DescSize](#descsize)
+  - [DescAlign](#descalign)
+  - [DescAlignY](#descaligny)
+  - [Rotate](#rotate)
+  - [Stroke](#stroke)
+  - [Stroke-width](#stroke-width)
+- [Demo ](#demo-)
+  - [Wave ](#wave-)
+  - [Egg ](#egg-)
+  - [Shark ](#shark-)
+  - [Slice ](#slice-)
+  - [Rect ](#rect-)
+  - [Soft ](#soft-)
+  - [Rounded ](#rounded-)
+  - [Cylinder ](#cylinder-)
+  - [Waving ](#waving-)
+  - [Transparent ](#transparent-)
+  - [Venom ](#venom-)
 
 Ideen -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) oder [PR](https://github.com/kyechan99/capsule-render/pulls)
 

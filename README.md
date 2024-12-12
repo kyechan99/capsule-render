@@ -22,6 +22,12 @@
   <a href="/docs/README_fr.md">Français</a>
   .
   <a href="/docs/README_de.md">Deutsch</a>
+  .
+  <a href="/docs/README_zh-cn.md">简体中文</a>  
+  .
+  <a href="/docs/README_zh-tw.md">繁體中文</a>
+  .
+  <a href="/docs/README_zh-hk.md">繁體粤语</a>
 </p>
 <br/>
 
@@ -32,26 +38,40 @@
 
 ## Navigation
 
-1. [How to Use](#how-to-use)
-2. [Types](#types)
-3. [Color](#color)
-4. [Custom Color List](#custom-color-list)
-5. [Section](#section)
-6. [Reversal](#reversal)
-7. [Height](#height)
-8. [Text](#text)
-9. [Desc](#desc)
-10. [Text Background](#text-background)
-11. [Text Animation](#text-animation)
-12. [Font Color](#fontcolor)
-13. [Font Size](#fontsize)
-14. [Font Align - X](#fontalign)
-15. [Font Align - Y](#fontaligny)
-16. [Desc Size](#descsize)
-17. [Desc Align - X](#descalign)
-18. [Desc Align - Y](#descaligny)
-19. [Rotate](#rotate)
-20. [Demo](#demo)
+- [How to Use](#how-to-use)
+  - [Types](#types)
+  - [Color](#color)
+  - [Custom Color List](#custom-color-list)
+  - [Theme](#theme)
+  - [Section](#section)
+  - [Reversal](#reversal)
+  - [Height](#height)
+  - [Text](#text)
+  - [Desc](#desc)
+  - [Text Background](#text-background)
+  - [Text Animation](#text-animation)
+  - [FontColor](#fontcolor)
+  - [FontSize](#fontsize)
+  - [FontAlign](#fontalign)
+  - [FontAlignY](#fontaligny)
+  - [DescSize](#descsize)
+  - [DescAlign](#descalign)
+  - [DescAlignY](#descaligny)
+  - [Rotate](#rotate)
+  - [Stroke](#stroke)
+  - [Stroke-width](#stroke-width)
+- [Demo ](#demo-)
+  - [Wave ](#wave-)
+  - [Egg ](#egg-)
+  - [Shark ](#shark-)
+  - [Slice ](#slice-)
+  - [Rect ](#rect-)
+  - [Soft ](#soft-)
+  - [Rounded ](#rounded-)
+  - [Cylinder ](#cylinder-)
+  - [Waving ](#waving-)
+  - [Transparent ](#transparent-)
+  - [Venom ](#venom-)
 
 Any of Idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 

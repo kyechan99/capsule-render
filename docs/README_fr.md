@@ -18,6 +18,16 @@
   <a href="README.md">English</a> 
   ·
   <a href="/docs/README_kr.md">한국어</a> 
+  .
+  <a href="/docs/README_fr.md">Français</a> 
+  .
+  <a href="/docs/README_de.md">Deutsch</a>
+  .
+  <a href="/docs/README_zh-cn.md">简体中文</a>  
+  .
+  <a href="/docs/README_zh-tw.md">繁體中文</a>
+  .
+  <a href="/docs/README_zh-hk.md">繁體粤语</a>
 </p>
 <br/>
 
@@ -27,29 +37,40 @@
 
 ## Navigation
 
-1. [Utilisation](#utilisation)
-2. [Types](#types)
-3. [Couleur](#couleur)
-4. [Liste de Couleurs Personnalisé](#liste-de-couleurs-personnalisé)
-5. [Thème](#thème)
-6. [Section](#section)
-7. [Renversement](#renversement)
-8. [Hauteur](#hauteur)
-9. [Texte](#texte)
-10. [Description](#description)
-11. [Arrière-plan du texte](#arrière-plan-du-texte)
-12. [Animation du texte](#animation-du-texte)
-13. [Couleur du texte](#couleur-du-texte)
-14. [Grandeur du texte](#grandeur-du-texte)
-15. [Position horizontal du texte - X](#position-horizontal-du-texte)
-16. [Position vertical du texte - Y](#position-vertical-du-texte)
-17. [Grandeur du description](#grandeur-de-la-description)
-18. [Position horizontal de la description - X](#position-horizontal-de-la-description)
-19. [Position vertical de la description - Y](#position-vertical-de-la-description)
-20. [Rotation](#rotation)
-21. [Trait du texte](#trait-du-texte)
-22. [Grandeur du trait](#grandeur-du-trait)
-23. [Exemples](#examples)
+- [Utilisation](#utilisation)
+  - [Types](#types)
+  - [Couleur](#couleur)
+  - [Liste de Couleurs Personnalisé](#liste-de-couleurs-personnalisé)
+  - [Thème](#thème)
+  - [Section](#section)
+  - [Renversement](#renversement)
+  - [Hauteur](#hauteur)
+  - [Texte](#texte)
+  - [Description](#description)
+  - [Arrière-plan du texte](#arrière-plan-du-texte)
+  - [Animation du texte](#animation-du-texte)
+  - [Couleur du texte](#couleur-du-texte)
+  - [Grandeur du texte](#grandeur-du-texte)
+  - [Position horizontal du texte](#position-horizontal-du-texte)
+  - [Position vertical du texte](#position-vertical-du-texte)
+  - [Grandeur de la description](#grandeur-de-la-description)
+  - [Position horizontal de la description](#position-horizontal-de-la-description)
+  - [Position vertical de la description](#position-vertical-de-la-description)
+  - [Rotation](#rotation)
+  - [Trait du texte](#trait-du-texte)
+  - [Grandeur du trait](#grandeur-du-trait)
+- [Examples ](#examples-)
+  - [Wave ](#wave-)
+  - [Egg ](#egg-)
+  - [Shark ](#shark-)
+  - [Slice ](#slice-)
+  - [Rect ](#rect-)
+  - [Soft ](#soft-)
+  - [Rounded ](#rounded-)
+  - [Cylinder ](#cylinder-)
+  - [Waving ](#waving-)
+  - [Transparent ](#transparent-)
+  - [Venom ](#venom-)
 
 Avez-vous des idées pour le projet ? -> [Soumettre un Idée](https://github.com/kyechan99/capsule-render/labels/Idea)
 Soumettre un Changement -> [PR](https://github.com/kyechan99/capsule-render/pulls)
