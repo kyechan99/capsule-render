@@ -2,6 +2,36 @@ import normalModels from "./normalModel/index";
 import animationModels from "./animationModel";
 
 import { isGradientColor } from "../src/verification";
+class Html {
+  content = "";
+
+  constructor(strings, values) {
+    this.content = strings.reduce((result, string, i) => {
+      return result + string + (values[i] || "");
+    }, "");
+  }
+
+  escape(val) {
+    return val instanceof Html ? val.toHtml() : escapeHtml(val);
+  }
+
+  append(newContent) {
+    return html`${this.content}${newContent}`;
+  }
+
+  appendIf(condition, newContent) {
+    if (condition) return this.append(newContent);
+    return this;
+  }
+
+  toString() {
+    return this.content;
+  }
+}
+
+const html = (strings, ...values) => {
+  return new Html(strings, values);
+};
 
 const models = {
   ...normalModels,
@@ -43,6 +73,22 @@ const Model = {
 
     return css;
   },
+
+  style: function (section, fontSize = "70", descSize = 20, rotate = 0) {
+    return html` .text { font-size: ${fontSize}px; } `
+      .appendIf(
+        rotate !== 0,
+        html`
+          .text, .desc { transform-origin: center center;
+          transform:rotate(${rotate}deg); }
+        `,
+      )
+      .appendIf(
+        section === "footer",
+        html` path { transform: rotate(180deg); transform-origin: 50% 50%; } `,
+      );
+  },
+
   gradientDef: function (color) {
     if (!isGradientColor(color)) return "";
 
