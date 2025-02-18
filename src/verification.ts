@@ -1,3 +1,5 @@
+import { ColorMap } from "../types/color";
+
 export const isGradientColor = (color: any) => {
   if (typeof color === "object") return true;
   return false;
@@ -9,11 +11,8 @@ export const regexData = (data: any) => {
     .replace(/[^a-z]/g, "");
 };
 
-interface ColorMap {
-  [key: string]: string;
-}
-
-export const checkCustomColor = (color: string) => {
+export const checkCustomColor = (color: string | ColorMap) => {
+  if (typeof color === "object") return color;
   if (color.split(",").length > 1) {
     let temp = color;
     let colorMap: ColorMap = {};

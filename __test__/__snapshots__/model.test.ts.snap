@@ -8,10 +8,10 @@ exports[`Test Models cylinder model 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -26,17 +26,17 @@ exports[`Test Models cylinder model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                
+        
   <svg
     viewBox="0 0 854 300"
     xmlns="http://www.w3.org/2000/svg"
   >
     
-                    
+          
     <path
       d="M 61 0 L 704 0 A 50 50 0 1 1 704 300 L 150 300 A 50 50 0 1 1 150 0 "
       fill="url(#linear)"
@@ -45,12 +45,10 @@ exports[`Test Models cylinder model 1`] = `
       transform-origin="center"
     />
     
-                
+        
   </svg>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -64,7 +62,7 @@ exports[`Test Models cylinder model 1`] = `
     cylinder
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -75,8 +73,8 @@ exports[`Test Models cylinder model 1`] = `
   >
     cylinder
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -88,10 +86,10 @@ exports[`Test Models egg model 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -106,17 +104,17 @@ exports[`Test Models egg model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                
+        
   <svg
     viewBox="0 0 854 300"
     xmlns="http://www.w3.org/2000/svg"
   >
     
-                    
+          
     <path
       d="M 427 300 Q 327 100 213.5 300 Q 100 100 0 300 Q 50 0 427 0 Q 750 0 854 300 Q 727 100 639.5 300 Q 527 100 427 300"
       fill="url(#linear)"
@@ -125,12 +123,10 @@ exports[`Test Models egg model 1`] = `
       transform-origin="center"
     />
     
-                
+        
   </svg>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -144,7 +140,7 @@ exports[`Test Models egg model 1`] = `
     egg
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -155,8 +151,8 @@ exports[`Test Models egg model 1`] = `
   >
     egg
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -168,10 +164,10 @@ exports[`Test Models rect model 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -186,17 +182,17 @@ exports[`Test Models rect model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                
+        
   <svg
     viewBox="0 0 854 300"
     xmlns="http://www.w3.org/2000/svg"
   >
     
-                    
+          
     <path
       d="m 0 0 l 0 300 l 854 0 l 0 -300 z"
       fill="url(#linear)"
@@ -205,12 +201,10 @@ exports[`Test Models rect model 1`] = `
       transform-origin="center"
     />
     
-                
+        
   </svg>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -224,7 +218,7 @@ exports[`Test Models rect model 1`] = `
     rect
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -235,8 +229,8 @@ exports[`Test Models rect model 1`] = `
   >
     rect
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -248,10 +242,10 @@ exports[`Test Models rounded model 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -266,17 +260,17 @@ exports[`Test Models rounded model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                
+        
   <svg
     viewBox="0 0 854 300"
     xmlns="http://www.w3.org/2000/svg"
   >
     
-                    
+          
     <path
       d="M 61 0 L 793 0 Q 854 0 854 61 L 854 239 Q 854 300 793 300 L 61 300 Q 0 300 0 239 L 0 61 Q 0 0 61 0 z"
       fill="url(#linear)"
@@ -285,12 +279,10 @@ exports[`Test Models rounded model 1`] = `
       transform-origin="center"
     />
     
-                
+        
   </svg>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -304,7 +296,7 @@ exports[`Test Models rounded model 1`] = `
     rounded
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -315,8 +307,8 @@ exports[`Test Models rounded model 1`] = `
   >
     rounded
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -328,10 +320,10 @@ exports[`Test Models shark model 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -346,17 +338,17 @@ exports[`Test Models shark model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                
+        
   <svg
     viewBox="0 0 854 300"
     xmlns="http://www.w3.org/2000/svg"
   >
     
-                    
+          
     <path
       d="M 0 205 C 61 327 61 327 122 205 C 183 327 183 327 244 205 C 305 327 305 327 366 205 C 427 327 427 327 488 205 C 549 327 549 327 610 205 C 671 327 671 327 732 205 C 793 327 793 327 854 205  L 854 0 L 0 0 L 0 305 "
       fill="url(#linear)"
@@ -365,12 +357,10 @@ exports[`Test Models shark model 1`] = `
       transform-origin="center"
     />
     
-                
+        
   </svg>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -384,7 +374,7 @@ exports[`Test Models shark model 1`] = `
     shark
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -395,8 +385,8 @@ exports[`Test Models shark model 1`] = `
   >
     shark
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -408,10 +398,10 @@ exports[`Test Models slice model 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -426,17 +416,17 @@ exports[`Test Models slice model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                
+        
   <svg
     viewBox="0 0 854 300"
     xmlns="http://www.w3.org/2000/svg"
   >
     
-                    
+          
     <path
       d="m 0 0 l 854 300 l 0 -300 l -854 0 z"
       fill="url(#linear)"
@@ -445,12 +435,10 @@ exports[`Test Models slice model 1`] = `
       transform-origin="center"
     />
     
-                
+        
   </svg>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -464,7 +452,7 @@ exports[`Test Models slice model 1`] = `
     slice
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -475,8 +463,8 @@ exports[`Test Models slice model 1`] = `
   >
     slice
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -488,10 +476,10 @@ exports[`Test Models soft model 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -506,17 +494,17 @@ exports[`Test Models soft model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                
+        
   <svg
     viewBox="0 0 854 300"
     xmlns="http://www.w3.org/2000/svg"
   >
     
-                    
+          
     <rect
       fill="url(#linear)"
       height="300"
@@ -528,12 +516,10 @@ exports[`Test Models soft model 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     />
     
-                
+        
   </svg>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -547,7 +533,7 @@ exports[`Test Models soft model 1`] = `
     soft
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -558,8 +544,8 @@ exports[`Test Models soft model 1`] = `
   >
     soft
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -571,10 +557,10 @@ exports[`Test Models transparent model 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -589,23 +575,21 @@ exports[`Test Models transparent model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                
+        
   <svg
     viewBox="0 0 854 300"
     xmlns="http://www.w3.org/2000/svg"
   >
     
-                    
-                
+          
+        
   </svg>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -619,7 +603,7 @@ exports[`Test Models transparent model 1`] = `
     transparent
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -630,8 +614,8 @@ exports[`Test Models transparent model 1`] = `
   >
     transparent
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -645,10 +629,10 @@ exports[`Test Models venom model 1`] = `
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -663,11 +647,11 @@ exports[`Test Models venom model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                    
+        
       
   <g
     transform="translate(427, 150)"
@@ -698,9 +682,7 @@ exports[`Test Models venom model 1`] = `
       
   </g>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -714,7 +696,7 @@ exports[`Test Models venom model 1`] = `
     venom
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -725,8 +707,8 @@ exports[`Test Models venom model 1`] = `
   >
     venom
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -738,10 +720,10 @@ exports[`Test Models wave model 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -756,17 +738,17 @@ exports[`Test Models wave model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                
+        
   <svg
     viewBox="0 0 854 300"
     xmlns="http://www.w3.org/2000/svg"
   >
     
-                    
+          
     <path
       d="m 0 0 T 0 250 Q 110 125 220 235 T 440 240 T 660 230 T 880 255 T 880 0 z"
       fill="url(#linear)"
@@ -775,12 +757,10 @@ exports[`Test Models wave model 1`] = `
       transform-origin="center"
     />
     
-                
+        
   </svg>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -794,7 +774,7 @@ exports[`Test Models wave model 1`] = `
     wave
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -805,8 +785,8 @@ exports[`Test Models wave model 1`] = `
   >
     wave
   </text>
-   
-            
+  
+      
 </svg>
 `;
 
@@ -820,10 +800,10 @@ exports[`Test Models waving model 1`] = `
   xmlns:xlink="http://www.w3.org/1999/xlink"
 >
   
-                
+        
   <style>
     
-                        .text {
+      .text {
   font-size: 20px;
   font-weight: 700px;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
@@ -838,11 +818,11 @@ exports[`Test Models waving model 1`] = `
   transform: rotate(1deg);
 }
 
-                        
-                     
+      
+    
   </style>
   
-                    
+        
       
   <g
     transform="translate(427, 150) scale(1, 1) translate(-427, -150)"
@@ -905,9 +885,7 @@ exports[`Test Models waving model 1`] = `
       
   </g>
   
-                
-     
-    
+         
   <text
     alignment-baseline="middle"
     class="text"
@@ -921,7 +899,7 @@ exports[`Test Models waving model 1`] = `
     waving
   </text>
   
-                
+        
   <text
     alignment-baseline="middle"
     class="desc"
@@ -932,7 +910,7 @@ exports[`Test Models waving model 1`] = `
   >
     waving
   </text>
-   
-            
+  
+      
 </svg>
 `;
