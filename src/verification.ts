@@ -9,16 +9,20 @@ export const regexData = (data: any) => {
     .replace(/[^a-z]/g, "");
 };
 
+interface ColorMap {
+  [key: string]: string;
+}
+
 export const checkCustomColor = (color: string) => {
-  const ret: { [x: string]: string } = {};
   if (color.split(",").length > 1) {
     let temp = color;
+    let colorMap: ColorMap = {};
     temp.split(",").forEach(e => {
       const [key, value] = e.split(":");
-      ret[key] = value;
+      colorMap[key] = value;
     });
-  } else {
-    ret["color"] = color;
+    return colorMap;
   }
-  return ret;
+
+  return color;
 };

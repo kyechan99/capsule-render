@@ -40,7 +40,6 @@ export default (req, res) => {
   let stroke = req.query.stroke || (req.query.strokeWidth ? "B897FF" : "none");
   let strokeWidth =
     req.query.strokeWidth || (req.query.stroke === "none" ? "0" : "1");
-
   try {
     //- Color Verify --------------------------------------------------------------------------------------------------
     if (theme !== "none" && checkThemeColor(theme)) {
