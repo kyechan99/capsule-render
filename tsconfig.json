@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "types": ["jest", "node"],
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "allowJs": true
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

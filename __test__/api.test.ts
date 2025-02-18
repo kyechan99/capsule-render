@@ -1,6 +1,6 @@
 import api from "../api";
 
-const route = query => {
+const route = (query: any) => {
   const req = {
     query: {
       type: "wave",

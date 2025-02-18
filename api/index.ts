@@ -1,4 +1,4 @@
-import Model from "../model/index";
+import Models from "../model";
 import {
   generateAutoColor,
   generateAutoGradient,
@@ -38,7 +38,8 @@ export default (req, res) => {
   let descColor = req.query.fontColor;
   let textBgColor = "#ffffff";
   let stroke = req.query.stroke || (req.query.strokeWidth ? "B897FF" : "none");
-  let strokeWidth = req.query.strokeWidth || (req.query.stroke === "none" ? "0" : "1");
+  let strokeWidth =
+    req.query.strokeWidth || (req.query.stroke === "none" ? "0" : "1");
 
   try {
     //- Color Verify --------------------------------------------------------------------------------------------------
@@ -47,34 +48,54 @@ export default (req, res) => {
       [color, fontColor, textBgColor] = generateThemeColor(theme);
       descColor = textBgColor;
     } else {
-      if (color === "auto") [color, fontColor, textBgColor] = generateAutoColor(fontColor, customColorList);
-      else if (color === "gradient") [color, fontColor, textBgColor] = generateAutoGradient(fontColor, customColorList);
+      if (color === "auto")
+        [color, fontColor, textBgColor] = generateAutoColor(
+          fontColor,
+          customColorList,
+        );
+      else if (color === "gradient")
+        [color, fontColor, textBgColor] = generateAutoGradient(
+          fontColor,
+          customColorList,
+        );
       else if (color === "timeAuto" || color === "timeGradient")
         [color, fontColor, textBgColor] = generateAutoByTime(color, fontColor);
       else color = checkCustomColor(color);
       descColor = fontColor;
     }
 
+    if (!Models[regexData(type)]) {
+      throw new Error("The value of 'type=' is invalide.");
+    }
+    const Model = new Models[regexData(type)](
+      reversal,
+      checkColor(color),
+      height,
+    );
+
     //- Layout --------------------------------------------------------------------------------------------------------
     // Default style values ​​such as font style or animation
     let styleScript = `<style>
-                        ${Model.style(section, fontSize, descSize, rotate)}
+                        ${Model.getStyle(section, fontSize, descSize, rotate)}
                         ${Model.animation(animation, fontAlign, fontAlignY)}
                      </style>`;
 
     // Get the svg contents of the corresponding model
-    let svgContentScript =
-      type !== "transparent"
-        ? `${Model.gradientDef(color)}
-         ${Model.getModel(regexData(type))(reversal, checkColor(color), height)}`
-        : ``;
+    let svgContentScript = Model.render();
 
     // set 'text' - The layout changes depending on whether or not 'textBg' is used.
     let textScript = `
     ${textBg === "true" ? Model.textBg(fontColor, fontAlign || 50, fontAlignY || 50, fontSize, text) : ""} 
     ${
       textBg === "true"
-        ? checkText(text, textBgColor, fontAlign, fontAlignY, stroke, strokeWidth)
+        ? checkText(
+            text,
+            textBgColor,
+            fontAlign,
+            fontAlignY,
+            stroke,
+            strokeWidth,
+          )
         : checkText(text, fontColor, fontAlign, fontAlignY, stroke, strokeWidth)
     }`;
 
@@ -108,7 +129,7 @@ export default (req, res) => {
             </svg>
         `);
     }
-  } catch (err) {
+  } catch (err: any) {
     res.setHeader("Content-Type", "text/html");
     res.send(err.message);
   }

@@ -6,7 +6,7 @@ import shark from "./shark";
 import slice from "./slice";
 import soft from "./soft";
 import wave from "./wave";
-
+import transparent from "./transparent";
 export default {
   cylinder,
   egg,
@@ -16,4 +16,5 @@ export default {
   slice,
   soft,
   wave,
+  transparent,
 };

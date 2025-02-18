@@ -1,4 +1,9 @@
-import { checkColor, generateAutoByTime, generateAutoColor, generateAutoGradient } from "../src/util";
+import {
+  checkColor,
+  generateAutoByTime,
+  generateAutoColor,
+  generateAutoGradient,
+} from "../src/util";
 import { checkCustomColor } from "../src/verification";
 
 import pallete from "../src/pallete.json";
@@ -30,7 +35,10 @@ describe("Test colors", () => {
       // DIFF 1m
       jest.useFakeTimers().setSystemTime(new Date("Wed Jul 22 2020 17:01:00"));
 
-      let [color, fontColor, textBgColor] = generateAutoByTime(query, "#FF00FF");
+      let [color, fontColor, textBgColor] = generateAutoByTime(
+        query,
+        "#FF00FF",
+      );
       expect(color).toBe(data[1].color);
       expect(textBgColor).toBe(data[1].textBg);
       expect(fontColor).toBe("#FF00FF");
@@ -55,7 +63,10 @@ describe("Test colors", () => {
     // DIFF 1m
     jest.useFakeTimers().setSystemTime(new Date("Wed Jul 22 2020 17:01:00"));
 
-    let [color, fontColor, textBgColor] = generateAutoByTime("timeAuto", "#FF00FF");
+    let [color, fontColor, textBgColor] = generateAutoByTime(
+      "timeAuto",
+      "#FF00FF",
+    );
     expect(color).toBe(pallete[1].color);
     expect(textBgColor).toBe(pallete[1].textBg);
     expect(fontColor).toBe("#FF00FF");
@@ -79,7 +90,10 @@ describe("Test colors", () => {
     // DIFF 1m
     jest.useFakeTimers().setSystemTime(new Date("Wed Jul 22 2020 17:01:00"));
 
-    let [color, fontColor, textBgColor] = generateAutoByTime("timeGradient", "#FF00FF");
+    let [color, fontColor, textBgColor] = generateAutoByTime(
+      "timeGradient",
+      "#FF00FF",
+    );
     expect(color).toBe(gradient[1].color);
     expect(textBgColor).toBe(gradient[1].textBg);
     expect(fontColor).toBe("#FF00FF");
@@ -87,7 +101,10 @@ describe("Test colors", () => {
     // DIFF 2m
     jest.useFakeTimers().setSystemTime(new Date("Wed Jul 22 2020 17:02:00"));
 
-    [color, fontColor, textBgColor] = generateAutoByTime("timeGradient", "#FF00FF");
+    [color, fontColor, textBgColor] = generateAutoByTime(
+      "timeGradient",
+      "#FF00FF",
+    );
     expect(color).toBe(gradient[2].color);
     expect(textBgColor).toBe(gradient[2].textBg);
     expect(fontColor).toBe("#FF00FF");
@@ -163,16 +180,16 @@ describe("Test colors", () => {
   });
 
   it("generates a color with Math.random() = 0.5", () => {
-    Math.random.mockReturnValue(0.5);
+    jest.spyOn(Math, "random").mockReturnValue(0.5);
     const color = checkColor("random");
     expect(color).toMatchInlineSnapshot(`"#888888"`);
   });
 
   it("generates a different color with Math.random() = 0.1", () => {
-    Math.random.mockReturnValue(0.1);
+    jest.spyOn(Math, "random").mockReturnValue(0.1);
     const color1 = checkColor("random");
 
-    Math.random.mockReturnValue(0.9);
+    jest.spyOn(Math, "random").mockReturnValue(0.9);
     const color2 = checkColor("random");
 
     expect(color1).not.toBe(color2);
