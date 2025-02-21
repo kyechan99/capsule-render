@@ -1,13 +1,13 @@
-import { Model } from "../model";
+import AnimationModel from "./animationModel";
 
-class Waving extends Model {
+class Waving extends AnimationModel {
   width = 854;
 
   override path() {
     return "";
   }
 
-  override render() {
+  override content() {
     const { width, height, color, reversal } = this;
 
     return `

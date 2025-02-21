@@ -1,6 +1,6 @@
-import { Model } from "../model";
+import NormalModel from "./normalModel";
 
-class Egg extends Model {
+class Egg extends NormalModel {
   path() {
     return `M 427 ${this.height} Q 327 ${this.height / 3} 213.5 ${this.height} Q 100 ${
       this.height / 3
@@ -9,7 +9,7 @@ class Egg extends Model {
     } 639.5 ${this.height} Q 527 ${this.height / 3} 427 ${this.height}`;
   }
 
-  render() {
+  content() {
     return `<path fill="${this.color}" ${this.reversal} fill-opacity="1"
           d="${this.path()}"></path>`;
   }

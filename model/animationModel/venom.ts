@@ -1,6 +1,6 @@
-import { Model } from "../model";
+import AnimationModel from "./animationModel";
 
-class Venom extends Model {
+class Venom extends AnimationModel {
   width = 854;
 
   override path() {
@@ -11,7 +11,7 @@ class Venom extends Model {
     ];
   }
 
-  override render() {
+  override content() {
     return `
       <g transform="translate(${this.width / 2}, ${this.height / 2})">
         <path id="myPath" fill="${this.color}" d="${this.path()[0]}" ${this.reversal}>

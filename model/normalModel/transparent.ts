@@ -1,11 +1,11 @@
-import { Model } from "../model";
+import NormalModel from "./normalModel";
 
-class Transparent extends Model {
+class Transparent extends NormalModel {
   path() {
     return "";
   }
-  render() {
-    return this.gradientDef(this.color);
+  content() {
+    return this.gradientDef();
   }
 }
 export default Transparent;

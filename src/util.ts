@@ -47,7 +47,7 @@ export const checkThemeColor = stats => {
   return pallete_theme[stats];
 };
 
-export const generateThemeColor = stats => {
+export const generateThemeColor = (stats: string) => {
   return [
     pallete_theme[stats].color,
     pallete_theme[stats].text,
@@ -71,7 +71,7 @@ const randomizedByTime = (colorData: any, fontColor?: string) => {
   ];
 };
 
-export const checkReversal = reversal => {
+export const checkReversal = (reversal: string | boolean) => {
   if (reversal === "true" || reversal === true) {
     return `transform="scale (-1, 1)" transform-origin="center"`;
   }
@@ -138,10 +138,10 @@ export const checkText = (
 };
 
 export const checkDesc = (
-  desc,
-  descColor = "000000",
-  descAlign = "50",
-  descAlignY = "60",
+  desc?: string,
+  descColor: string = "000000",
+  descAlign: string | number = "50",
+  descAlignY: string | number = "60",
 ) => {
   if (desc === "" || desc === undefined) return "";
 

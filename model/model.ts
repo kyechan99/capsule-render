@@ -1,17 +1,107 @@
-import { checkReversal } from "../src/util";
+import {
+  checkColor,
+  checkDesc,
+  checkReversal,
+  checkText,
+  checkThemeColor,
+  generateAutoByTime,
+  generateAutoColor,
+  generateAutoGradient,
+  generateThemeColor,
+} from "../src/util";
 import { html } from "../utils/html";
 import { css } from "../utils/css";
-import { isGradientColor } from "../src/verification";
+import { checkCustomColor, isGradientColor } from "../src/verification";
+import { ColorMap } from "../types/color";
 
 export abstract class Model {
-  reversal: string;
-  color: string;
+  color: string | ColorMap;
   height: number;
+  section: "footer" | "header";
+  text: string;
+  desc: string;
+  textBg: boolean;
+  fontSize: string;
+  fontColor: string;
+  fontAlign: number;
+  fontAlignY: number;
+  textBgColor: string;
+  stroke: string;
+  strokeWidth: string;
+  descSize: number;
+  descAlign: number;
+  descAlignY: number;
+  descColor: string;
+  animation: string;
+  reversal: string;
+  rotate: number;
+  customColorList: string;
+  theme: string;
+  type: string;
 
-  constructor(reversal: boolean, color: string, height: number) {
-    this.reversal = checkReversal(reversal);
-    this.color = color;
-    this.height = height;
+  constructor(params: any) {
+    this.type = params.type || "wave";
+    this.section = params.section || "header";
+    this.height = params.height || 120;
+    this.text = params.text || "";
+    this.desc = params.desc || "";
+    this.textBg = params.textBg == "true";
+    this.fontSize = params.fontSize || "70";
+    this.fontColor = params.fontColor || "000000";
+    this.fontAlign = params.fontAlign || 0;
+    this.fontAlignY = params.fontAlignY || 0;
+    this.textBgColor = params.textBgColor || "000000";
+    this.stroke = params.stroke || "B897FF";
+    this.strokeWidth = params.strokeWidth || "0";
+    this.descSize = params.descSize || 20;
+    this.descAlign = params.descAlign || 50;
+    this.descAlignY = params.descAlignY || 60;
+    this.descColor = params.descColor || "000000";
+    this.animation = params.animation || "fadeIn";
+    this.reversal = checkReversal(params.reversal || "false");
+    this.rotate = params.rotate || 0;
+    this.customColorList = params.customColorList || "";
+    this.theme = params.theme || "none";
+
+    this.color = params.color || "B897FF";
+    this.fontColor = params.fontColor || "000000";
+    this.stroke = params.stroke || (params.strokeWidth ? "B897FF" : "none");
+    this.strokeWidth =
+      params.strokeWidth || (params.stroke === "none" ? "0" : "1");
+
+    if (this.theme !== "none" && checkThemeColor(this.theme)) {
+      [this.color, this.fontColor, this.textBgColor] = generateThemeColor(
+        this.theme,
+      );
+      this.descColor = this.textBgColor;
+    } else {
+      this.processColors();
+    }
+    this.color = checkColor(this.color);
+    console.log("this.color", this.color);
+  }
+
+  private processColors() {
+    if (this.color === "auto") {
+      [this.color, this.fontColor, this.textBgColor] = generateAutoColor(
+        this.fontColor,
+        this.customColorList,
+      );
+    } else if (this.color === "gradient") {
+      [this.color, this.fontColor, this.textBgColor] = generateAutoGradient(
+        this.fontColor,
+        this.customColorList,
+      );
+      console.log(this.color, this.fontColor, this.textBgColor);
+    } else if (this.color === "timeAuto" || this.color === "timeGradient") {
+      [this.color, this.fontColor, this.textBgColor] = generateAutoByTime(
+        this.color,
+        this.fontColor,
+      );
+    } else {
+      this.color = checkCustomColor(this.color);
+    }
+    this.descColor = this.fontColor;
   }
 
   getStyle(
@@ -50,12 +140,14 @@ export abstract class Model {
       );
   }
 
-  gradientDef(color: string) {
-    if (!isGradientColor(color)) return "";
+  gradientDef() {
+    console.log("gradientDef", this.color);
+    if (!isGradientColor(this.color)) return "";
 
-    const offset = Object.entries(color)
+    const offset = Object.entries(this.color)
       .map(([key, value]) => `<stop offset="${key}%" stop-color="#${value}"/>`)
       .join("");
+    console.log("def", offset);
 
     return `<defs>
               <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -64,17 +156,20 @@ export abstract class Model {
             </defs>`;
   }
 
-  textBg(
-    bgColor: string,
+  getTextBg(
+    bgColor: string | ColorMap,
     posX: number,
     posY: number,
-    fontHeight: number,
+    fontHeight: string | number,
     text: string,
   ) {
+    if (!this.textBg) return "";
+
     // 40 : padding value
     const height = Number(fontHeight) + 40;
     // 0.5 : temp sizing.
     const width = text.length * Number(fontHeight) * 0.5 + 40;
+
     return `
         <rect fill="#${bgColor}" height="${height}" width ="${width}" x="${posX}%" y="${posY}%" transform="translate(-${
           width / 2
@@ -82,7 +177,7 @@ export abstract class Model {
         `;
   }
 
-  animation(animation: string, fontAlign: number, fontAlignY: number) {
+  getAnimation(animation: string, fontAlign: number, fontAlignY: number) {
     if (!animation) return html``;
 
     return html``
@@ -171,6 +266,54 @@ export abstract class Model {
       ]);
   }
 
+  textScript() {
+    const textBgScript = this.textBg
+      ? this.getTextBg(
+          this.color,
+          this.fontAlign || 50,
+          this.fontAlignY || 50,
+          this.fontSize,
+          this.text,
+        )
+      : "";
+
+    const textContent = this.textBg
+      ? checkText(
+          this.text,
+          this.textBgColor,
+          this.fontAlign,
+          this.fontAlignY,
+          this.stroke,
+          this.strokeWidth,
+        )
+      : checkText(
+          this.text,
+          this.fontColor,
+          this.fontAlign,
+          this.fontAlignY,
+          this.stroke,
+          this.strokeWidth,
+        );
+
+    return `${textBgScript} ${textContent}`;
+  }
+
+  styleScript() {
+    return `<style>
+      ${this.getStyle(this.section, this.fontSize, this.descSize, this.rotate)}
+      ${this.getAnimation(this.animation, this.fontAlign, this.fontAlignY)}
+    </style>`;
+  }
+
+  descScript() {
+    return checkDesc(
+      this.desc,
+      this.descColor,
+      this.descAlign,
+      this.descAlignY,
+    );
+  }
+
   /**
    * draw <path/>
    */
@@ -179,5 +322,20 @@ export abstract class Model {
   /**
    * draw render
    */
-  abstract render(): string;
+  abstract content(): string;
+
+  /**
+   * draw render
+   */
+  render() {
+    return `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        ${this.styleScript()} ${this.gradientDef()} ${this.content()} ${this.textScript()}
+        ${this.descScript()}
+      </svg>
+    `;
+  }
 }

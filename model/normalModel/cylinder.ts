@@ -1,6 +1,6 @@
-import { Model } from "../model";
+import NormalModel from "./normalModel";
 
-class Cylinder extends Model {
+class Cylinder extends NormalModel {
   width = 854;
 
   override path() {
@@ -9,7 +9,7 @@ class Cylinder extends Model {
     return `M 61 0 L ${this.width - per} 0 A 50 50 0 1 1 ${this.width - per} ${height} L ${per} ${height} A 50 50 0 1 1 ${per} 0 `;
   }
 
-  override render() {
+  override content() {
     return `<path fill="${this.color}" ${this.reversal} fill-opacity="1" d="${this.path()}"></path>`;
   }
 }

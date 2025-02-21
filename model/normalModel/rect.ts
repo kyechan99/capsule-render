@@ -1,11 +1,11 @@
-import { Model } from "../model";
+import NormalModel from "./normalModel";
 
-class Rect extends Model {
+class Rect extends NormalModel {
   path() {
     return `m 0 0 l 0 ${this.height} l 854 0 l 0 -${this.height} z`;
   }
 
-  render() {
+  content() {
     return `<path fill="${this.color}" ${this.reversal} fill-opacity="1" d="${this.path()}"></path>`;
   }
 }
