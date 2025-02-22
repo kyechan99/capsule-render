@@ -4,11 +4,11 @@ type CSSProperties = {
   [key: string]: CSSValue | CSSProperties;
 };
 
-function kebabCase(str: string): string {
+const kebabCase = (str: string) => {
   return str.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
-}
+};
 
-function formatCSSValue(key: string, value: CSSValue): string {
+const formatCSSValue = (key: string, value: CSSValue) => {
   const autoPixelProperties = new Set([
     "flexGrow",
     "flexShrink",
@@ -26,12 +26,12 @@ function formatCSSValue(key: string, value: CSSValue): string {
     return autoPixelProperties.has(key) ? value.toString() : `${value}`;
   }
   return value;
-}
+};
 
-function stringifyProperties(
+const stringifyProperties = (
   properties: CSSProperties,
   indent: string = "  ",
-): string {
+) => {
   let css = "";
 
   for (const [key, value] of Object.entries(properties)) {
@@ -39,21 +39,21 @@ function stringifyProperties(
 
     if (typeof value === "object") {
       if (key.startsWith("@")) {
-        css += `${key} {\n${stringifyProperties(value as CSSProperties, indent + "  ")}${indent}}\n`;
+        css += `${key} { ${stringifyProperties(value as CSSProperties, indent + "  ")}${indent} } `;
       } else if (key === "from" || key === "to" || /^\d+%$/.test(key)) {
-        css += `${indent}${key} {\n${stringifyProperties(value as CSSProperties, indent + "  ")}${indent}}\n`;
+        css += `${indent}${key} { ${stringifyProperties(value as CSSProperties, indent + "  ")}${indent}} `;
       } else {
         css += stringifyProperties(value as CSSProperties, indent);
       }
     } else {
       const formattedValue = formatCSSValue(propertyName, value);
-      css += `${indent}${propertyName}: ${formattedValue};\n`;
+      css += `${indent}${propertyName}: ${formattedValue}; `;
     }
   }
 
   return css;
-}
+};
 
-export function css(selector: string, properties: CSSProperties): string {
-  return `${selector} {\n${stringifyProperties(properties)}}\n`;
-}
+export const css = (selector: string, properties: CSSProperties) => {
+  return `${selector} { ${stringifyProperties(properties)} } `;
+};

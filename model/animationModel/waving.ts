@@ -1,8 +1,6 @@
 import AnimationModel from "./animationModel";
 
 class Waving extends AnimationModel {
-  width = 854;
-
   override path() {
     return "";
   }

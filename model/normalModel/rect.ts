@@ -2,7 +2,7 @@ import NormalModel from "./normalModel";
 
 class Rect extends NormalModel {
   path() {
-    return `m 0 0 l 0 ${this.height} l 854 0 l 0 -${this.height} z`;
+    return `m 0 0 l 0 ${this.height} l ${this.width} 0 l 0 -${this.height} z`;
   }
 
   content() {

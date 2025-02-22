@@ -2,7 +2,7 @@ import {
   generateAutoColor,
   generateAutoGradient,
   generateThemeColor,
-} from "../src/util";
+} from "../utils/setting";
 
 import pallete from "../src/pallete.json";
 import gradient from "../src/gradient.json";

@@ -1,8 +1,6 @@
 import NormalModel from "./normalModel";
 
 class Cylinder extends NormalModel {
-  width = 854;
-
   override path() {
     const { height } = this;
     const per = height / 2;

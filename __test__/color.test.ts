@@ -1,13 +1,13 @@
 import {
-  checkColor,
   generateAutoByTime,
   generateAutoColor,
   generateAutoGradient,
-} from "../src/util";
+} from "../utils/setting";
 import { checkCustomColor } from "../src/verification";
 
 import pallete from "../src/pallete.json";
 import gradient from "../src/gradient.json";
+import { parseColor } from "../utils/parse";
 
 const autoColorCases = [
   {
@@ -181,16 +181,16 @@ describe("Test colors", () => {
 
   it("generates a color with Math.random() = 0.5", () => {
     jest.spyOn(Math, "random").mockReturnValue(0.5);
-    const color = checkColor("random");
+    const color = parseColor("random");
     expect(color).toMatchInlineSnapshot(`"#888888"`);
   });
 
   it("generates a different color with Math.random() = 0.1", () => {
     jest.spyOn(Math, "random").mockReturnValue(0.1);
-    const color1 = checkColor("random");
+    const color1 = parseColor("random");
 
     jest.spyOn(Math, "random").mockReturnValue(0.9);
-    const color2 = checkColor("random");
+    const color2 = parseColor("random");
 
     expect(color1).not.toBe(color2);
   });

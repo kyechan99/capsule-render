@@ -5,7 +5,7 @@ class Transparent extends NormalModel {
     return "";
   }
   content() {
-    return this.gradientDef();
+    return this._drawGradient();
   }
 }
 export default Transparent;

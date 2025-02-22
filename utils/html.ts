@@ -1,19 +1,13 @@
-function escapeHtml(unsafe: string): string {
+const escapeHtml = (unsafe: string) => {
   return unsafe
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
-}
+};
 
-// function extend(content: string | Html | string[] | Html[]): string | string[] {
-//   if (Array.isArray(content)) return content.map(extend);
-//   if (content instanceof Html) return content.toString();
-//   return content;
-// }
-
-class Html {
+export class Html {
   content = "";
 
   constructor(strings: TemplateStringsArray, values: any[]) {

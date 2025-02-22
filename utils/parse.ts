@@ -1,3 +1,6 @@
+import { generateRandomColor } from "./setting";
+import { isGradientColor } from "../src/verification";
+
 export const parseToNumberArr = (
   value: string | number | undefined,
 ): number[] => {
@@ -10,4 +13,11 @@ export const parseToNumberArr = (
     .map(Number);
 
   return numbers.length ? numbers : [50];
+};
+
+export const parseColor = color => {
+  if (isGradientColor(color)) return "url(#linear)";
+  if (color === "random") return generateRandomColor();
+  if (color) return "#" + color;
+  return "#B897FF";
 };

@@ -1,19 +1,21 @@
 import {
-  checkColor,
-  checkDesc,
   checkReversal,
-  checkText,
   checkThemeColor,
   generateAutoByTime,
   generateAutoColor,
   generateAutoGradient,
   generateThemeColor,
-} from "../src/util";
-import { html } from "../utils/html";
-import { css } from "../utils/css";
+} from "../utils/setting";
 import { checkCustomColor, isGradientColor } from "../src/verification";
 import { ColorMap } from "../types/color";
-import { parseToNumberArr } from "../utils/parse";
+import { parseColor, parseToNumberArr } from "../utils/parse";
+import {
+  getAnimation,
+  getDesc,
+  getStyle,
+  getText,
+  getTextBg,
+} from "../utils/render";
 
 export abstract class Model {
   width = 854;
@@ -73,6 +75,7 @@ export abstract class Model {
     this.theme = params.theme || "none";
     this.color = params.color || "B897FF";
 
+    // Something needs improvement..
     if (this.theme !== "none" && checkThemeColor(this.theme)) {
       [this.color, this.fontColor, this.textBgColor] = generateThemeColor(
         this.theme,
@@ -103,46 +106,10 @@ export abstract class Model {
     if (isGradientColor(this.color)) {
       this.gradient = this.color as ColorMap;
     }
-    this.color = checkColor(this.color);
+    this.color = parseColor(this.color);
   }
 
-  getStyle(
-    section: "footer" | "header",
-    fontSize: number = 70,
-    descSize: number = 20,
-    rotate: number = 0,
-  ) {
-    return html`${css(".text", {
-      fontSize: `${fontSize}px`,
-      fontWeight: 700,
-      fontFamily:
-        "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji",
-    })}`
-      .append(
-        css(".desc", {
-          fontSize: `${descSize}px`,
-          fontWeight: 500,
-          fontFamily:
-            "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji",
-        }),
-      )
-      .appendIf(
-        rotate !== 0,
-        css(".text, .desc", {
-          transformOrigin: "center center",
-          transform: `rotate(${rotate}deg)`,
-        }),
-      )
-      .appendIf(
-        section === "footer",
-        css("path", {
-          transform: "rotate(180deg)",
-          transformOrigin: "50% 50%",
-        }),
-      );
-  }
-
-  gradientDef() {
+  protected _drawGradient() {
     if (!this.gradient || !isGradientColor(this.gradient)) return "";
 
     const offset = Object.entries(this.gradient)
@@ -156,99 +123,19 @@ export abstract class Model {
             </defs>`;
   }
 
-  getTextBg(
-    bgColor: string | ColorMap,
-    posX: number[],
-    posY: number[],
-    fontHeight: string | number,
-    text: string,
-  ) {
-    if (!this.textBg) return "";
-
-    // 40 : padding value
-    const height = Number(fontHeight) + 40;
-    // 0.5 : temp sizing.
-    const width = text.length * Number(fontHeight) * 0.5 + 40;
-
-    return `
-        <rect fill="#${bgColor}" height="${height}" width ="${width}" x="${posX[0]}%" y="${posY[0]}%" transform="translate(-${
-          width / 2
-        }, -${height / 2})"  rx ="25" ry ="25" />
-        `;
-  }
-
-  getAnimation(animation: string) {
-    if (!animation) return html``;
-
-    return html``
-      .appendIf(animation === "fadeIn", [
-        css(".text, .desc", {
-          animation: "fadeIn 1.2s ease-in-out forwards",
-        }),
-        css("@keyframes fadeIn", {
-          from: { opacity: 0 },
-          to: { opacity: 1 },
-        }),
-      ])
-      .appendIf(animation === "scaleIn", [
-        css(".text, .desc", {
-          animation: "scaleIn .8s ease-in-out forwards",
-          transformOrigin: "center",
-        }),
-        css("@keyframes scaleIn", {
-          from: { transform: `scale(0)` },
-          to: { transform: `scale(1)` },
-        }),
-      ])
-      .appendIf(animation === "blinking", [
-        css(".text, .desc", {
-          animation: "blinking 1.6s step-start 0s infinite",
-        }),
-        css("@keyframes blinking", {
-          "20%": { opacity: 1 },
-          "50%": { opacity: 0 },
-          "80%": { opacity: 1 },
-        }),
-      ])
-      .appendIf(animation === "blink", [
-        css(".text, .desc", {
-          animation: "blink .6s step-start 0s backwards",
-        }),
-        css("@keyframes blink", {
-          "10%": { opacity: 1 },
-          "25%": { opacity: 0 },
-          "40%": { opacity: 1 },
-          "55%": { opacity: 0 },
-          "70%": { opacity: 0 },
-          "80%": { opacity: 1 },
-        }),
-      ])
-      .appendIf(animation === "twinkling", [
-        css(".text, .desc", {
-          animation: "twinkling 4s ease-in-out infinite",
-        }),
-        css("@keyframes twinkling", {
-          "40%": { opacity: 1 },
-          "50%": { opacity: 0.5 },
-          "60%": { opacity: 1 },
-          "70%": { opacity: 0.5 },
-          "80%": { opacity: 1 },
-        }),
-      ]);
-  }
-
-  textScript() {
+  protected _drawText() {
     const textBgScript = this.textBg
-      ? this.getTextBg(
+      ? getTextBg(
           this.color,
           this.fontAlign,
           this.fontAlignY,
           this.fontSize,
           this.text,
+          this.textBg,
         )
       : "";
 
-    const textContent = checkText(
+    const textContent = getText(
       this.text,
       this.textBg ? this.textBgColor : this.fontColor,
       this.fontAlign,
@@ -260,20 +147,15 @@ export abstract class Model {
     return `${textBgScript} ${textContent}`;
   }
 
-  styleScript() {
+  protected _drawStyle() {
     return `<style>
-      ${this.getStyle(this.section, this.fontSize, this.descSize, this.rotate)}
-      ${this.getAnimation(this.animation)}
+      ${getStyle(this.section, this.fontSize, this.descSize, this.rotate)}
+      ${getAnimation(this.animation)}
     </style>`;
   }
 
-  descScript() {
-    return checkDesc(
-      this.desc,
-      this.descColor,
-      this.descAlign,
-      this.descAlignY,
-    );
+  protected _drawDesc() {
+    return getDesc(this.desc, this.descColor, this.descAlign, this.descAlignY);
   }
 
   /**
@@ -282,7 +164,7 @@ export abstract class Model {
   abstract path(): string | string[];
 
   /**
-   * draw render
+   * draw content
    */
   abstract content(): string;
 
@@ -295,8 +177,11 @@ export abstract class Model {
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
       >
-        ${this.styleScript()} ${this.gradientDef()} ${this.content()} ${this.textScript()}
-        ${this.descScript()}
+        ${this._drawStyle()}
+        ${this._drawGradient()}
+        ${this.content()}
+        ${this._drawText()}
+        ${this._drawDesc()}
       </svg>
     `;
   }

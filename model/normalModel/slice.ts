@@ -2,7 +2,7 @@ import NormalModel from "./normalModel";
 
 class Slice extends NormalModel {
   path() {
-    return `m 0 0 l 854 ${this.height} l 0 -${this.height} l -854 0 z`;
+    return `m 0 0 l ${this.width} ${this.height} l 0 -${this.height} l -${this.width} 0 z`;
   }
 
   content() {

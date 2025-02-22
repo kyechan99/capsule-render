@@ -1,9 +1,9 @@
-import { isGradientColor } from "./verification";
-import pallete from "./pallete.json";
-import gradient from "./gradient.json";
-import pallete_theme from "./pallete_theme.json";
+import { isGradientColor } from "../src/verification";
+import pallete from "../src/pallete.json";
+import gradient from "../src/gradient.json";
+import pallete_theme from "../src/pallete_theme.json";
 
-const generateRandomColor = () => {
+export const generateRandomColor = () => {
   const letters = "0123456789ABCDEF";
   let color = "#";
   for (let i = 0; i < 6; i++) {
@@ -79,53 +79,4 @@ export const checkReversal = (reversal: string | boolean) => {
   }
 
   return "";
-};
-
-export const checkColor = color => {
-  if (isGradientColor(color)) return "url(#linear)";
-  if (color === "random") return generateRandomColor();
-  if (color) return "#" + color;
-  return "#B897FF";
-};
-
-export const checkText = (
-  text?: string,
-  fontColor: string = "000000",
-  fontAlign: number[] = [50],
-  fontAlignY: number[] = [50],
-  stroke: string = "B897FF",
-  strokeWidth: number = 0,
-) => {
-  if (!text) return "";
-
-  const lines = text.split("-nl-");
-  const alignX = Array.from(
-    { length: lines.length },
-    (_, i) => fontAlign[i] ?? 50,
-  );
-  const alignY = Array.from(
-    { length: lines.length },
-    (_, i) => fontAlignY[i] ?? undefined,
-  );
-
-  return lines
-    .map((line, i) => {
-      alignY[i] =
-        alignY[i] !== undefined ? alignY[i] : alignY[i - 1] + 90 / lines.length;
-      // debate : adjustable text-anchor|pos-y. not only pos-x
-      return `<text text-anchor="middle" alignment-baseline="middle" x="${alignX[i]}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`;
-    })
-    .join("");
-};
-
-export const checkDesc = (
-  desc?: string,
-  descColor: string = "000000",
-  descAlign: string | number = "50",
-  descAlignY: string | number = "60",
-) => {
-  if (desc === "" || desc === undefined) return "";
-
-  // debate : adjustable text-anchor|pos-y. not only pos-x
-  return `<text text-anchor="middle" alignment-baseline="middle" x="${descAlign}%" y="${descAlignY}%" class="desc" style="fill:#${descColor};">${desc}</text>`;
 };
