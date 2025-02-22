@@ -18,7 +18,13 @@ const route = query => {
 
 describe("Test Text and Desc", () => {
   it("Text", () => {
-    const { req, res } = route({ type: "waving", text: "_TEST_TEXT_", fontSize: 40, fontAlign: 30, fontAlignY: 20 });
+    const { req, res } = route({
+      type: "waving",
+      text: "_TEST_TEXT_",
+      fontSize: 40,
+      fontAlign: 30,
+      fontAlignY: 20,
+    });
 
     api(req, res);
 
@@ -37,7 +43,13 @@ describe("Test Text and Desc", () => {
   });
 
   it("Desc", () => {
-    const { req, res } = route({ type: "venom", desc: "_DESC_TEST_", descSize: 40, descAlign: 30, descAlignY: 90 });
+    const { req, res } = route({
+      type: "venom",
+      desc: "_DESC_TEST_",
+      descSize: 40,
+      descAlign: 30,
+      descAlignY: 90,
+    });
 
     api(req, res);
 

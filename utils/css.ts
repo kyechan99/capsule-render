@@ -23,7 +23,7 @@ function formatCSSValue(key: string, value: CSSValue): string {
   ]);
 
   if (typeof value === "number") {
-    return autoPixelProperties.has(key) ? value.toString() : `${value}px`;
+    return autoPixelProperties.has(key) ? value.toString() : `${value}`;
   }
   return value;
 }
@@ -39,7 +39,9 @@ function stringifyProperties(
 
     if (typeof value === "object") {
       if (key.startsWith("@")) {
-        css += `${key} {\n${stringifyProperties(value as CSSProperties, indent + "  ")}}\n`;
+        css += `${key} {\n${stringifyProperties(value as CSSProperties, indent + "  ")}${indent}}\n`;
+      } else if (key === "from" || key === "to" || /^\d+%$/.test(key)) {
+        css += `${indent}${key} {\n${stringifyProperties(value as CSSProperties, indent + "  ")}${indent}}\n`;
       } else {
         css += stringifyProperties(value as CSSProperties, indent);
       }

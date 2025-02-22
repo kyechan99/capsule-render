@@ -1,6 +1,7 @@
 import { ColorMap } from "../types/color";
 
 export const isGradientColor = (color: any) => {
+  if (!color) return false;
   return typeof color === "object";
 };
 

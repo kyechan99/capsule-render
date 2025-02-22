@@ -13,61 +13,65 @@ import { html } from "../utils/html";
 import { css } from "../utils/css";
 import { checkCustomColor, isGradientColor } from "../src/verification";
 import { ColorMap } from "../types/color";
+import { parseToNumberArr } from "../utils/parse";
 
 export abstract class Model {
-  color: string | ColorMap;
+  width = 854;
   height: number;
+
+  type: string;
   section: "footer" | "header";
+  reversal: string;
+  animation: string;
+  rotate: number;
+
+  color: string | ColorMap;
+  customColorList: string;
+  theme: string;
+  gradient?: ColorMap;
+
   text: string;
-  desc: string;
   textBg: boolean;
-  fontSize: string;
-  fontColor: string;
-  fontAlign: number;
-  fontAlignY: number;
   textBgColor: string;
-  stroke: string;
-  strokeWidth: string;
+
+  desc: string;
   descSize: number;
   descAlign: number;
   descAlignY: number;
   descColor: string;
-  animation: string;
-  reversal: string;
-  rotate: number;
-  customColorList: string;
-  theme: string;
-  type: string;
+
+  fontSize: number;
+  fontColor: string;
+  fontAlign: number[];
+  fontAlignY: number[];
+  stroke: string;
+  strokeWidth: number;
 
   constructor(params: any) {
     this.type = params.type || "wave";
     this.section = params.section || "header";
-    this.height = params.height || 120;
+    this.height = Number(params.height) || 120;
     this.text = params.text || "";
     this.desc = params.desc || "";
     this.textBg = params.textBg == "true";
-    this.fontSize = params.fontSize || "70";
+    this.fontSize = Number(params.fontSize) || 70;
     this.fontColor = params.fontColor || "000000";
-    this.fontAlign = params.fontAlign || 0;
-    this.fontAlignY = params.fontAlignY || 0;
+    this.fontAlign = parseToNumberArr(params.fontAlign || "");
+    this.fontAlignY = parseToNumberArr(params.fontAlignY || "");
     this.textBgColor = params.textBgColor || "000000";
-    this.stroke = params.stroke || "B897FF";
-    this.strokeWidth = params.strokeWidth || "0";
-    this.descSize = params.descSize || 20;
-    this.descAlign = params.descAlign || 50;
-    this.descAlignY = params.descAlignY || 60;
+    this.stroke = params.stroke || (params.strokeWidth ? "B897FF" : "none");
+    this.strokeWidth =
+      Number(params.strokeWidth) || (params.stroke === "none" ? 0 : 1);
+    this.descSize = Number(params.descSize) || 20;
+    this.descAlign = Number(params.descAlign) || 50;
+    this.descAlignY = Number(params.descAlignY) || 60;
     this.descColor = params.descColor || "000000";
     this.animation = params.animation || "fadeIn";
     this.reversal = checkReversal(params.reversal || "false");
-    this.rotate = params.rotate || 0;
+    this.rotate = Number(params.rotate) || 0;
     this.customColorList = params.customColorList || "";
     this.theme = params.theme || "none";
-
     this.color = params.color || "B897FF";
-    this.fontColor = params.fontColor || "000000";
-    this.stroke = params.stroke || (params.strokeWidth ? "B897FF" : "none");
-    this.strokeWidth =
-      params.strokeWidth || (params.stroke === "none" ? "0" : "1");
 
     if (this.theme !== "none" && checkThemeColor(this.theme)) {
       [this.color, this.fontColor, this.textBgColor] = generateThemeColor(
@@ -75,38 +79,36 @@ export abstract class Model {
       );
       this.descColor = this.textBgColor;
     } else {
-      this.processColors();
+      if (this.color === "auto") {
+        [this.color, this.fontColor, this.textBgColor] = generateAutoColor(
+          this.fontColor,
+          this.customColorList,
+        );
+      } else if (this.color === "gradient") {
+        [this.color, this.fontColor, this.textBgColor] = generateAutoGradient(
+          this.fontColor,
+          this.customColorList,
+        );
+      } else if (this.color === "timeAuto" || this.color === "timeGradient") {
+        [this.color, this.fontColor, this.textBgColor] = generateAutoByTime(
+          this.color,
+          this.fontColor,
+        );
+      } else {
+        this.color = checkCustomColor(this.color);
+      }
+      this.descColor = this.fontColor;
+    }
+
+    if (isGradientColor(this.color)) {
+      this.gradient = this.color as ColorMap;
     }
     this.color = checkColor(this.color);
-    console.log("this.color", this.color);
-  }
-
-  private processColors() {
-    if (this.color === "auto") {
-      [this.color, this.fontColor, this.textBgColor] = generateAutoColor(
-        this.fontColor,
-        this.customColorList,
-      );
-    } else if (this.color === "gradient") {
-      [this.color, this.fontColor, this.textBgColor] = generateAutoGradient(
-        this.fontColor,
-        this.customColorList,
-      );
-      console.log(this.color, this.fontColor, this.textBgColor);
-    } else if (this.color === "timeAuto" || this.color === "timeGradient") {
-      [this.color, this.fontColor, this.textBgColor] = generateAutoByTime(
-        this.color,
-        this.fontColor,
-      );
-    } else {
-      this.color = checkCustomColor(this.color);
-    }
-    this.descColor = this.fontColor;
   }
 
   getStyle(
     section: "footer" | "header",
-    fontSize: string = "70",
+    fontSize: number = 70,
     descSize: number = 20,
     rotate: number = 0,
   ) {
@@ -141,13 +143,11 @@ export abstract class Model {
   }
 
   gradientDef() {
-    console.log("gradientDef", this.color);
-    if (!isGradientColor(this.color)) return "";
+    if (!this.gradient || !isGradientColor(this.gradient)) return "";
 
-    const offset = Object.entries(this.color)
+    const offset = Object.entries(this.gradient)
       .map(([key, value]) => `<stop offset="${key}%" stop-color="#${value}"/>`)
       .join("");
-    console.log("def", offset);
 
     return `<defs>
               <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -158,8 +158,8 @@ export abstract class Model {
 
   getTextBg(
     bgColor: string | ColorMap,
-    posX: number,
-    posY: number,
+    posX: number[],
+    posY: number[],
     fontHeight: string | number,
     text: string,
   ) {
@@ -171,13 +171,13 @@ export abstract class Model {
     const width = text.length * Number(fontHeight) * 0.5 + 40;
 
     return `
-        <rect fill="#${bgColor}" height="${height}" width ="${width}" x="${posX}%" y="${posY}%" transform="translate(-${
+        <rect fill="#${bgColor}" height="${height}" width ="${width}" x="${posX[0]}%" y="${posY[0]}%" transform="translate(-${
           width / 2
         }, -${height / 2})"  rx ="25" ry ="25" />
         `;
   }
 
-  getAnimation(animation: string, fontAlign: number, fontAlignY: number) {
+  getAnimation(animation: string) {
     if (!animation) return html``;
 
     return html``
@@ -186,25 +186,18 @@ export abstract class Model {
           animation: "fadeIn 1.2s ease-in-out forwards",
         }),
         css("@keyframes fadeIn", {
-          from: {
-            opacity: 0,
-          },
-          to: {
-            opacity: 1,
-          },
+          from: { opacity: 0 },
+          to: { opacity: 1 },
         }),
       ])
       .appendIf(animation === "scaleIn", [
         css(".text, .desc", {
           animation: "scaleIn .8s ease-in-out forwards",
+          transformOrigin: "center",
         }),
         css("@keyframes scaleIn", {
-          from: {
-            transform: `translate(${fontAlign}%, ${fontAlignY}%) scale(0)`,
-          },
-          to: {
-            transform: `translate(0%, 0%) scale(1)`,
-          },
+          from: { transform: `scale(0)` },
+          to: { transform: `scale(1)` },
         }),
       ])
       .appendIf(animation === "blinking", [
@@ -212,9 +205,9 @@ export abstract class Model {
           animation: "blinking 1.6s step-start 0s infinite",
         }),
         css("@keyframes blinking", {
-          "50%": {
-            opacity: 0,
-          },
+          "20%": { opacity: 1 },
+          "50%": { opacity: 0 },
+          "80%": { opacity: 1 },
         }),
       ])
       .appendIf(animation === "blink", [
@@ -222,24 +215,12 @@ export abstract class Model {
           animation: "blink .6s step-start 0s backwards",
         }),
         css("@keyframes blink", {
-          "10%": {
-            opacity: 1,
-          },
-          "25%": {
-            opacity: 0,
-          },
-          "40%": {
-            opacity: 1,
-          },
-          "55%": {
-            opacity: 0,
-          },
-          "70%": {
-            opacity: 0,
-          },
-          "80%": {
-            opacity: 1,
-          },
+          "10%": { opacity: 1 },
+          "25%": { opacity: 0 },
+          "40%": { opacity: 1 },
+          "55%": { opacity: 0 },
+          "70%": { opacity: 0 },
+          "80%": { opacity: 1 },
         }),
       ])
       .appendIf(animation === "twinkling", [
@@ -247,21 +228,11 @@ export abstract class Model {
           animation: "twinkling 4s ease-in-out infinite",
         }),
         css("@keyframes twinkling", {
-          "40%": {
-            opacity: 1,
-          },
-          "50%": {
-            opacity: 0.5,
-          },
-          "60%": {
-            opacity: 1,
-          },
-          "70%": {
-            opacity: 0.5,
-          },
-          "80%": {
-            opacity: 1,
-          },
+          "40%": { opacity: 1 },
+          "50%": { opacity: 0.5 },
+          "60%": { opacity: 1 },
+          "70%": { opacity: 0.5 },
+          "80%": { opacity: 1 },
         }),
       ]);
   }
@@ -270,30 +241,21 @@ export abstract class Model {
     const textBgScript = this.textBg
       ? this.getTextBg(
           this.color,
-          this.fontAlign || 50,
-          this.fontAlignY || 50,
+          this.fontAlign,
+          this.fontAlignY,
           this.fontSize,
           this.text,
         )
       : "";
 
-    const textContent = this.textBg
-      ? checkText(
-          this.text,
-          this.textBgColor,
-          this.fontAlign,
-          this.fontAlignY,
-          this.stroke,
-          this.strokeWidth,
-        )
-      : checkText(
-          this.text,
-          this.fontColor,
-          this.fontAlign,
-          this.fontAlignY,
-          this.stroke,
-          this.strokeWidth,
-        );
+    const textContent = checkText(
+      this.text,
+      this.textBg ? this.textBgColor : this.fontColor,
+      this.fontAlign,
+      this.fontAlignY,
+      this.stroke,
+      this.strokeWidth,
+    );
 
     return `${textBgScript} ${textContent}`;
   }
@@ -301,7 +263,7 @@ export abstract class Model {
   styleScript() {
     return `<style>
       ${this.getStyle(this.section, this.fontSize, this.descSize, this.rotate)}
-      ${this.getAnimation(this.animation, this.fontAlign, this.fontAlignY)}
+      ${this.getAnimation(this.animation)}
     </style>`;
   }
 

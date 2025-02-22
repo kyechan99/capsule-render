@@ -12,12 +12,14 @@ const generateRandomColor = () => {
   return color;
 };
 
-const generateSelectColor = (list, fontColor, customColorList) => {
-  customColorList = customColorList
+const generateSelectColor = (list, fontColor, customColorList: string) => {
+  const colorList = customColorList
     .split(",")
-    .filter(e => !isNaN(e) && e !== "" && 0 <= e && e < list.length);
-  const auto =
-    list[customColorList[Math.floor(Math.random() * customColorList.length)]];
+    .filter(item => !isNaN(Number(item)))
+    .map(item => Number(item))
+    .filter(item => 0 <= item && item < list.length);
+  const idx = colorList[Math.floor(Math.random() * colorList.length)];
+  const auto = list[idx < list.length ? idx : 0];
   return [auto.color, fontColor ? fontColor : auto.text, auto.textBg];
 };
 
@@ -87,50 +89,29 @@ export const checkColor = color => {
 };
 
 export const checkText = (
-  text: string | undefined,
+  text?: string,
   fontColor: string = "000000",
-  fontAlign: string | number | (string | number)[] = 0,
-  fontAlignY: string | number | (string | number)[] = 0,
+  fontAlign: number[] = [50],
+  fontAlignY: number[] = [50],
   stroke: string = "B897FF",
-  strokeWidth: string = "0",
+  strokeWidth: number = 0,
 ) => {
-  if (text === "" || text === undefined) return "";
+  if (!text) return "";
 
   const lines = text.split("-nl-");
-  let lineSpace;
-  let firstAlignY;
-  if (lines.length > 1) {
-    firstAlignY = fontAlignY || 58 / lines.length;
-    lineSpace = 90 / lines.length;
-  } else {
-    firstAlignY = fontAlignY || "50";
-  }
-
-  let alignX = [typeof fontAlign === "string" ? fontAlign : fontAlign[0] || 50];
-  let alignY = [
-    typeof fontAlignY === "string" ? fontAlignY : fontAlignY[0] || 50,
-  ];
+  const alignX = Array.from(
+    { length: lines.length },
+    (_, i) => fontAlign[i] ?? 50,
+  );
+  const alignY = Array.from(
+    { length: lines.length },
+    (_, i) => fontAlignY[i] ?? undefined,
+  );
 
   return lines
     .map((line, i) => {
-      if (i > 0)
-        alignX.push(
-          typeof fontAlign !== "string" &&
-            typeof fontAlign !== "number" &&
-            fontAlign[i]
-            ? fontAlign[i]
-            : 50,
-        );
-      alignY.push(
-        typeof fontAlignY !== "string" &&
-          typeof fontAlignY !== "number" &&
-          fontAlignY[i]
-          ? fontAlignY[i]
-          : alignY[i - 1]
-            ? Number(alignY[i - 1]) + lineSpace
-            : firstAlignY,
-      );
-
+      alignY[i] =
+        alignY[i] !== undefined ? alignY[i] : alignY[i - 1] + 90 / lines.length;
       // debate : adjustable text-anchor|pos-y. not only pos-x
       return `<text text-anchor="middle" alignment-baseline="middle" x="${alignX[i]}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`;
     })
