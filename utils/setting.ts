@@ -12,7 +12,11 @@ export const generateRandomColor = () => {
   return color;
 };
 
-const generateSelectColor = (list, fontColor, customColorList: string) => {
+const generateSelectColor = (
+  list,
+  fontColor: string | undefined,
+  customColorList: string,
+) => {
   const colorList = customColorList
     .split(",")
     .filter(item => !isNaN(Number(item)))
@@ -23,15 +27,22 @@ const generateSelectColor = (list, fontColor, customColorList: string) => {
   return [auto.color, fontColor ? fontColor : auto.text, auto.textBg];
 };
 
-export const generateAutoColor = (fontColor, customColorList = "") => {
+export const generateAutoColor = (
+  fontColor: string | undefined,
+  customColorList = "",
+) => {
   if (customColorList !== "")
     return generateSelectColor(pallete, fontColor, customColorList);
 
-  const auto = pallete[Math.floor(Math.random() * pallete.length)];
+  const idx = Math.floor(Math.random() * pallete.length);
+  const auto = pallete[idx];
   return [auto.color, fontColor ? fontColor : auto.text, auto.textBg];
 };
 
-export const generateAutoGradient = (fontColor, customColorList = "") => {
+export const generateAutoGradient = (
+  fontColor: string | undefined,
+  customColorList = "",
+) => {
   if (customColorList !== "")
     return generateSelectColor(gradient, fontColor, customColorList);
 
@@ -45,7 +56,7 @@ export const generateAutoByTime = (queryColor: string, fontColor?: string) => {
   return randomizedByTime(gradient, fontColor);
 };
 
-export const checkThemeColor = stats => {
+export const checkThemeColor = (stats: string) => {
   return pallete_theme[stats];
 };
 

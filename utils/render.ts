@@ -107,22 +107,22 @@ export const getAnimation = (animation: string) => {
 };
 
 export const getTextBg = (
-  bgColor: string | ColorMap,
+  textBg: string | ColorMap,
   posX: number[],
   posY: number[],
   fontHeight: string | number,
   text: string,
-  textBg,
 ) => {
   if (!textBg) return "";
+  const lines = text.split("-nl-");
 
   // 40 : padding value
   const height = Number(fontHeight) + 40;
   // 0.5 : temp sizing.
-  const width = text.length * Number(fontHeight) * 0.5 + 40;
+  const width = lines[0].length * Number(fontHeight) * 0.5 + 40;
 
   return `
-        <rect fill="#${bgColor}" height="${height}" width ="${width}" x="${posX[0]}%" y="${posY[0]}%" transform="translate(-${
+        <rect fill="#${textBg}" height="${height}" width ="${width}" x="${posX[0]}%" y="${posY[0]}%" transform="translate(-${
           width / 2
         }, -${height / 2})"  rx ="25" ry ="25" />
         `;
@@ -137,7 +137,6 @@ export const getText = (
   strokeWidth: number = 0,
 ) => {
   if (!text) return "";
-
   const lines = text.split("-nl-");
   const alignX = Array.from(
     { length: lines.length },
@@ -148,14 +147,34 @@ export const getText = (
     (_, i) => fontAlignY[i] ?? undefined,
   );
 
-  return lines
-    .map((line, i) => {
-      alignY[i] =
-        alignY[i] !== undefined ? alignY[i] : alignY[i - 1] + 90 / lines.length;
-      // debate : adjustable text-anchor|pos-y. not only pos-x
-      return `<text text-anchor="middle" alignment-baseline="middle" x="${alignX[i]}%" y="${alignY[i]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${line}</text>`;
-    })
-    .join("");
+  if (lines.length > 1)
+    return `<text 
+      text-anchor="middle" 
+      alignment-baseline="middle" 
+      x="${50}%" 
+      y="${alignY[0]}%" 
+      class="text" 
+      style="fill:#${fontColor};" 
+      stroke="#${stroke}" 
+      stroke-width="${strokeWidth}"
+    >
+      ${lines
+        .map(
+          (line, i) =>
+            `<tspan x="${alignX[i]}%" dy="${
+              i === 0
+                ? 0
+                : alignY[i]
+                  ? `${alignY[i] - alignY[i - 1]}%`
+                  : "1.2em"
+            }">${line}</tspan>`,
+        )
+        .join("")}
+    </text>
+  `;
+
+  // debate : adjustable text-anchor|pos-y. not only pos-x
+  return `<text text-anchor="middle" alignment-baseline="middle" x="${alignX[0]}%" y="${alignY[0]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${lines[0]}</text>`;
 };
 
 export const getDesc = (

@@ -57,7 +57,7 @@ export abstract class Model {
     this.desc = params.desc || "";
     this.textBg = params.textBg == "true";
     this.fontSize = Number(params.fontSize) || 70;
-    this.fontColor = params.fontColor || "000000";
+    this.fontColor = params.fontColor;
     this.fontAlign = parseToNumberArr(params.fontAlign || "");
     this.fontAlignY = parseToNumberArr(params.fontAlignY || "");
     this.textBgColor = params.textBgColor || "000000";
@@ -126,18 +126,17 @@ export abstract class Model {
   protected _drawText() {
     const textBgScript = this.textBg
       ? getTextBg(
-          this.color,
+          this.textBgColor,
           this.fontAlign,
           this.fontAlignY,
           this.fontSize,
           this.text,
-          this.textBg,
         )
       : "";
 
     const textContent = getText(
       this.text,
-      this.textBg ? this.textBgColor : this.fontColor,
+      this.fontColor,
       this.fontAlign,
       this.fontAlignY,
       this.stroke,
