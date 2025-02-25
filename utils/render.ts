@@ -140,7 +140,7 @@ export const getText = (
   const lines = text.split("-nl-");
   const alignX = Array.from(
     { length: lines.length },
-    (_, i) => fontAlign[i] ?? 50,
+    (_, i) => fontAlign[i] ?? undefined,
   );
   const alignY = Array.from(
     { length: lines.length },
@@ -161,7 +161,7 @@ export const getText = (
       ${lines
         .map(
           (line, i) =>
-            `<tspan x="${alignX[i]}%" dy="${
+            `<tspan x="${alignX[i] || alignX[0]}%" dy="${
               i === 0
                 ? 0
                 : alignY[i]
