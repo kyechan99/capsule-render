@@ -50,7 +50,9 @@ const App = () => {
     .join("&");
 
   const copyHandler = () => {
-    window.navigator.clipboard.writeText(`https://capsule-render.vercel.app/api?${queryString}`);
+    window.navigator.clipboard.writeText(
+      `https://capsule-render.vercel.app/api?${queryString}`,
+    );
   };
 
   return (
@@ -74,6 +76,7 @@ const App = () => {
                   "cylinder",
                   "waving",
                   "venom",
+                  "speech",
                   "transparent",
                 ].map(item => (
                   <option value={item} key={item}>
@@ -85,15 +88,28 @@ const App = () => {
 
             <div className="group">
               <label htmlFor="height">Height : </label>
-              <input type="number" value={query.height} onChange={onChangeHandler} id="height" />
+              <input
+                type="number"
+                value={query.height}
+                onChange={onChangeHandler}
+                id="height"
+              />
             </div>
 
             <div className="group">
               <label htmlFor="color">Color : </label>
-              <input type="text" value={query.color} onChange={onChangeHandler} id="color" />
+              <input
+                type="text"
+                value={query.color}
+                onChange={onChangeHandler}
+                id="color"
+              />
               <p className="desc">
                 Check{" "}
-                <a href="https://github.com/kyechan99/capsule-render?tab=readme-ov-file#color" target="_blank">
+                <a
+                  href="https://github.com/kyechan99/capsule-render?tab=readme-ov-file#color"
+                  target="_blank"
+                >
                   #Color
                 </a>{" "}
                 before using this option
@@ -107,7 +123,10 @@ const App = () => {
                   #CustomColorList
                 </a>
                 ,{" "}
-                <a href="https://github.com/kyechan99/capsule-render?tab=readme-ov-file#theme" target="_blank">
+                <a
+                  href="https://github.com/kyechan99/capsule-render?tab=readme-ov-file#theme"
+                  target="_blank"
+                >
                   #Theme
                 </a>
               </p>
@@ -116,7 +135,11 @@ const App = () => {
 
             <div className="group">
               <label htmlFor="type">Section : </label>
-              <select onChange={onChangeHandler} value={query.section} id="section">
+              <select
+                onChange={onChangeHandler}
+                value={query.section}
+                id="section"
+              >
                 {["header", "footer"].map(item => (
                   <option value={item} key={item}>
                     {item}
@@ -127,7 +150,11 @@ const App = () => {
 
             <div className="group">
               <label htmlFor="type">Reversal : </label>
-              <select onChange={onChangeHandler} value={query.reversal} id="reversal">
+              <select
+                onChange={onChangeHandler}
+                value={query.reversal}
+                id="reversal"
+              >
                 {["false", "true"].map(item => (
                   <option value={item} key={item}>
                     {item}
@@ -140,32 +167,58 @@ const App = () => {
 
             <div className="group">
               <label htmlFor="text">Text : </label>
-              <input type="text" value={query.text} onChange={onChangeHandler} id="text" />
-              <p className="desc">Can't use some special characters. Like '#', '&', '/' ...</p>
+              <input
+                type="text"
+                value={query.text}
+                onChange={onChangeHandler}
+                id="text"
+              />
+              <p className="desc">
+                Can't use some special characters. Like '#', '&', '/' ...
+              </p>
               <p className="desc">To use a newline, enter -nl-</p>
             </div>
 
             <div className="group">
               <label htmlFor="textBg">Text background : </label>
-              <select onChange={onChangeHandler} value={query.textBg} id="textBg">
+              <select
+                onChange={onChangeHandler}
+                value={query.textBg}
+                id="textBg"
+              >
                 {["false", "true"].map(item => (
                   <option value={item} key={item}>
                     {item}
                   </option>
                 ))}
               </select>
-              <p className="desc">If you want to increase background-size, add %20 between text values.</p>
+              <p className="desc">
+                If you want to increase background-size, add %20 between text
+                values.
+              </p>
             </div>
 
             <div className="group">
               <label htmlFor="fontColor">Font Color : </label>
-              <input type="esc" value={query.fontColor} onChange={onChangeHandler} id="fontColor" />
-              <p className="desc">Value should be Hex code with erased '#'. (e.g. 00FF00)</p>
+              <input
+                type="esc"
+                value={query.fontColor}
+                onChange={onChangeHandler}
+                id="fontColor"
+              />
+              <p className="desc">
+                Value should be Hex code with erased '#'. (e.g. 00FF00)
+              </p>
             </div>
 
             <div className="group">
               <label htmlFor="fontSize">Font Size : </label>
-              <input type="number" value={query.fontSize} onChange={onChangeHandler} id="fontSize" />
+              <input
+                type="number"
+                value={query.fontSize}
+                onChange={onChangeHandler}
+                id="fontSize"
+              />
               <p className="desc">Default value is 70</p>
             </div>
 
@@ -199,8 +252,19 @@ const App = () => {
 
             <div className="group">
               <label htmlFor="animation">Text Animation : </label>
-              <select onChange={onChangeHandler} value={query.animation} id="animation">
-                {["", "fadeIn", "scaleIn", "blink", "blinking", "twinkling"].map(item => (
+              <select
+                onChange={onChangeHandler}
+                value={query.animation}
+                id="animation"
+              >
+                {[
+                  "",
+                  "fadeIn",
+                  "scaleIn",
+                  "blink",
+                  "blinking",
+                  "twinkling",
+                ].map(item => (
                   <option value={item} key={item}>
                     {item}
                   </option>
@@ -210,19 +274,36 @@ const App = () => {
 
             <div className="group">
               <label htmlFor="rotate">Rotate : </label>
-              <input type="number" value={query.rotate} onChange={onChangeHandler} id="rotate" />
+              <input
+                type="number"
+                value={query.rotate}
+                onChange={onChangeHandler}
+                id="rotate"
+              />
               <p className="desc">0 ~ 360, 0 ~ -360</p>
             </div>
 
             <div className="group">
               <label htmlFor="stroke">Stroke : </label>
-              <input type="esc" value={query.stroke} onChange={onChangeHandler} id="stroke" />
-              <p className="desc">Value should be Hex code with erased '#'. (e.g. 00FF00)</p>
+              <input
+                type="esc"
+                value={query.stroke}
+                onChange={onChangeHandler}
+                id="stroke"
+              />
+              <p className="desc">
+                Value should be Hex code with erased '#'. (e.g. 00FF00)
+              </p>
             </div>
 
             <div className="group">
               <label htmlFor="strokeWidth">Stroke Width : </label>
-              <input type="number" value={query.strokeWidth} onChange={onChangeHandler} id="strokeWidth" />
+              <input
+                type="number"
+                value={query.strokeWidth}
+                onChange={onChangeHandler}
+                id="strokeWidth"
+              />
               <p className="desc">Value must be greater than or equal to 0</p>
             </div>
 
@@ -230,13 +311,25 @@ const App = () => {
 
             <div className="group">
               <label htmlFor="text">Desc : </label>
-              <input type="esc" value={query.desc} onChange={onChangeHandler} id="desc" />
-              <p className="desc">Can't use some special characters. Like '#', '&', '/' ...</p>
+              <input
+                type="esc"
+                value={query.desc}
+                onChange={onChangeHandler}
+                id="desc"
+              />
+              <p className="desc">
+                Can't use some special characters. Like '#', '&', '/' ...
+              </p>
             </div>
 
             <div className="group">
               <label htmlFor="descSize">Desc Size : </label>
-              <input type="number" value={query.descSize} onChange={onChangeHandler} id="descSize" />
+              <input
+                type="number"
+                value={query.descSize}
+                onChange={onChangeHandler}
+                id="descSize"
+              />
               <p className="desc">Default value is 20</p>
             </div>
 
@@ -271,7 +364,9 @@ const App = () => {
         </div>
         <div className="result">
           <ImageComponent queryString={queryString} />
-          <p className="url">https://capsule-render.vercel.app/api?{queryString}</p>
+          <p className="url">
+            https://capsule-render.vercel.app/api?{queryString}
+          </p>
           <button className="copy-btn" onClick={copyHandler}>
             Copy
           </button>

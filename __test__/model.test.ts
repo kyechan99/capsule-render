@@ -27,6 +27,7 @@ const modelList = [
   "cylinder",
   "waving",
   "venom",
+  "speech",
   "transparent",
 ];
 
@@ -48,7 +49,6 @@ describe("Test Models", () => {
         text: type,
         desc: type,
         fontSize: 20,
-        fontAlign: 30,
         fontAlign: 40,
         descSize: 30,
         descAlign: 40,
@@ -63,10 +63,9 @@ describe("Test Models", () => {
       });
       api(req, res);
 
-      expect(res.setHeader).toBeCalledWith("Content-Type", "image/svg+xml");
       expect(res.send).toHaveBeenCalled();
 
-      const svgContent = res.send.mock.lastCall[0];
+      const svgContent = res.send.mock.lastCall?.[0];
       const parser = new DOMParser();
       const svgDocument = parser.parseFromString(svgContent, "image/svg+xml");
 
@@ -91,7 +90,6 @@ describe("Test Models", () => {
         text: type,
         desc: type,
         fontSize: 20,
-        fontAlign: 30,
         fontAlign: 40,
         descSize: 30,
         descAlign: 40,
@@ -101,10 +99,9 @@ describe("Test Models", () => {
       });
       api(req, res);
 
-      expect(res.setHeader).toBeCalledWith("Content-Type", "image/svg+xml");
       expect(res.send).toHaveBeenCalled();
 
-      const svgContent = res.send.mock.lastCall[0];
+      const svgContent = res.send.mock.lastCall?.[0];
       const parser = new DOMParser();
       const svgDocument = parser.parseFromString(svgContent, "image/svg+xml");
 

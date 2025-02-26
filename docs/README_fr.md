@@ -1,4 +1,3 @@
-
 <p align='center'>
     <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Decorate%20GitHub%20Profile%20or%20any%20Repo%20like%20me!&descAlignY=51&descAlign=62"/>
 </p>
@@ -15,11 +14,11 @@
   </a>
 </p> 
 <p align="center"> 
-  <a href="README.md">English</a> 
+  <a href="../README.md">English</a> 
   ·
   <a href="/docs/README_kr.md">한국어</a> 
   .
-  <a href="/docs/README_fr.md">Français</a> 
+  <a href="/docs/README_fr.md">Français</a>
   .
   <a href="/docs/README_de.md">Deutsch</a>
   .
@@ -98,6 +97,7 @@ Le paramètre `&type= ` change la forme de l'arrière-plan. Les formes dont vous
 - [cylinder](#cylinder)
 - [waving](#waving)
 - [venom](#venom)
+- [speech](#speech)
 - [transparent](#transparent)
 
 Ajoute `&type= ` au URL, suivi par la forme que vous voulez afficher.
@@ -105,6 +105,7 @@ Ajoute `&type= ` au URL, suivi par la forme que vous voulez afficher.
 ```
 ![header](https://capsule-render.vercel.app/api?type=slice)
 ```
+
 ## Couleur
 
 Changer l'arrière-plan!
@@ -115,7 +116,7 @@ Changer l'arrière-plan!
 - `&color=gradient` : Dégrade de couleur complétement aléatoire. Une liste de toutes les couleurs se trouve [ici](https://github.com/kyechan99/capsule-render/blob/master/src/gradient.json)
 - `&color=timeGradient` : Dégrade de couleur complétement aléatoire demandent sur le temp.
 - `&color=_hexcode` : défaut(#B897FF)
-remplace `_hexcode` par le représentation hexadécimal d'un couleur spécifique.
+  remplace `_hexcode` par le représentation hexadécimal d'un couleur spécifique.
 - `&color=_custom_gradient` : Dégrade de couleur personnalisé `&color=0:EEFF00,100:a82da8`, produira { 0%: 'EEFF00', 100%: 'a82da8' }. [Example](https://capsule-render.vercel.app/api?type=rect&color=0:EEFF00,100:a82da8)
 
 Si vous utilise `auto` comme paramètre, il ne faut pas spécifier un couleur pour le texte avec `fontColor`.
@@ -162,7 +163,7 @@ Vous pouvez voire la liste de thèmes dans le fichier [pallete_theme.json](https
 ![reversal](https://capsule-render.vercel.app/api?type=rect&text=RECT&fontAlign=30&fontSize=30&desc=Use%20theme&descAlign=60&descAlignY=50&theme=radical)
 ```
 
->J'ajoute couramment des combinaison de couleur de cette projet [Link:theme](https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md) peut par peut.
+> J'ajoute couramment des combinaison de couleur de cette projet [Link:theme](https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md) peut par peut.
 
 ## Section
 
@@ -209,6 +210,7 @@ Ajoute du texte avec `&text= `.
 ```
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!)
 ```
+
 > Il ne faut pas utiliser des caractères spécial, comme '#', '&', '/', etc...
 >
 > remplace les espaces avec `%20` et les nouveaux linges avec `-nl-`.
@@ -431,5 +433,9 @@ Le valeur devrais être plus grand que 0.
 ## Venom <a id="venom">
 
 ![venom](https://capsule-render.vercel.app/api?type=venom&height=200&text=Je%20suis%20venom.&fontSize=70&color=0:8871e5,100:b678c4&stroke=b678c4)
+
+## Speech <a id="speech">
+
+![speech](https://capsule-render.vercel.app/api?type=speech&height=200&fontSize=45&color=gradient&text=speech-nl-bubble&animation=blinking&fontAlign=30,60&fontAlignY=35,55)
 
 <hr/>

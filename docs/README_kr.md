@@ -1,4 +1,3 @@
-
 <p align='center'>
     <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Decorate%20GitHub%20Profile%20or%20any%20Repo%20like%20me!&descAlignY=51&descAlign=62"/>
 </p>
@@ -15,11 +14,11 @@
   </a>
 </p> 
 <p align="center"> 
-  <a href="readme.md">English</a> 
+  <a href="../README.md">English</a> 
   ·
-  <a href="/docs/readme_kr.md">한국어</a>  
+  <a href="/docs/README_kr.md">한국어</a> 
   .
-  <a href="/docs/README_fr.md">Français</a> 
+  <a href="/docs/README_fr.md">Français</a>
   .
   <a href="/docs/README_de.md">Deutsch</a>
   .
@@ -69,7 +68,6 @@
 https://capsule-render.vercel.app/api?
 ```
 
-
 Markdown:
 
 ```
@@ -96,6 +94,7 @@ Type 데이터는 배경 이미지를 변경합니다.
 - [cylinder](#cylinder)
 - [waving](#waving)
 - [venom](#venom)
+- [speech](#speech)
 - [transparent](#transparent)
 
 `&type= ` 에 데이터를 작성하여 사용합니다.
@@ -116,7 +115,7 @@ Type 데이터는 배경 이미지를 변경합니다.
 - `&color=_hexcode` : 커스텀 hexcode를 입력하여 사용합니다. (기본값: B897FF)
 - `&color=_custom_gradient` : 커스텀 gradient를 입력하여 사용합니다. 만약 `&color=0:EEFF00,100:a82da8` 과 같이 작성한다면 { 0%: 'EEFF00', 100%: 'a82da8' } 으로 사용됩니다. (예시: [DEMO](https://capsule-render.vercel.app/api?type=rect&color=0:EEFF00,100:a82da8))
 
-만약 `auto` 모드를 사용한다면  `fontColor`를 사용할 필요는 없습니다.
+만약 `auto` 모드를 사용한다면 `fontColor`를 사용할 필요는 없습니다.
 `auto` 모드는 fontColor도 자동으로 적용됩니다.
 
 ```
@@ -140,7 +139,7 @@ Type 데이터는 배경 이미지를 변경합니다.
 
 원하는 패턴을 고르고 `idx` 값을 기억합니다.
 
-예를 들어, 0, 2, 3 인 idx를 사용하고자 한다면 `&customColorList=0,2,3`  과 같이 사용합니다.
+예를 들어, 0, 2, 3 인 idx를 사용하고자 한다면 `&customColorList=0,2,3` 과 같이 사용합니다.
 
 만약 `idx=2` 인 값을 조금 더 자주 나타나게 하고자 한다면 반복해서 작성하는 방법도 있습니다. (예: `&customColorList=0,2,2,2,2,3`)
 
@@ -164,11 +163,10 @@ Type 데이터는 배경 이미지를 변경합니다.
 
 ## Section
 
-`section` 데이터는 배경 이미지를 반전시킵니다. 
+`section` 데이터는 배경 이미지를 반전시킵니다.
 
 - `&section=header` : (default)
 - `&section=footer`
-
 
 ```
 ![footer](https://capsule-render.vercel.app/api?section=footer)
@@ -276,7 +274,7 @@ text 의 크기를 변경합니다. 기본값 70.
 
 ## FontAlign
 
-text의 가로 정렬(x)을 변경합니다. **0~100 사이** 
+text의 가로 정렬(x)을 변경합니다. **0~100 사이**
 
 `&fontAlign= ` : 기본값은 50입니다. 이미지 중앙을 의미합니다.
 
@@ -288,7 +286,7 @@ text의 가로 정렬(x)을 변경합니다. **0~100 사이**
 
 ## FontAlignY
 
-text의 세로 정렬(x)을 변경합니다. **0~100 사이** 
+text의 세로 정렬(x)을 변경합니다. **0~100 사이**
 
 `&fontAlignY= ` : 기본값은 50입니다. 이미지 중앙을 의미합니다. `-nl-`을 사용하면서 여러 줄이 될 경우 기본값은 줄을 서로 겹쳐 쌓이고 중앙에 배치하도록 계산됩니다.
 
@@ -300,7 +298,7 @@ text의 세로 정렬(x)을 변경합니다. **0~100 사이**
 
 ## DescSize
 
-부가 설명 글꼴 크기를 변경합니다. 기본값은 20입니다. 
+부가 설명 글꼴 크기를 변경합니다. 기본값은 20입니다.
 
 **desc** 쿼리를 사용후 `&descSize= ` 를 사용하세요.
 
@@ -312,7 +310,7 @@ text의 세로 정렬(x)을 변경합니다. **0~100 사이**
 
 ## DescAlign
 
-desc의 가로 정렬(x)을 변경합니다. **0~100 사이**  
+desc의 가로 정렬(x)을 변경합니다. **0~100 사이**
 
 `&descAlign= ` : 기본값은 50입니다. 이미지 중앙을 의미합니다.
 
@@ -322,7 +320,7 @@ desc의 가로 정렬(x)을 변경합니다. **0~100 사이**
 
 ## DescAlignY
 
-desc의 세로 정렬(x)을 변경합니다. **0~100 사이** 
+desc의 세로 정렬(x)을 변경합니다. **0~100 사이**
 
 `&descAlignY= ` : 기본값은 50입니다. 이미지 중앙을 의미합니다.
 
@@ -417,5 +415,9 @@ stroke의 굵기를 변경합니다.
 ## Venom <a id="venom">
 
 ![venom](https://capsule-render.vercel.app/api?type=venom&height=200&text=I%20am%20Venom.&fontSize=70&color=0:8871e5,100:b678c4&stroke=b678c4)
+
+## Speech <a id="speech">
+
+![speech](https://capsule-render.vercel.app/api?type=speech&height=200&fontSize=45&color=gradient&text=speech-nl-bubble&animation=blinking&fontAlign=30,60&fontAlignY=35,55)
 
 <hr/>

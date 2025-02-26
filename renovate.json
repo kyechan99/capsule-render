@@ -1,12 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "labels": ["dependencies"],
-  "extends": [
-    "config:recommended"
-  ],
-  "prConcurrentLimit" : 5,
+  "extends": ["config:recommended"],
+  "prConcurrentLimit": 5,
   "packageRules": [
-    { 
+    {
       "groupName": "lints",
       "packageNames": ["eslint", "prettier", "@commitlint"],
       "packagePatterns": ["^eslint-", "^prettier-", "@commitlint-"],

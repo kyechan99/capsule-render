@@ -1,5 +1,6 @@
 {
   "tabWidth": 2,
-  "printWidth": 120,
-  "arrowParens": "avoid"
+  "printWidth": 80,
+  "arrowParens": "avoid",
+  "proseWrap": "preserve"
 }

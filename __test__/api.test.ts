@@ -1,6 +1,6 @@
 import api from "../api";
 
-const route = query => {
+const route = (query: any) => {
   const req = {
     query: {
       type: "wave",
@@ -37,6 +37,6 @@ describe("Test API", () => {
 
     expect(res.setHeader).toBeCalledWith("Content-Type", "text/html");
     const svgContent = res.send.mock.lastCall[0];
-    expect(svgContent).toContain("The value of 'type=' is invalide.");
+    expect(svgContent).toContain("The value of 'type=' is invalid.");
   });
 });

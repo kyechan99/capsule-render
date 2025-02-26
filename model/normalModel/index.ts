@@ -6,6 +6,8 @@ import shark from "./shark";
 import slice from "./slice";
 import soft from "./soft";
 import wave from "./wave";
+import transparent from "./transparent";
+import speech from "./speech";
 
 export default {
   cylinder,
@@ -16,4 +18,6 @@ export default {
   slice,
   soft,
   wave,
+  transparent,
+  speech,
 };

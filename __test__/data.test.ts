@@ -1,4 +1,8 @@
-import { generateAutoColor, generateAutoGradient, generateThemeColor } from "../src/util";
+import {
+  generateAutoColor,
+  generateAutoGradient,
+  generateThemeColor,
+} from "../utils/setting";
 
 import pallete from "../src/pallete.json";
 import gradient from "../src/gradient.json";
@@ -19,7 +23,7 @@ describe("Data integrity check", () => {
 
   pallete.map((data, idx) => {
     it(`make sure the data in pallete.json is correct (idx: ${data.idx})`, () => {
-      const [color, fontColor, textBgColor] = generateAutoColor("", `${idx},`);
+      const [color, fontColor, textBgColor] = generateAutoColor("", `${idx}`);
       expect(color).toBeTruthy();
       expect(fontColor).toBeTruthy();
       expect(textBgColor).toBeTruthy();
@@ -31,7 +35,10 @@ describe("Data integrity check", () => {
 
   gradient.map((data, idx) => {
     it(`make sure the data in gradient.json is correct (idx: ${data.idx})`, () => {
-      const [color, fontColor, textBgColor] = generateAutoGradient("", `${idx},`);
+      const [color, fontColor, textBgColor] = generateAutoGradient(
+        "",
+        `${idx}`,
+      );
       expect(color).toBeTruthy();
       expect(fontColor).toBeTruthy();
       expect(textBgColor).toBeTruthy();
