@@ -1,4 +1,3 @@
-
 <p align='center'>
     <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=capsule%20render&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Decorate%20GitHub%20Profile%20or%20any%20Repo%20like%20me!&descAlignY=51&descAlign=62"/>
 </p>
@@ -15,11 +14,11 @@
   </a>
 </p> 
 <p align="center"> 
-  <a href="README.md">English</a> 
+  <a href="../README.md">English</a> 
   ·
   <a href="/docs/README_kr.md">한국어</a> 
   .
-  <a href="/docs/README_fr.md">Français</a> 
+  <a href="/docs/README_fr.md">Français</a>
   .
   <a href="/docs/README_de.md">Deutsch</a>
   .
@@ -66,6 +65,7 @@ Ideen -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) o
 ```
 https://capsule-render.vercel.app/api?
 ```
+
 Schreibt einfach die Parameter der Query an das Ende der Url, wie hier:
 
 Markdown:
@@ -82,7 +82,6 @@ HTML:
 
 ## Arten
 
-
 Diesen Arten können angegeben werden, um den Hintergrund zu ändern:
 
 - [wave](#wave) : default
@@ -95,6 +94,7 @@ Diesen Arten können angegeben werden, um den Hintergrund zu ändern:
 - [cylinder](#cylinder)
 - [waving](#waving)
 - [venom](#venom)
+- [speech](#speech)
 - [transparent](#transparent)
 
 Schreibe `&type= ` in die URL:
@@ -234,7 +234,7 @@ Bestimmt den Hintergrund des Textes
 
 Scchreibe zum Aktivieren `&textBg=true`.
 
-> Wenn du die Größe des Hintergrunds ändern willst, 
+> Wenn du die Größe des Hintergrunds ändern willst,
 > füge `%20` im Text hinzu.
 > Das liegt daran, dass die Hintergrundgröße von der Länge des englischen Textes abhängt. (%20 bedeutet Abstand)
 
@@ -427,5 +427,9 @@ Wert muss größer oder gleich 0 sein.
 ## Venom <a id="venom">
 
 ![venom](https://capsule-render.vercel.app/api?type=venom&height=200&text=I%20am%20Venom.&fontSize=70&color=0:8871e5,100:b678c4&stroke=b678c4)
+
+## Speech <a id="speech">
+
+![speech](https://capsule-render.vercel.app/api?type=speech&height=200&fontSize=45&color=gradient&text=speech-nl-bubble&animation=blinking&fontAlign=30,60&fontAlignY=35,55)
 
 <hr/>

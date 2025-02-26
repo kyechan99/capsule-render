@@ -13,16 +13,16 @@
     <img src="https://img.shields.io/badge/Generator%20-%235c86fa.svg?&style=for-the-badge&&logoColor=white"/>
   </a>
 </p>
-<p align="center">
-  <a href="README.md">English</a>
+<p align="center"> 
+  <a href="../README.md">English</a> 
   ·
-  <a href="/docs/README_kr.md">한국어</a>
+  <a href="/docs/README_kr.md">한국어</a> 
   .
   <a href="/docs/README_fr.md">Français</a>
   .
   <a href="/docs/README_de.md">Deutsch</a>
   .
-  <a href="/docs/README_zh-cn.md">简体中文</a>
+  <a href="/docs/README_zh-cn.md">简体中文</a>  
   .
   <a href="/docs/README_zh-tw.md">繁體中文</a>
   .
@@ -94,6 +94,7 @@ HTML 格式：
 - [cylinder](#cylinder)
 - [waving](#waving)
 - [venom](#venom)
+- [speech](#speech)
 - [transparent](#transparent)
 
 在 URL 中添加 `&type=`
@@ -427,5 +428,9 @@ HTML 格式：
 ## Venom <a id="venom">
 
 ![venom](https://capsule-render.vercel.app/api?type=venom&height=200&text=I%20am%20Venom.&fontSize=70&color=0:8871e5,100:b678c4&stroke=b678c4)
+
+## Speech <a id="speech">
+
+![speech](https://capsule-render.vercel.app/api?type=speech&height=200&fontSize=45&color=gradient&text=speech-nl-bubble&animation=blinking&fontAlign=30,60&fontAlignY=35,55)
 
 <hr/>

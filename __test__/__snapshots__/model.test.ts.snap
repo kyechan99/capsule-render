@@ -647,6 +647,98 @@ exports[`Test Models soft model 1`] = `
 </svg>
 `;
 
+exports[`Test Models speech model 1`] = `
+<svg
+  height="300"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  
+        
+  <style>
+    
+      .text {   font-size: 20px;   font-weight: 700;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .desc {   font-size: 30px;   font-weight: 500;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .text, .desc {   transform-origin: center center;   transform: rotate(1deg);  } 
+      .text, .desc {   animation: fadeIn 1.2s ease-in-out forwards;  } @keyframes fadeIn {   from {     opacity: 0;   }   to {     opacity: 1;   }  } 
+    
+  </style>
+  
+        
+  <svg
+    viewBox="0 0 854 300"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    
+          
+    <defs>
+      
+              
+      <lineargradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        
+                
+        <stop
+          offset="0%"
+          stop-color="#ddd6f3"
+        />
+        <stop
+          offset="100%"
+          stop-color="#faaca8"
+        />
+        
+              
+      </lineargradient>
+      
+            
+    </defs>
+    
+          
+    <path
+      d="M 30 0 H 824 C 839 0, 854 15, 854 30 V 230 C 854 245, 839 260, 824 260 H 794 L 754 300 L 714 260 H 30 C 15 260, 0 245, 0 230 V 30 C 0 15, 15 0, 30 0 Z"
+      fill="url(#linear)"
+      fill-opacity="1"
+      transform="scale (-1, 1)"
+      transform-origin="center"
+    />
+    
+        
+  </svg>
+  
+         
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    speech
+  </text>
+  
+        
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    speech
+  </text>
+  
+      
+</svg>
+`;
+
 exports[`Test Models transparent model 1`] = `
 <svg
   height="300"

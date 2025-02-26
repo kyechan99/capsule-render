@@ -27,6 +27,7 @@ const modelList = [
   "cylinder",
   "waving",
   "venom",
+  "speech",
   "transparent",
 ];
 

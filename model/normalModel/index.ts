@@ -7,6 +7,8 @@ import slice from "./slice";
 import soft from "./soft";
 import wave from "./wave";
 import transparent from "./transparent";
+import speech from "./speech";
+
 export default {
   cylinder,
   egg,
@@ -17,4 +19,5 @@ export default {
   soft,
   wave,
   transparent,
+  speech,
 };
