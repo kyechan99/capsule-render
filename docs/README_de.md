@@ -95,6 +95,7 @@ Diesen Arten können angegeben werden, um den Hintergrund zu ändern:
 - [waving](#waving)
 - [venom](#venom)
 - [speech](#speech)
+- [blur](#blur)
 - [transparent](#transparent)
 
 Schreibe `&type= ` in die URL:
@@ -431,5 +432,9 @@ Wert muss größer oder gleich 0 sein.
 ## Speech <a id="speech">
 
 ![speech](https://capsule-render.vercel.app/api?type=speech&height=200&fontSize=45&color=gradient&text=speech-nl-bubble&animation=blinking&fontAlign=30,60&fontAlignY=35,55)
+
+## Blur <a id="blur">
+
+![blur](https://capsule-render.vercel.app/api?type=blur&height=300&color=gradient&text=Blur&strokeWidth=2&section=footer&reversal=true&fontAlign=50&stroke=E0E0E0&fontSize=55&textBg=false)
 
 <hr/>

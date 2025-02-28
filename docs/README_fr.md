@@ -98,6 +98,7 @@ Le paramètre `&type= ` change la forme de l'arrière-plan. Les formes dont vous
 - [waving](#waving)
 - [venom](#venom)
 - [speech](#speech)
+- [blur](#blur)
 - [transparent](#transparent)
 
 Ajoute `&type= ` au URL, suivi par la forme que vous voulez afficher.
@@ -437,5 +438,9 @@ Le valeur devrais être plus grand que 0.
 ## Speech <a id="speech">
 
 ![speech](https://capsule-render.vercel.app/api?type=speech&height=200&fontSize=45&color=gradient&text=speech-nl-bubble&animation=blinking&fontAlign=30,60&fontAlignY=35,55)
+
+## Blur <a id="blur">
+
+![blur](https://capsule-render.vercel.app/api?type=blur&height=300&color=gradient&text=Blur&strokeWidth=2&section=footer&reversal=true&fontAlign=50&stroke=E0E0E0&fontSize=55&textBg=false)
 
 <hr/>

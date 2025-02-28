@@ -1,5 +1,6 @@
 import api from "../api";
 import { DOMParser } from "xmldom";
+import { MODELS } from "../constants/model";
 
 const route = query => {
   const req = {
@@ -16,21 +17,6 @@ const route = query => {
   return { req, res };
 };
 
-const modelList = [
-  "wave",
-  "egg",
-  "shark",
-  "slice",
-  "rect",
-  "soft",
-  "rounded",
-  "cylinder",
-  "waving",
-  "venom",
-  "speech",
-  "transparent",
-];
-
 describe("Test Models", () => {
   beforeEach(() => {
     jest.spyOn(Math, "random").mockReturnValue(0.5);
@@ -40,7 +26,7 @@ describe("Test Models", () => {
     jest.restoreAllMocks();
   });
 
-  modelList.map(type => {
+  MODELS.map(type => {
     it(`${type} model`, () => {
       const { req, res } = route({
         type,
@@ -80,7 +66,7 @@ describe("Test Models", () => {
     });
   });
 
-  modelList.map(type => {
+  MODELS.map(type => {
     it(`${type} model`, () => {
       // This is a safe query that will not be modified with a high probability.
       const { req, res } = route({

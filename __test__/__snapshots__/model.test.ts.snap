@@ -1,5 +1,217 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test Models blur model 1`] = `
+<svg
+  height="300"
+  style="z-index:1;position:relative"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  
+        
+  <style>
+    
+      .text {   font-size: 20px;   font-weight: 700;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .desc {   font-size: 30px;   font-weight: 500;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .text, .desc {   transform-origin: center center;   transform: rotate(1deg);  } 
+      .text, .desc {   animation: fadeIn 1.2s ease-in-out forwards;  } @keyframes fadeIn {   from {     opacity: 0;   }   to {     opacity: 1;   }  } 
+    
+  </style>
+  
+        
+  <defs>
+    
+              
+    <lineargradient
+      id="linear"
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    >
+      
+                
+      <stop
+        offset="0%"
+        stop-color="#ddd6f3"
+      />
+      <stop
+        offset="100%"
+        stop-color="#faaca8"
+      />
+      
+              
+    </lineargradient>
+    
+            
+  </defs>
+  
+        
+      
+  <defs>
+    
+        
+    <filter
+      id="blurFilter"
+    >
+      
+          
+      <fegaussianblur
+        stdDeviation="12"
+      />
+      
+        
+    </filter>
+    
+      
+  </defs>
+  
+      
+          
+  <circle
+    cx="50%"
+    cy="50%"
+    fill="url(#linear)"
+    filter="url(#blurFilter)"
+    opacity="0.2"
+    r="75"
+    transform="scale (-1, 1)"
+    transform-origin="center"
+  >
+    
+            
+    <animate
+      attributeName="cx"
+      begin="0s"
+      calcMode="spline"
+      dur="10s"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"
+      repeatCount="indefinite"
+      values="50%;50%;50%;50%;50%"
+    />
+    
+            
+    <animate
+      attributeName="cy"
+      begin="0s"
+      calcMode="spline"
+      dur="12s"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"
+      repeatCount="indefinite"
+      values="50%;50%;50%;50%;50%"
+    />
+    
+          
+  </circle>
+  
+        
+          
+  <circle
+    cx="45%"
+    cy="50%"
+    fill="url(#linear)"
+    filter="url(#blurFilter)"
+    opacity="0.3"
+    r="90"
+    transform="scale (-1, 1)"
+    transform-origin="center"
+  >
+    
+            
+    <animate
+      attributeName="cx"
+      begin="1s"
+      calcMode="spline"
+      dur="30s"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"
+      repeatCount="indefinite"
+      values="45%;50%;55%;50%;45%"
+    />
+    
+            
+    <animate
+      attributeName="cy"
+      begin="1s"
+      calcMode="spline"
+      dur="36s"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"
+      repeatCount="indefinite"
+      values="50%;50%;50%;50%;50%"
+    />
+    
+          
+  </circle>
+  
+        
+          
+  <circle
+    cx="60%"
+    cy="50%"
+    fill="url(#linear)"
+    filter="url(#blurFilter)"
+    opacity="0.15"
+    r="84.00000000000001"
+    transform="scale (-1, 1)"
+    transform-origin="center"
+  >
+    
+            
+    <animate
+      attributeName="cx"
+      begin="2s"
+      calcMode="spline"
+      dur="15s"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"
+      repeatCount="indefinite"
+      values="60%;50%;40%;50%;60%"
+    />
+    
+            
+    <animate
+      attributeName="cy"
+      begin="2s"
+      calcMode="spline"
+      dur="18s"
+      keySplines="0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1; 0.4 0 0.6 1"
+      repeatCount="indefinite"
+      values="50%;50%;50%;50%;50%"
+    />
+    
+          
+  </circle>
+  
+        
+    
+         
+  <text
+    alignment-baseline="middle"
+    class="text"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    blur
+  </text>
+  
+        
+  <text
+    alignment-baseline="middle"
+    class="desc"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    blur
+  </text>
+  
+      
+</svg>
+`;
+
 exports[`Test Models cylinder model 1`] = `
 <svg
   height="300"
