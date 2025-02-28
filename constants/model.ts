@@ -1,3 +1,8 @@
 // agonizing whether to get the name from the file name..
-export const ANIMATION_MODELS = ["waving", "venom"];
-export const NORMAL_MODELS = ["cylinder", "egg", "rect", "rounded", "shark", "slice", "soft", "wave"];
+
+import animationModel from "../model/animationModel";
+import normalMode from "../model/normalModel";
+
+export const ANIMATION_MODELS = Object.keys(animationModel);
+export const NORMAL_MODELS = Object.keys(normalMode);
+export const MODELS = [...NORMAL_MODELS, ...ANIMATION_MODELS];

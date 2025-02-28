@@ -95,6 +95,7 @@ Type 데이터는 배경 이미지를 변경합니다.
 - [waving](#waving)
 - [venom](#venom)
 - [speech](#speech)
+- [blur](#blur)
 - [transparent](#transparent)
 
 `&type= ` 에 데이터를 작성하여 사용합니다.
@@ -419,5 +420,9 @@ stroke의 굵기를 변경합니다.
 ## Speech <a id="speech">
 
 ![speech](https://capsule-render.vercel.app/api?type=speech&height=200&fontSize=45&color=gradient&text=speech-nl-bubble&animation=blinking&fontAlign=30,60&fontAlignY=35,55)
+
+## Blur <a id="blur">
+
+![blur](https://capsule-render.vercel.app/api?type=blur&height=300&color=gradient&text=Blur&strokeWidth=2&section=footer&reversal=true&fontAlign=50&stroke=E0E0E0&fontSize=55&textBg=false)
 
 <hr/>
