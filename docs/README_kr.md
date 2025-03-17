@@ -186,7 +186,7 @@ Type 데이터는 배경 이미지를 변경합니다.
 
 ## Height
 
-높이를 변겹합니다. 기본값은 120 입니다.
+높이를 변경합니다. 기본값은 120 입니다.
 
 ```
 ![header](https://capsule-render.vercel.app/api?height=400)
@@ -202,7 +202,7 @@ Type 데이터는 배경 이미지를 변경합니다.
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!)
 ```
 
-> 특수 문자를 직접 사용할 수는 없는니다. '#', '&', '/' ...
+> 특수 문자를 직접 사용할 수는 없습니다. '#', '&', '/' ...
 >
 > 이는 API를 혼란스럽게 만듭니다.
 
@@ -216,7 +216,7 @@ Type 데이터는 배경 이미지를 변경합니다.
 ![header](https://capsule-render.vercel.app/api?height=400&text=Hello%20World!&desc=Hello%20capsule%20render)
 ```
 
-> 특수 문자를 직접 사용할 수는 없는니다. '#', '&', '/' ...
+> 특수 문자를 직접 사용할 수는 없습니다. '#', '&', '/' ...
 >
 > 이는 API를 혼란스럽게 만듭니다.
 
@@ -345,7 +345,7 @@ desc의 세로 정렬(x)을 변경합니다. **0~100 사이**
 
 text의 stroke 도 변경할 수 있습니다.
 
-Hexcode에서 '#' 르 지워 사용합니다.
+Hexcode에서 '#' 를 지워 사용합니다.
 
 ```
 ![header](https://capsule-render.vercel.app/api?type=rect&height=200&text=Stroke%20Test&fontAlign=70&stroke=00FF00)
