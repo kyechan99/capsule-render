@@ -27,6 +27,8 @@
   <a href="/docs/README_zh-tw.md">繁體中文</a>
   .
   <a href="/docs/README_zh-hk.md">繁體粤语</a>
+  . 
+  <a href="/docs/README_pt-br.md">Português (Brasileiro)</a>
 </p>
 <br/>
 
