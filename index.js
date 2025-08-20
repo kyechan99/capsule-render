@@ -365,9 +365,14 @@ const App = () => {
         </div>
         <div className="result">
           <ImageComponent queryString={queryString} />
-          <p className="url">
+          <a
+            className="url"
+            href={`https://capsule-render.vercel.app/api?${queryString}`}
+            target="_blank"
+          >
             https://capsule-render.vercel.app/api?{queryString}
-          </p>
+          </a>
+
           <button className="copy-btn" onClick={copyHandler}>
             Copy
           </button>

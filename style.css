@@ -17,6 +17,7 @@ body {
   position: relative;
   max-width: 911px;
 }
+
 @media (min-width: 1350px) {
   .panel {
     width: calc(100% - 1000px);
@@ -24,27 +25,54 @@ body {
 }
 
 .result {
-  min-width: 1000px;
-  width: 100%;
+  width: 100vw;
+  max-width: 911px;
   position: relative;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.result img {
+  max-width: 100%;
+}
+
+
 @media (min-width: 1350px) {
   .result {
+    min-width: 1000px;
     width: 1000px;
+    position: fixed;
+    right: 0;
+    top: 10;
+    height: 100vh;
+    width: 400px;
+    overflow-y: auto;
+    background: #fff;
+    box-sizing: border-box;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
   }
 }
+
 .result .url {
-  width: 700px;
   max-width: 100%;
   margin: 20px auto;
   background: #eee;
+  color: blue;
   padding: 1rem;
   font-size: 16px;
   border-radius: 8px;
   word-break: break-all;
   text-align: left;
+  cursor: pointer;
 }
+
 .result .copy-btn {
   border: none;
   background: #494949;
@@ -55,6 +83,7 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
 .result .copy-btn:hover {
   background: #5a5a5a;
 }
@@ -72,21 +101,25 @@ body {
   flex: 0 0 100%;
   margin: 0.75rem 0rem;
 }
+
 .group label {
   margin-left: 1rem;
 }
+
 @media (min-width: 1700px) {
   .group {
     width: 49%;
     flex: 0 0 49%;
   }
 }
+
 .desc {
   margin: 0px;
   color: #979797;
   font-size: 13px;
   margin-left: 1rem;
 }
+
 .desc a {
   color: #979797;
 }
