@@ -17,19 +17,21 @@
   <a href="README.md">English</a> 
   ·
   <a href="/docs/README_kr.md">한국어</a> 
-  .
+  ·
+  <a href="/docs/README_es.md">Español</a>
+  ·
   <a href="/docs/README_fr.md">Français</a>
-  .
+  ·
   <a href="/docs/README_de.md">Deutsch</a>
-  .
+  ·
   <a href="/docs/README_zh-cn.md">简体中文</a>  
-  .
+  ·
   <a href="/docs/README_zh-tw.md">繁體中文</a>
-  .
+  ·
   <a href="/docs/README_zh-hk.md">繁體粤语</a>
-  . 
+  ·
   <a href="/docs/README_pt-br.md">Português (Brasileiro)</a>
-  . 
+  ·
   <a href="/docs/README_jp.md">日本語</a>
 </p>
 <br/>
