@@ -171,185 +171,221 @@ URL-ൽ `&customColorList=` ചേർക്കുക.
 ![footer](https://capsule-render.vercel.app/api?section=footer)
 ```
 
-Reversal (റിവേഴ്സൽ)
+---
 
-ചിത്രം ഇടത്തോട്ടും വലത്തോട്ടും മറിക്കുന്നു. (നിറവും കൂടെ മാറും)
+## Reversal
 
-&reversal=false : (ഡിഫോൾട്ട്)
+ചിത്രം ഇടത്തോട്ടും വലത്തോട്ടും മറിക്കുക. (നിറവും ഒരേസമയം മാറും)
 
-&reversal=true
+- `&reversal=false` : (default)
+- `&reversal=true`
 
-![reversal](https://capsule-render.vercel.app/api?type=slice&reversal=true&color=gradient) 
+```
+![reversal](https://capsule-render.vercel.app/api?type=slice&reversal=true&color=gradient)
+```
 
-Height (ഉയരം)
+## Height
 
-ചിത്രത്തിന്റെ വലുപ്പം മാറ്റാം. ഡിഫോൾട്ട് മൂല്യം 120.
+ചിത്രത്തിന്റെ വലുപ്പം മാറ്റുക. ഡിഫോൾട്ട് മൂല്യം 120 ആണ്.
 
-URL-ൽ &height= ചേർക്കുക
+URL-ൽ `&height= ` എഴുതുക
 
-![header](https://capsule-render.vercel.app/api?height=400) 
+```
+![header](https://capsule-render.vercel.app/api?height=400)
+```
 
-px എഴുതരുത്
+> `px` എഴുതരുത്
 
-Text (ടെക്സ്റ്റ്)
+## Text
 
-ചിത്രത്തിന്മുകളിൽ ടെക്സ്റ്റ് ചേർക്കാം.
+ചിത്രത്തിന്മുകളിൽ ടെക്സ്റ്റ് ചേർക്കുക.
 
-&text= ഉപയോഗിച്ച് എഴുതുക.
+`&text= ` ഉപയോഗിച്ച് എന്തെങ്കിലും എഴുതുക.
 
-![header](https://capsule-render.vercel.app/api?text=Hello%World!) 
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!)
+```
 
-ചില പ്രത്യേക ചിഹ്നങ്ങൾ ഉപയോഗിക്കരുത് — '#', '&', '/' ...
-API കുഴങ്ങും.
+> ചില പ്രത്യേക പ്രതീകങ്ങൾ ഉപയോഗിക്കാൻ പറ്റില്ല. ഉദാ: '#', '&', '/' ...
+>
+> API കുഴങ്ങാൻ ഇടയാകും
 
-%20 (സ്പേസ്) & -nl- (പുതിയ വരി) മാത്രം ഉപയോഗിക്കാൻ ശുപാർശ ചെയ്യുന്നു.
+> `%20` (സ്പേസ്)യും `-nl-` (പുതിയ വരി)യും മാത്രം ഉപയോഗിക്കുന്നത് ശുപാർശ ചെയ്യുന്നു
 
-Desc (വിവരണം)
+## Desc
 
-ചിത്രത്തിന്മുകളിൽ ഒരു വിവരണം ചേർക്കാം.
+ചിത്രത്തിന്മുകളിൽ വിവരണം (desc) ചേർക്കുക.
 
-&desc= ഉപയോഗിക്കുക.
+`&desc= ` ഉപയോഗിച്ച് എന്തെങ്കിലും എഴുതുക.
 
-![header](https://capsule-render.vercel.app/api?height=400&text=Hello%20World!&desc=Hello%20capsule%20render) 
+```
+![header](https://capsule-render.vercel.app/api?height=400&text=Hello%20World!&desc=Hello%20capsule%20render)
+```
 
-'#', '&', '/' പോലുള്ള പ്രത്യേക ചിഹ്നങ്ങൾ ഉപയോഗിക്കരുത്
-API കുഴങ്ങും.
+> ചില പ്രത്യേക പ്രതീകങ്ങൾ ഉപയോഗിക്കാൻ പറ്റില്ല. ഉദാ: '#', '&', '/' ...
+>
+> API കുഴങ്ങാൻ ഇടയാകും
 
-%20 (സ്പേസ്) മാത്രം ഉപയോഗിക്കാൻ ശുപാർശ ചെയ്യുന്നു.
+> `%20` (സ്പേസ്) മാത്രം ഉപയോഗിക്കുന്നത് ശുപാർശ ചെയ്യുന്നു
 
-Text Background (ടെക്സ്റ്റ് ബാക്ക്ഗ്രൗണ്ട്)
+## Text Background
 
-ടെക്സ്റ്റിന് പിന്നിൽ ബാക്ക്ഗ്രൗണ്ട് ചേർക്കാം.
+ടെക്സ്റ്റിന്റെ പശ്ചാത്തലം.
 
-&textBg=true ഉപയോഗിച്ച് ആക്ടിവേറ്റ് ചെയ്യുക.
+സജീവമാക്കാൻ `&textBg=true` എഴുതുക.
 
-ബാക്ക്ഗ്രൗണ്ട് വലുപ്പം കൂട്ടണമെങ്കിൽ,
-ടെക്സ്റ്റിനിടയിൽ %20 ചേർക്കുക.
-കാരണം ബാക്ക്ഗ്രൗണ്ട് വലുപ്പം ഇംഗ്ലീഷ് ടെക്സ്റ്റിന്റെ നീളത്തെ ആശ്രയിച്ചിരിക്കുന്നു.
+> പശ്ചാത്തല വലുപ്പം കൂട്ടണമെങ്കിൽ,
+> ടെക്സ്റ്റ് മൂല്യങ്ങൾക്കിടയിൽ `%20` ചേർക്കുക.
+> കാരണം പശ്ചാത്തല വലുപ്പം ഇംഗ്ലീഷ് ടെക്സ്റ്റിന്റെ നീളത്തെ ആശ്രയിച്ചിരിക്കുന്നു. (%20 = സ്പേസ്)
 
-![header](https://capsule-render.vercel.app/api?type=rounded&color=gradient&text=%20asdf%20&height=300&fontSize=100&textBg=true) 
+```
+![header](https://capsule-render.vercel.app/api?type=rounded&color=gradient&text=%20asdf%20&height=300&fontSize=100&textBg=true)
+```
 
-Text Animation (ടെക്സ്റ്റ് അനിമേഷൻ)
+## Text Animation
 
-ടെക്സ്റ്റ് ഡൈനാമിക് ആക്കാം.
+ടെക്സ്റ്റ് ഡൈനാമിക് ആക്കുക.
 
-&animation= ഉപയോഗിക്കുക.
+ഉപയോഗിക്കണമെങ്കിൽ `&animation= ` എഴുതുക.
 
-fadeIn : fadeIn 1.2s
+- `fadeIn` : fadeIn 1.2s
+- `scaleIn` : scaleIn .8s
+- `blink` : blink .6s
+- `blinking` : blinking 1.6s
+- `twinkling` : twinkling 4s
 
-scaleIn : scaleIn .8s
+```
+![header](https://capsule-render.vercel.app/api?text=capsule_render&animation=fadeIn)
+```
 
-blink : blink .6s
+## FontColor
 
-blinking : blinking 1.6s
+ടെക്സ്റ്റിന്റെ നിറം മാറ്റുക. ഡിഫോൾട്ട് മൂല്യം 000000.
 
-twinkling : twinkling 4s
+മൂല്യം '#' ഇല്ലാത്ത Hex കോഡ് ആയിരിക്കണം.
 
-![header](https://capsule-render.vercel.app/api?text=capsule_render&animation=fadeIn) 
+**Text** query-ന്റെ പിന്നാലെ `&fontColor= ` എഴുതുക.
 
-FontColor (ഫോണ്ട് നിറം)
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontColor=d6ace6)
+```
 
-ടെക്സ്റ്റിന്റെ നിറം മാറ്റാം. ഡിഫോൾട്ട് 000000.
+## FontSize
 
-Hex code ആയിരിക്കണം (‘#’ ഇല്ലാതെ).
+ടെക്സ്റ്റിന്റെ ഫോണ്ട് വലുപ്പം മാറ്റുക. ഡിഫോൾട്ട് മൂല്യം 70.
 
-&fontColor= ടെക്സ്റ്റിന് ശേഷം ചേർക്കുക.
+**Text** query-ന്റെ പിന്നാലെ `&fontSize= ` എഴുതുക.
 
-![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontColor=d6ace6) 
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontSize=40)
+```
 
-FontSize (ഫോണ്ട് വലുപ്പം)
+> `px` എഴുതരുത്
 
-ടെക്സ്റ്റിന്റെ ഫോണ്ട് വലുപ്പം മാറ്റാം. ഡിഫോൾട്ട് 70.
+## FontAlign
 
-&fontSize= ടെക്സ്റ്റിന് ശേഷം ചേർക്കുക.
+ടെക്സ്റ്റിന്റെ horizontal-align (x) മാറ്റുക. **0 മുതൽ 100 വരെ** ഒരു സംഖ്യ എഴുതുക.
 
-![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontSize=40) 
+`&fontAlign= ` : ഡിഫോൾട്ട് മൂല്യം 50 (ചിത്രത്തിന്റെ മധ്യം)
 
-px എഴുതരുത്
+> `&text= `-ൽ (`-nl-`) ഒന്നിലധികം വരികൾ ഉണ്ടെങ്കിൽ,
+> ഒന്നിലധികം `&fontAlign= ` നൽകിയാൽ ഓരോ വരിക്കും വ്യത്യസ്ത alignment ലഭിക്കും.
 
-FontAlign (ഫോണ്ട് അലൈന്മെന്റ് - X)
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlign=70)
+```
 
-ടെക്സ്റ്റിന്റെ horizontal-align (x) മാറ്റാം. 0 മുതൽ 100 വരെ സംഖ്യ.
+## FontAlignY
 
-&fontAlign= : ഡിഫോൾട്ട് 50 (ചിത്രത്തിന്റെ മധ്യം)
+ടെക്സ്റ്റിന്റെ vertical-align (y) മാറ്റുക. **0 മുതൽ 100 വരെ** ഒരു സംഖ്യ എഴുതുക.
 
--nl- ഉപയോഗിച്ച് പല വരികളുണ്ടെങ്കിൽ,
-പല &fontAlign= മൂല്യങ്ങൾ നൽകി ഓരോ വരിക്കും വ്യത്യസ്ത അലൈന്മെന്റ് നൽകാം.
+`&fontAlignY= ` : ഒരു വരിക്ക് ഡിഫോൾട്ട് മൂല്യം 50 (ചിത്രത്തിന്റെ മധ്യം).  
+ഒന്നിലധികം വരികൾ ഉണ്ടെങ്കിൽ അവയെ മധ്യത്തിൽ നിരത്താൻ സ്വയം കണക്കാക്കും.
 
-![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlign=70) 
+> ഒന്നിലധികം വരികൾ ഉണ്ടെങ്കിൽ,
+> ഒന്നിലധികം `&fontAlignY= ` നൽകിയാൽ ഓരോ വരിക്കും വ്യത്യസ്ത alignment ലഭിക്കും.
 
-FontAlignY (ഫോണ്ട് അലൈന്മെന്റ് - Y)
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlignY=20)
+```
 
-ടെക്സ്റ്റിന്റെ vertical-align (y) മാറ്റാം. 0 മുതൽ 100 വരെ സംഖ്യ.
+## DescSize
 
-&fontAlignY= : ഒരു വരിക്ക് ഡിഫോൾട്ട് 50.
+വിവരണത്തിന്റെ ഫോണ്ട് വലുപ്പം മാറ്റുക. ഡിഫോൾട്ട് മൂല്യം 20.
 
-പല വരികളുണ്ടെങ്കിൽ (-nl-),
-ഓരോ വരിക്കും വ്യത്യസ്ത vertical-align നൽകാം.
+**desc** query-ന്റെ പിന്നാലെ `&descSize= ` എഴുതുക.
 
-![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlignY=20) 
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontSize=40&desc=Desc&descSize=30)
+```
 
-DescSize (വിവരണ വലുപ്പം)
+> `px` എഴുതരുത്
 
-വിവരണത്തിന്റെ ഫോണ്ട് വലുപ്പം മാറ്റാം. ഡിഫോൾട്ട് 20.
+## DescAlign
 
-&descSize= വിവരണത്തിന് ശേഷം ചേർക്കുക.
+വിവരണത്തിന്റെ horizontal-align (x) മാറ്റുക. **0 മുതൽ 100 വരെ** ഒരു സംഖ്യ എഴുതുക.
 
-![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontSize=40&desc=Desc&descSize=30) 
+`&descAlign= ` : ഡിഫോൾട്ട് മൂല്യം 50 (ചിത്രത്തിന്റെ മധ്യം)
 
-px എഴുതരുത്
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlign=70&desc=Desc&descAlign=20)
+```
 
-DescAlign (വിവരണ അലൈന്മെന്റ് - X)
+## DescAlignY
 
-വിവരണത്തിന്റെ horizontal-align (x) മാറ്റാം. 0 മുതൽ 100 വരെ സംഖ്യ.
+വിവരണത്തിന്റെ vertical-align (y) മാറ്റുക. **0 മുതൽ 100 വരെ** ഒരു സംഖ്യ എഴുതുക.
 
-ഡിഫോൾട്ട് 50.
+`&descAlignY= ` : ഡിഫോൾട്ട് മൂല്യം 60 (ചിത്രത്തിന്റെ മധ്യം)
 
-![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlign=70&desc=Desc&descAlign=20) 
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlignY=20&desc=Desc&descAlignY=40)
+```
 
-DescAlignY (വിവരണ അലൈന്മെന്റ് - Y)
+## Rotate
 
-വിവരണത്തിന്റെ vertical-align (y) മാറ്റാം. 0 മുതൽ 100 വരെ സംഖ്യ.
-
-ഡിഫോൾട്ട് 60.
-
-![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontAlignY=20&desc=Desc&descAlignY=40) 
-
-Rotate (റൊട്ടേറ്റ്)
-
-ടെക്സ്റ്റ് തിരിക്കാൻ &rotate= ഉപയോഗിക്കുക.
+ടെക്സ്റ്റ് തിരിക്കാൻ `&rotate= ` ഉപയോഗിക്കുക.
 
 നെഗറ്റീവ് സംഖ്യകളും ഉപയോഗിക്കാം.
 
-ശുപാർശ ചെയ്യുന്ന പരിധി: 0 ~ 360, 0 ~ -360
+> ശുപാർശ ചെയ്യുന്ന പരിധി: `0 ~ 360`, `0 ~ -360`.
 
-![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontSize=20&rotate=-30) 
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontSize=20&rotate=-30)
+```
 
-Stroke (സ്ട്രോക്ക്)
+## Stroke
 
-ടെക്സ്റ്റിന് stroke ചേർക്കാം.
+ടെക്സ്റ്റിന്റെ stroke മാറ്റുക.
 
-&stroke= ഉപയോഗിക്കുക.
+query-ന്റെ പിന്നാലെ `&stroke=` എഴുതുക.
 
-Hex code (‘#’ ഇല്ലാതെ).
+മൂല്യം '#' ഇല്ലാത്ത Hex കോഡ് ആയിരിക്കണം.
 
-![header](https://capsule-render.vercel.app/api?type=rect&height=200&text=Stroke%20Test&fontAlign=70&stroke=00FF00) 
+```
+![header](https://capsule-render.vercel.app/api?type=rect&height=200&text=Stroke%20Test&fontAlign=70&stroke=00FF00)
+```
 
-strokeWidth ഉപയോഗിക്കുമ്പോൾ കൂടുതൽ നല്ലത്.
-ഒറ്റയ്ക്ക് ഉപയോഗിച്ചാൽ strokeWidth = 1.
+> `strokeWidth` ഉപയോഗിച്ച് ചേർത്താൽ കൂടുതൽ നല്ലത്.
+>
+> ഒറ്റയ്ക്ക് ഉപയോഗിച്ചാൽ strokeWidth ഡിഫോൾട്ട് മൂല്യം 1.
 
-Stroke-width (സ്ട്രോക്ക് വീതി)
+## Stroke-width
 
-സ്ട്രോക്കിന്റെ വീതി മാറ്റാം.
+ടെക്സ്റ്റിന്റെ stroke വീതി മാറ്റുക.
 
-&strokeWidth= ഉപയോഗിക്കുക.
+stroke query-ന്റെ പിന്നാലെ `&strokeWidth=` എഴുതുക.
 
 മൂല്യം 0 അല്ലെങ്കിൽ അതിൽ കൂടുതലായിരിക്കണം.
 
-![header](https://capsule-render.vercel.app/api?type=rect&height=200&text=Stroke%20Test&fontAlign=70&stroke=00FF00&strokeWidth=3) 
+```
+![header](https://capsule-render.vercel.app/api?type=rect&height=200&text=Stroke%20Test&fontAlign=70&stroke=00FF00&strokeWidth=3)
+```
 
-stroke ഉപയോഗിക്കുമ്പോൾ കൂടുതൽ നല്ലത്.
-ഒറ്റയ്ക്ക് ഉപയോഗിച്ചാൽ stroke = 'B897FF'.
+> `stroke` ഉപയോഗിച്ച് ചേർത്താൽ കൂടുതൽ നല്ലത്.
+>
+> ഒറ്റയ്ക്ക് ഉപയോഗിച്ചാൽ stroke ഡിഫോൾട്ട് മൂല്യം 'B897FF'.
+
+---
 
 # Demo <a id="demo">
 
