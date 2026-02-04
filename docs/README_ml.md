@@ -14,7 +14,7 @@
   </a>
 </p> 
 <p align="center"> 
-  <a href="README.md">English</a> 
+  <a href="../README.md">English</a> 
   ·
   <a href="/docs/README_kr.md">한국어</a> 
   ·
@@ -39,7 +39,7 @@
 </p>
 <br/>
 
-> ഈ README മലയാളത്തിലേക്ക് വിവർത്തനം ചെയ്യാൻ ഒരാളെ അന്വേഷിക്കുന്നു.
+> ഈ README മറ്റ് R വിവർത്തനം ചെയ്യാൻ ഒരാളെ അന്വേഷിക്കുന്നു.
 
 > ലളിതമായ [Generator](https://capsule-render.vercel.app/) പിന്തുണയ്ക്കുന്നു.  
 > എന്നാൽ കൂടുതൽ വിശദമായ ക്രമീകരണങ്ങൾക്ക് README വായിക്കാൻ ശുപാർശ ചെയ്യുന്നു.
