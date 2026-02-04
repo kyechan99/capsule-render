@@ -69,7 +69,7 @@
 
 Idea സംബന്ധിച്ച ഏതെങ്കിലും നിർദ്ദേശങ്ങൾ → [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) അല്ലെങ്കിൽ [PR](https://github.com/kyechan99/capsule-render/pulls)
 
-# എങ്ങനെ ഉപയോഗിക്കാം (How to Use)
+# എങ്ങനെ ഉപയോഗിക്കാം (how-to-use)
 
 ```
 https://capsule-render.vercel.app/api?
