@@ -46,7 +46,7 @@
 
 ## Navigation (നാവിഗേഷൻ)
 
-1. [എങ്ങനെ ഉപയോഗിക്കാം](#how-to-use)
+1. [എങ്ങനെ ഉപയോഗിക്കാം (How To Use)](#how-to-use)
 2. [ടൈപ്പുകൾ](#types)
 3. [നിറം](#color)
 4. [കസ്റ്റം കളർ ലിസ്റ്റ്](#custom-color-list)
@@ -67,9 +67,11 @@
 19. [റൊട്ടേറ്റ്](#rotate)
 20. [ഡെമോ](#demo)
 
+
 Idea സംബന്ധിച്ച ഏതെങ്കിലും നിർദ്ദേശങ്ങൾ → [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) അല്ലെങ്കിൽ [PR](https://github.com/kyechan99/capsule-render/pulls)
 
-# എങ്ങനെ ഉപയോഗിക്കാം (how-to-use)
+
+## എങ്ങനെ ഉപയോഗിക്കാം (How To Use) <a id="how-to-use"></a>
 
 ```
 https://capsule-render.vercel.app/api?
