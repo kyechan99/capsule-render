@@ -33,6 +33,9 @@
   <a href="/docs/README_pt-br.md">Português (Brasileiro)</a>
   ·
   <a href="/docs/README_jp.md">日本語</a>
+  ·
+  <a href="/docs/README_ml.md">മലയാളം</a>
+
 </p>
 <br/>
 
