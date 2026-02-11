@@ -27,7 +27,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vercel": "^33.0.0",
+    "vercel": "^50.3.2",
     "xmldom": "^0.6.0"
   },
   "devDependencies": {
