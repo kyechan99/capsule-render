@@ -185,6 +185,26 @@ export const getDesc = (
 ) => {
   if (desc === "" || desc === undefined) return "";
 
+  const lines = desc.split("-nl-");
+
+  if (lines.length > 1)
+    return `<text
+      text-anchor="middle"
+      alignment-baseline="middle"
+      x="${descAlign}%"
+      y="${descAlignY}%"
+      class="desc"
+      style="fill:#${descColor};"
+    >
+      ${lines
+        .map(
+          (line, i) =>
+            `<tspan x="${descAlign}%" dy="${i === 0 ? 0 : "1em"}">${line}</tspan>`,
+        )
+        .join("")}
+    </text>
+  `;
+
   // debate : adjustable text-anchor|pos-y. not only pos-x
-  return `<text text-anchor="middle" alignment-baseline="middle" x="${descAlign}%" y="${descAlignY}%" class="desc" style="fill:#${descColor};">${desc}</text>`;
+  return `<text text-anchor="middle" alignment-baseline="middle" x="${descAlign}%" y="${descAlignY}%" class="desc" style="fill:#${descColor};">${lines[0]}</text>`;
 };

@@ -66,4 +66,33 @@ describe("Test Text and Desc", () => {
     expect($texts.length).toBeTruthy();
     expect($texts[0].firstChild.data).toBe("_DESC_TEST_");
   });
+
+  it("Desc multiline", () => {
+    const { req, res } = route({
+      type: "venom",
+      desc: "_DESC_LINE_1_-nl-_DESC_LINE_2_",
+      descSize: 40,
+      descAlign: 30,
+      descAlignY: 90,
+    });
+
+    api(req, res);
+
+    expect(res.setHeader).toBeCalledWith("Content-Type", "image/svg+xml");
+    expect(res.send).toHaveBeenCalled();
+
+    const svgContent = res.send.mock.lastCall[0];
+    const parser = new DOMParser();
+    const svgDocument = parser.parseFromString(svgContent, "image/svg+xml");
+    const $svg = svgDocument.documentElement;
+    expect($svg.tagName).toBe("svg");
+
+    const $texts = svgDocument.getElementsByTagName("text");
+    expect($texts.length).toBeTruthy();
+
+    const $tspans = svgDocument.getElementsByTagName("tspan");
+    expect($tspans.length).toBe(2);
+    expect($tspans[0].firstChild.data).toBe("_DESC_LINE_1_");
+    expect($tspans[1].firstChild.data).toBe("_DESC_LINE_2_");
+  });
 });
