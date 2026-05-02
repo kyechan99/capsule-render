@@ -285,6 +285,18 @@ URL-ൽ `&height= ` എഴുതുക
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontColor=d6ace6)
 ```
 
+## FontFamily
+
+Change text font family.
+
+Write `&fontFamily= ` behind **Text** query.
+
+Use `%20` for spaces in font names.
+
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%20World!&fontFamily=Segoe%20UI)
+```
+
 ## FontSize (ഫോണ്ട് വലുപ്പം) <a id="fontsize"></a>
 
 ടെക്സ്റ്റിന്റെ ഫോണ്ട് വലുപ്പം മാറ്റുക. ഡിഫോൾട്ട് മൂല്യം 70.

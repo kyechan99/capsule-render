@@ -95,4 +95,20 @@ describe("Test Text and Desc", () => {
     expect($tspans[0].firstChild.data).toBe("_DESC_LINE_1_");
     expect($tspans[1].firstChild.data).toBe("_DESC_LINE_2_");
   });
+
+  it("Font family", () => {
+    const { req, res } = route({
+      type: "waving",
+      text: "_TEST_TEXT_",
+      fontFamily: "Momo Trust Display",
+    });
+
+    api(req, res);
+
+    expect(res.setHeader).toBeCalledWith("Content-Type", "image/svg+xml");
+    expect(res.send).toHaveBeenCalled();
+
+    const svgContent = res.send.mock.lastCall[0];
+    expect(svgContent).toContain("font-family: Momo Trust Display;");
+  });
 });

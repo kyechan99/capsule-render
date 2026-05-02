@@ -285,6 +285,18 @@ text 의 색상을 변경합니다. 기본값 000000.
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontColor=d6ace6)
 ```
 
+## FontFamily
+
+Change text font family.
+
+Write `&fontFamily= ` behind **Text** query.
+
+Use `%20` for spaces in font names.
+
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%20World!&fontFamily=Segoe%20UI)
+```
+
 ## FontSize
 
 text 의 크기를 변경합니다. 기본값 70.
