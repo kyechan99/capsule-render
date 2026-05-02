@@ -44,6 +44,7 @@ export abstract class Model {
 
   fontSize: number;
   fontColor: string;
+  fontFamily: string;
   fontAlign: number[];
   fontAlignY: number[];
   stroke: string;
@@ -58,6 +59,9 @@ export abstract class Model {
     this.textBg = params.textBg == "true";
     this.fontSize = Number(params.fontSize) || 70;
     this.fontColor = params.fontColor;
+    this.fontFamily =
+      params.fontFamily ||
+      "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji";
     this.fontAlign = parseToNumberArr(params.fontAlign || "");
     this.fontAlignY = parseToNumberArr(params.fontAlignY || "");
     this.textBgColor = params.textBgColor || "000000";
@@ -148,7 +152,13 @@ export abstract class Model {
 
   protected _drawStyle() {
     return `<style>
-      ${getStyle(this.section, this.fontSize, this.descSize, this.rotate)}
+      ${getStyle(
+        this.section,
+        this.fontSize,
+        this.descSize,
+        this.rotate,
+        this.fontFamily,
+      )}
       ${getAnimation(this.animation)}
     </style>`;
   }

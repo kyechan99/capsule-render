@@ -8,23 +8,23 @@ export const getStyle = (
   fontSize: number = 70,
   descSize: number = 20,
   rotate: number = 0,
+  fontFamily: string,
 ) => {
+  const resolvedFontFamily = fontFamily;
   return _(
     html``,
     append(
       css(".text", {
         fontSize: `${fontSize}px`,
         fontWeight: 700,
-        fontFamily:
-          "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji",
+        fontFamily: resolvedFontFamily,
       }),
     ),
     append(
       css(".desc", {
         fontSize: `${descSize}px`,
         fontWeight: 500,
-        fontFamily:
-          "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji",
+        fontFamily: resolvedFontFamily,
       }),
     ),
     appendIf(

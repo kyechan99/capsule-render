@@ -297,6 +297,20 @@ Escreva `&fontColor= ` após a consulta **Texto**
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontColor=d6ace6)
 ```
 
+## FontFamily
+
+Change text font family.
+
+Write `&fontFamily= ` behind **Text** query.
+
+Use `%20` for spaces in font names.
+
+> `fontFamily` is applied as CSS `font-family`, but actual rendering depends on fonts available in the rendering environment. If a font is unavailable, fallback fonts are used.
+
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%20World!&fontFamily=Segoe%20UI)
+```
+
 ## Tamanho da Fonte
 
 Altere o tamanho da fonte do texto. O valor padrão é 70.

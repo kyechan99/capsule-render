@@ -297,6 +297,20 @@ Ajoute `&fontColor= ` après `&text=` dans l'URL.
 ![header](https://capsule-render.vercel.app/api?text=Hello%World!&fontColor=d6ace6)
 ```
 
+## FontFamily
+
+Change text font family.
+
+Write `&fontFamily= ` behind **Text** query.
+
+Use `%20` for spaces in font names.
+
+> `fontFamily` is applied as CSS `font-family`, but actual rendering depends on fonts available in the rendering environment. If a font is unavailable, fallback fonts are used.
+
+```
+![header](https://capsule-render.vercel.app/api?text=Hello%20World!&fontFamily=Segoe%20UI)
+```
+
 ## Grandeur du texte
 
 Change la grandeur du texte, le défaut est 70.
