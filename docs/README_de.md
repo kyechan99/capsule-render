@@ -46,6 +46,8 @@
   <a href="/docs/README_jp.md">日本語</a>
   ·
   <a href="/docs/README_ml.md">മലയാളം</a>
+  ·
+  <a href="/docs/README_ru.md">Русский</a>
 
 </p>
 <br/>
@@ -63,24 +65,28 @@
 
 1. [Anleitung](#how-to-use)
 2. [Arten](#arten)
-3. [Farben](#color)
+3. [Farben](#farben)
 4. [Benutzerdefinierte Farbliste](#benutzerdefinierte-farbliste)
-5. [Abschnitte](#abschnitt)
-6. [Reversal](#reversal)
-7. [Höhe](#höhe)
-8. [Text](#text)
-9. [Beschreibung](#beschreibung)
-10. [Text Hintergrund](#text-hintergrund)
-11. [Text Animation](#text-animation)
-12. [Textfarbe](#fontcolor)
-13. [Textgröße](#fontsize)
-14. [Textausrichtung - X](#fontalign)
-15. [Textausrichtung - Y](#fontaligny)
-16. [Größe der Beschreibung](#descsize)
-17. [Beschreibung Ausrichtung - X](#descalign)
-18. [Beschreibung Ausrichtung - Y](#descaligny)
-19. [Drehen](#rotate)
-20. [Demo](#demo)
+5. [Theme](#theme)
+6. [Abschnitt](#abschnitt)
+7. [Reversal](#reversal)
+8. [Höhe](#höhe)
+9. [Text](#text)
+10. [Beschreibung](#beschreibung)
+11. [Text Hintergrund](#text-hintergrund)
+12. [Text Animation](#text-animation)
+13. [FontColor](#fontcolor)
+14. [FontFamily](#fontfamily)
+15. [FontSize](#fontsize)
+16. [FontAlign](#fontalign)
+17. [FontAlignY](#fontaligny)
+18. [DescSize](#descsize)
+19. [DescAlign](#descalign)
+20. [DescAlignY](#descaligny)
+21. [Rotate](#rotate)
+22. [Stroke](#stroke)
+23. [Stroke-width](#stroke-width)
+24. [Demo](#demo)
 
 Ideen -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) oder [PR](https://github.com/kyechan99/capsule-render/pulls)
 
