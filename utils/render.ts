@@ -128,6 +128,21 @@ export const getTextBg = (
         `;
 };
 
+const getTextStrokeAttrs = (
+  fontColor: string,
+  stroke: string,
+  strokeWidth: number,
+) => {
+  const hasStroke = strokeWidth > 0 && stroke !== "none";
+  const paintOrder = hasStroke ? "paint-order:stroke fill;" : "";
+
+  return {
+    style: `fill:#${fontColor};${paintOrder}`,
+    stroke: `#${stroke}`,
+    strokeWidth,
+  };
+};
+
 export const getText = (
   text?: string,
   fontColor: string = "000000",
@@ -137,6 +152,11 @@ export const getText = (
   strokeWidth: number = 0,
 ) => {
   if (!text) return "";
+  const { style, stroke: strokeColor, strokeWidth: width } = getTextStrokeAttrs(
+    fontColor,
+    stroke,
+    strokeWidth,
+  );
   const lines = text.split("-nl-");
   const alignX = Array.from(
     { length: lines.length },
@@ -154,9 +174,9 @@ export const getText = (
       x="${50}%" 
       y="${alignY[0]}%" 
       class="text" 
-      style="fill:#${fontColor};" 
-      stroke="#${stroke}" 
-      stroke-width="${strokeWidth}"
+      style="${style}" 
+      stroke="${strokeColor}" 
+      stroke-width="${width}"
     >
       ${lines
         .map(
@@ -174,7 +194,7 @@ export const getText = (
   `;
 
   // debate : adjustable text-anchor|pos-y. not only pos-x
-  return `<text text-anchor="middle" alignment-baseline="middle" x="${alignX[0]}%" y="${alignY[0]}%" class="text" style="fill:#${fontColor};" stroke="#${stroke}" stroke-width="${strokeWidth}" >${lines[0]}</text>`;
+  return `<text text-anchor="middle" alignment-baseline="middle" x="${alignX[0]}%" y="${alignY[0]}%" class="text" style="${style}" stroke="${strokeColor}" stroke-width="${width}" >${lines[0]}</text>`;
 };
 
 export const getDesc = (
