@@ -46,6 +46,8 @@
   <a href="/docs/README_jp.md">日本語</a>
   ·
   <a href="/docs/README_ml.md">മലയാളം</a>
+  ·
+  <a href="/docs/README_ru.md">Русский</a>
 
 </p>
 <br/>
@@ -65,22 +67,26 @@
 2. [ടൈപ്പുകൾ](#types)
 3. [നിറം](#color)
 4. [കസ്റ്റം കളർ ലിസ്റ്റ്](#custom-color-list)
-5. [വിഭാഗം](#section)
-6. [റിവേഴ്സൽ](#reversal)
-7. [ഉയരം](#height)
-8. [ടെക്സ്റ്റ്](#text)
-9. [വിവരണം (Desc)](#desc)
-10. [ടെക്സ്റ്റ് ബാക്ക്ഗ്രൗണ്ട്](#text-background)
-11. [ടെക്സ്റ്റ് അനിമേഷൻ](#text-animation)
-12. [ഫോണ്ട് നിറം](#fontcolor)
-13. [ഫോണ്ട് വലുപ്പം](#fontsize)
-14. [ഫോണ്ട് അലൈന്മെന്റ് - X](#fontalign)
-15. [ഫോണ്ട് അലൈന്മെന്റ് - Y](#fontaligny)
-16. [വിവരണ വലുപ്പം](#descsize)
-17. [വിവരണ അലൈന്മെന്റ് - X](#descalign)
-18. [വിവരണ അലൈന്മെന്റ് - Y](#descaligny)
-19. [റൊട്ടേറ്റ്](#rotate)
-20. [ഡെമോ](#demo)
+5. [Theme (തീം)](#theme-തീം)
+6. [വിഭാഗം](#section)
+7. [റിവേഴ്സൽ](#reversal)
+8. [ഉയരം](#height)
+9. [ടെക്സ്റ്റ്](#text)
+10. [വിവരണം (Desc)](#desc)
+11. [ടെക്സ്റ്റ് ബാക്ക്ഗ്രൗണ്ട്](#text-background)
+12. [ടെക്സ്റ്റ് അനിമേഷൻ](#text-animation)
+13. [ഫോണ്ട് നിറം](#fontcolor)
+14. [FontFamily](#fontfamily)
+15. [ഫോണ്ട് വലുപ്പം](#fontsize)
+16. [ഫോണ്ട് അലൈന്മെന്റ് - X](#fontalign)
+17. [ഫോണ്ട് അലൈന്മെന്റ് - Y](#fontaligny)
+18. [വിവരണ വലുപ്പം](#descsize)
+19. [വിവരണ അലൈന്മെന്റ് - X](#descalign)
+20. [വിവരണ അലൈന്മെന്റ് - Y](#descaligny)
+21. [റൊട്ടേറ്റ്](#rotate)
+22. [Stroke](#stroke)
+23. [Stroke-width](#stroke-width)
+24. [ഡെമോ](#demo)
 
 Idea സംബന്ധിച്ച ഏതെങ്കിലും നിർദ്ദേശങ്ങൾ → [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) അല്ലെങ്കിൽ [PR](https://github.com/kyechan99/capsule-render/pulls)
 

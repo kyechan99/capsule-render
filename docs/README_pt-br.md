@@ -46,6 +46,8 @@
   <a href="/docs/README_jp.md">日本語</a>
   ·
   <a href="/docs/README_ml.md">മലയാളം</a>
+  ·
+  <a href="/docs/README_ru.md">Русский</a>
 
 </p>
 <br/>
@@ -65,23 +67,26 @@
 2. [Tipos](#tipos)
 3. [Cor](#cor)
 4. [Lista de Cores Customizadas](#lista-de-cores-customizadas)
-5. [Seção](#seção)
-6. [Inversão](#inversão)
-7. [Altura](#altura)
-8. [Texto](#texto)
-9. [Descrição](#descrição)
-10. [Fundo do Texto](#fundo-do-texto)
-11. [Animação do Texto](#animação-do-texto)
-12. [Cor da Fonte](#cor-da-fonte)
-13. [Tamanho da Fonte](#tamanho-da-fonte)
-14. [Alinhamento da Fonte - X](#alinhamento-da-fonte)
-15. [Alinhamento da Fonte - Y](#alinhamento-vertical-da-fonte)
-16. [Tamanho da Descrição](#tamanho-da-descrição)
-17. [Alinhamento da Descrição - X](#alinhamento-da-descrição)
-18. [Alinhamento da Descrição - Y](#alinhamento-vertical-da-descrição)
-19. [Girar](#Girar)
-20. [Contorno do Texto](#contorno-do-texto)
-21. [Demonstração](#demo)
+5. [Tema](#tema)
+6. [Seção](#seção)
+7. [Inversão](#inversão)
+8. [Altura](#altura)
+9. [Texto](#texto)
+10. [Descrição](#descrição)
+11. [Fundo do Texto](#fundo-do-texto)
+12. [Animação do Texto](#animação-do-texto)
+13. [Cor da Fonte](#cor-da-fonte)
+14. [FontFamily](#fontfamily)
+15. [Tamanho da Fonte](#tamanho-da-fonte)
+16. [Alinhamento da Fonte - X](#alinhamento-da-fonte)
+17. [Alinhamento da Fonte - Y](#alinhamento-vertical-da-fonte)
+18. [Tamanho da Descrição](#tamanho-da-descrição)
+19. [Alinhamento da Descrição - X](#alinhamento-da-descrição)
+20. [Alinhamento da Descrição - Y](#alinhamento-vertical-da-descrição)
+21. [Girar](#girar)
+22. [Contorno do Texto](#contorno-do-texto)
+23. [Largura do Contorno](#largura-do-contorno)
+24. [Demonstração](#demo)
 
 Qualquer sugestão de ideia -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) ou [PR](https://github.com/kyechan99/capsule-render/pulls)
 

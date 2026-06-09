@@ -46,6 +46,8 @@
   <a href="/docs/README_jp.md">日本語</a>
   ·
   <a href="/docs/README_ml.md">മലയാളം</a>
+  ·
+  <a href="/docs/README_ru.md">Русский</a>
 
 </p>
 <br/>
@@ -73,16 +75,17 @@
 11. [Arrière-plan du texte](#arrière-plan-du-texte)
 12. [Animation du texte](#animation-du-texte)
 13. [Couleur du texte](#couleur-du-texte)
-14. [Grandeur du texte](#grandeur-du-texte)
-15. [Position horizontal du texte - X](#position-horizontal-du-texte)
-16. [Position vertical du texte - Y](#position-vertical-du-texte)
-17. [Grandeur du description](#grandeur-de-la-description)
-18. [Position horizontal de la description - X](#position-horizontal-de-la-description)
-19. [Position vertical de la description - Y](#position-vertical-de-la-description)
-20. [Rotation](#rotation)
-21. [Trait du texte](#trait-du-texte)
-22. [Grandeur du trait](#grandeur-du-trait)
-23. [Exemples](#examples)
+14. [FontFamily](#fontfamily)
+15. [Grandeur du texte](#grandeur-du-texte)
+16. [Position horizontal du texte - X](#position-horizontal-du-texte)
+17. [Position vertical du texte - Y](#position-vertical-du-texte)
+18. [Grandeur du description](#grandeur-de-la-description)
+19. [Position horizontal de la description - X](#position-horizontal-de-la-description)
+20. [Position vertical de la description - Y](#position-vertical-de-la-description)
+21. [Rotation](#rotation)
+22. [Trait du texte](#trait-du-texte)
+23. [Grandeur du trait](#grandeur-du-trait)
+24. [Exemples](#examples)
 
 Avez-vous des idées pour le projet ? -> [Soumettre un Idée](https://github.com/kyechan99/capsule-render/labels/Idea)
 Soumettre un Changement -> [PR](https://github.com/kyechan99/capsule-render/pulls)

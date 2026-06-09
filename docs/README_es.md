@@ -46,6 +46,8 @@
   <a href="/docs/README_jp.md">日本語</a>
   ·
   <a href="/docs/README_ml.md">മലയാളം</a>
+  ·
+  <a href="/docs/README_ru.md">Русский</a>
 
 </p>
 <br/>
@@ -65,8 +67,8 @@
 2. [Tipos](#tipos)
 3. [Colores](#colores)
 4. [Lista de colores personalizada](#lista-de-colores-personalizada)
-5. [Sección](#sección)
-6. [Tema](#tema)
+5. [Tema](#tema)
+6. [Sección](#sección)
 7. [Reversión](#reversión)
 8. [Altura](#altura)
 9. [Texto](#texto)
@@ -74,16 +76,17 @@
 11. [Fondo del texto](#fondo-del-texto)
 12. [Animación del texto](#animación-del-texto)
 13. [Color de fuente](#color-de-fuente)
-14. [Tamaño de fuente](#tamaño-de-fuente)
-15. [Alineación horizontal del texto](#alineación-horizontal-del-texto)
-16. [Alineación vertical del texto](#alineación-vertical-del-texto)
-17. [Tamaño de la descripción](#tamaño-de-la-descripción)
-18. [Alineación horizontal de la descripción](#alineación-horizontal-de-la-descripción)
-19. [Alineación vertical de la descripción](#alineación-vertical-de-la-descripción)
-20. [Rotación](#rotación)
-21. [Contorno del texto](#contorno-del-texto)
-22. [Ancho del contorno del texto](#ancho-del-contorno-del-texto)
-23. [Demo](#demo)
+14. [FontFamily](#fontfamily)
+15. [Tamaño de fuente](#tamaño-de-fuente)
+16. [Alineación horizontal del texto](#alineación-horizontal-del-texto)
+17. [Alineación vertical del texto](#alineación-vertical-del-texto)
+18. [Tamaño de la descripción](#tamaño-de-la-descripción)
+19. [Alineación horizontal de la descripción](#alineación-horizontal-de-la-descripción)
+20. [Alineación vertical de la descripción](#alineación-vertical-de-la-descripción)
+21. [Rotación](#rotación)
+22. [Contorno del texto](#contorno-del-texto)
+23. [Ancho del contorno del texto](#ancho-del-contorno-del-texto)
+24. [Demo](#demo)
 
 Cualquier idea -> [Idea-Issue](https://github.com/kyechan99/capsule-render/labels/Idea) or [PR](https://github.com/kyechan99/capsule-render/pulls)
 
