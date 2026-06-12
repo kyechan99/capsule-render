@@ -20,7 +20,7 @@
         <path fill="url(#linear)" fill-opacity="1"
             d="M 30 0 H 824 C 839 0, 854 15, 854 30 V 130 C 854 145, 839 160, 824 160 H 794 L 754 200 L 714 160 H 30 C 15 160, 0 145, 0 130 V 30 C 0 15, 15 0, 30 0 Z" />
     </svg>
-    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="35%" class="text"
+    <text text-anchor="middle" dominant-baseline="middle" x="50%" y="35%" class="text"
         style="fill:#f7f5f5;" stroke="#none" stroke-width="1">
         <tspan x="30%" dy="0">speech</tspan>
         <tspan x="60%" dy="20%">bubble</tspan>

@@ -184,8 +184,8 @@ exports[`Test Models blur model 1`] = `
     
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -198,8 +198,8 @@ exports[`Test Models blur model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -276,8 +276,8 @@ exports[`Test Models cylinder model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -290,8 +290,8 @@ exports[`Test Models cylinder model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -368,8 +368,8 @@ exports[`Test Models egg model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -382,8 +382,8 @@ exports[`Test Models egg model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -460,8 +460,8 @@ exports[`Test Models rect model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -474,8 +474,8 @@ exports[`Test Models rect model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -552,8 +552,8 @@ exports[`Test Models rounded model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -566,8 +566,8 @@ exports[`Test Models rounded model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -644,8 +644,8 @@ exports[`Test Models shark model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -658,8 +658,8 @@ exports[`Test Models shark model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -736,8 +736,8 @@ exports[`Test Models slice model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -750,8 +750,8 @@ exports[`Test Models slice model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -831,8 +831,8 @@ exports[`Test Models soft model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -845,8 +845,8 @@ exports[`Test Models soft model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -923,8 +923,8 @@ exports[`Test Models speech model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -937,8 +937,8 @@ exports[`Test Models speech model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -1034,8 +1034,8 @@ exports[`Test Models transparent model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -1048,8 +1048,8 @@ exports[`Test Models transparent model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -1141,8 +1141,8 @@ exports[`Test Models venom model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -1155,8 +1155,8 @@ exports[`Test Models venom model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -1233,8 +1233,8 @@ exports[`Test Models wave model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -1247,8 +1247,8 @@ exports[`Test Models wave model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"
@@ -1372,8 +1372,8 @@ exports[`Test Models waving model 1`] = `
   
          
   <text
-    alignment-baseline="middle"
     class="text"
+    dominant-baseline="middle"
     stroke="#none"
     stroke-width="1"
     style="fill:#f7f5f5;"
@@ -1386,8 +1386,8 @@ exports[`Test Models waving model 1`] = `
   
         
   <text
-    alignment-baseline="middle"
     class="desc"
+    dominant-baseline="middle"
     style="fill:#f7f5f5;"
     text-anchor="middle"
     x="40%"

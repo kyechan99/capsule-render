@@ -15,8 +15,8 @@
         <path fill="#F4BBBB" fill-opacity="1"
             d="M 61 0 L 779 0 A 50 50 0 1 1 779 150 L 75 150 A 50 50 0 1 1 75 0 " />
     </svg>
-    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="45%" class="text"
+    <text text-anchor="middle" dominant-baseline="middle" x="50%" y="45%" class="text"
         style="fill:#f7f5f5;" stroke="#none" stroke-width="1">Cylinder</text>
-    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="70%" class="desc"
+    <text text-anchor="middle" dominant-baseline="middle" x="50%" y="70%" class="desc"
         style="fill:#f7f5f5;">desc is also animated</text>
 </svg>

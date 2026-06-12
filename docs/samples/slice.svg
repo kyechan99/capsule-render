@@ -14,8 +14,8 @@
 
         <path fill="#75BDE0" fill-opacity="1" d="m 0 0 l 854 200 l 0 -200 l -854 0 z" />
     </svg>
-    <text text-anchor="middle" alignment-baseline="middle" x="70%" y="25%" class="text"
+    <text text-anchor="middle" dominant-baseline="middle" x="70%" y="25%" class="text"
         style="fill:#363636;" stroke="#none" stroke-width="1">SLICE</text>
-    <text text-anchor="middle" alignment-baseline="middle" x="60%" y="44%" class="desc"
+    <text text-anchor="middle" dominant-baseline="middle" x="60%" y="44%" class="desc"
         style="fill:#363636;">desc function is also rotated.</text>
 </svg>

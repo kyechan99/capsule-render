@@ -32,7 +32,7 @@
             </animate>
         </path>
     </g>
-    <text text-anchor="middle" alignment-baseline="middle" x="80%" y="40%" class="text"
+    <text text-anchor="middle" dominant-baseline="middle" x="80%" y="40%" class="text"
         style="fill:#f7f5f5;" stroke="#none" stroke-width="1">Waving!</text>
 
 </svg>
