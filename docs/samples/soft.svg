@@ -16,7 +16,7 @@
         <rect xmlns="http://www.w3.org/2000/svg" rx="4.5" height="120" width="100%" fill="#76819C"
             stroke-opacity="1" />
     </svg>
-    <text text-anchor="middle" alignment-baseline="middle" x="50%" y="50%" class="text"
+    <text text-anchor="middle" dominant-baseline="middle" x="50%" y="50%" class="text"
         style="fill:#363636;" stroke="#none" stroke-width="1">Good to use with other readme</text>
 
 </svg>

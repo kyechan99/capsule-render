@@ -152,11 +152,11 @@ export const getText = (
   strokeWidth: number = 0,
 ) => {
   if (!text) return "";
-  const { style, stroke: strokeColor, strokeWidth: width } = getTextStrokeAttrs(
-    fontColor,
-    stroke,
-    strokeWidth,
-  );
+  const {
+    style,
+    stroke: strokeColor,
+    strokeWidth: width,
+  } = getTextStrokeAttrs(fontColor, stroke, strokeWidth);
   const lines = text.split("-nl-");
   const alignX = Array.from(
     { length: lines.length },
@@ -170,7 +170,7 @@ export const getText = (
   if (lines.length > 1)
     return `<text 
       text-anchor="middle" 
-      alignment-baseline="middle" 
+      dominant-baseline="middle" 
       x="${50}%" 
       y="${alignY[0]}%" 
       class="text" 
@@ -194,7 +194,7 @@ export const getText = (
   `;
 
   // debate : adjustable text-anchor|pos-y. not only pos-x
-  return `<text text-anchor="middle" alignment-baseline="middle" x="${alignX[0]}%" y="${alignY[0]}%" class="text" style="${style}" stroke="${strokeColor}" stroke-width="${width}" >${lines[0]}</text>`;
+  return `<text text-anchor="middle" dominant-baseline="middle" x="${alignX[0]}%" y="${alignY[0]}%" class="text" style="${style}" stroke="${strokeColor}" stroke-width="${width}" >${lines[0]}</text>`;
 };
 
 export const getDesc = (
@@ -210,7 +210,7 @@ export const getDesc = (
   if (lines.length > 1)
     return `<text
       text-anchor="middle"
-      alignment-baseline="middle"
+      dominant-baseline="middle"
       x="${descAlign}%"
       y="${descAlignY}%"
       class="desc"
@@ -226,5 +226,5 @@ export const getDesc = (
   `;
 
   // debate : adjustable text-anchor|pos-y. not only pos-x
-  return `<text text-anchor="middle" alignment-baseline="middle" x="${descAlign}%" y="${descAlignY}%" class="desc" style="fill:#${descColor};">${lines[0]}</text>`;
+  return `<text text-anchor="middle" dominant-baseline="middle" x="${descAlign}%" y="${descAlignY}%" class="desc" style="fill:#${descColor};">${lines[0]}</text>`;
 };
