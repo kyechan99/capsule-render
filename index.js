@@ -79,6 +79,8 @@ const App = () => {
                   "speech",
                   "transparent",
                   "blur",
+                  "pulse",
+                  "checkered",
                 ].map(item => (
                   <option value={item} key={item}>
                     {item}

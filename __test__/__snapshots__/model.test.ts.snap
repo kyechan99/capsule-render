@@ -212,6 +212,255 @@ exports[`Test Models blur model 1`] = `
 </svg>
 `;
 
+exports[`Test Models checkered model 1`] = `
+<svg
+  height="300"
+  style="z-index:1;position:relative"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  
+        
+  <style>
+    
+      .text {   font-size: 20px;   font-weight: 700;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .desc {   font-size: 30px;   font-weight: 500;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .text, .desc {   transform-origin: center center;   transform: rotate(1deg);  } 
+      .text, .desc {   animation: fadeIn 1.2s ease-in-out forwards;  } @keyframes fadeIn {   from {     opacity: 0;   }   to {     opacity: 1;   }  } 
+    
+  </style>
+  
+        
+  <defs>
+    
+              
+    <lineargradient
+      id="linear"
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    >
+      
+                
+      <stop
+        offset="0%"
+        stop-color="#ddd6f3"
+      />
+      <stop
+        offset="100%"
+        stop-color="#faaca8"
+      />
+      
+              
+    </lineargradient>
+    
+            
+  </defs>
+  
+        
+      
+  <defs>
+    
+        
+    <lineargradient
+      gradientUnits="userSpaceOnUse"
+      id="checkeredLinear"
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    >
+      
+                
+      <stop
+        offset="0%"
+        stop-color="#ddd6f3"
+      />
+      <stop
+        offset="100%"
+        stop-color="#faaca8"
+      />
+      
+              
+    </lineargradient>
+    
+        
+    <pattern
+      height="60"
+      id="checkeredPattern"
+      patternUnits="userSpaceOnUse"
+      width="60"
+    >
+      
+          
+      <rect
+        fill="none"
+        height="60"
+        shape-rendering="crispEdges"
+        width="60"
+      />
+      
+          
+      
+      <rect
+        fill="#ffffff"
+        height="30"
+        opacity="0.06"
+        width="30"
+        x="0"
+        y="0"
+      >
+        
+        
+        <animate
+          attributeName="opacity"
+          begin="0s"
+          calcMode="spline"
+          dur="16s"
+          keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+          keyTimes="0;0.2;0.5;0.8;1"
+          repeatCount="indefinite"
+          values="0.041999999999999996;0.06;0.06899999999999999;0.06;0.041999999999999996"
+        />
+        
+      
+      </rect>
+      
+      
+      <rect
+        fill="#000000"
+        height="30"
+        opacity="0.05"
+        width="30"
+        x="30"
+        y="0"
+      >
+        
+        
+        <animate
+          attributeName="opacity"
+          begin="2s"
+          calcMode="spline"
+          dur="16s"
+          keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+          keyTimes="0;0.2;0.5;0.8;1"
+          repeatCount="indefinite"
+          values="0.034999999999999996;0.05;0.057499999999999996;0.05;0.034999999999999996"
+        />
+        
+      
+      </rect>
+      
+      
+      <rect
+        fill="#000000"
+        height="30"
+        opacity="0.05"
+        width="30"
+        x="0"
+        y="30"
+      >
+        
+        
+        <animate
+          attributeName="opacity"
+          begin="4s"
+          calcMode="spline"
+          dur="16s"
+          keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+          keyTimes="0;0.2;0.5;0.8;1"
+          repeatCount="indefinite"
+          values="0.034999999999999996;0.05;0.057499999999999996;0.05;0.034999999999999996"
+        />
+        
+      
+      </rect>
+      
+      
+      <rect
+        fill="#ffffff"
+        height="30"
+        opacity="0.06"
+        width="30"
+        x="30"
+        y="30"
+      >
+        
+        
+        <animate
+          attributeName="opacity"
+          begin="6s"
+          calcMode="spline"
+          dur="16s"
+          keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1;0.42 0 0.58 1"
+          keyTimes="0;0.2;0.5;0.8;1"
+          repeatCount="indefinite"
+          values="0.041999999999999996;0.06;0.06899999999999999;0.06;0.041999999999999996"
+        />
+        
+      
+      </rect>
+      
+        
+    </pattern>
+    
+      
+  </defs>
+  
+      
+  <g
+    transform="scale (-1, 1)"
+    transform-origin="center"
+  >
+    
+        
+    <rect
+      fill="url(#checkeredLinear)"
+      height="100%"
+      width="100%"
+    />
+    
+        
+    <rect
+      fill="url(#checkeredPattern)"
+      height="100%"
+      width="100%"
+    />
+    
+      
+  </g>
+  
+         
+  <text
+    class="text"
+    dominant-baseline="middle"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    checkered
+  </text>
+  
+        
+  <text
+    class="desc"
+    dominant-baseline="middle"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    checkered
+  </text>
+  
+      
+</svg>
+`;
+
 exports[`Test Models cylinder model 1`] = `
 <svg
   height="300"
@@ -390,6 +639,169 @@ exports[`Test Models egg model 1`] = `
     y="50%"
   >
     egg
+  </text>
+  
+      
+</svg>
+`;
+
+exports[`Test Models pulse model 1`] = `
+<svg
+  height="300"
+  style="z-index:1;position:relative"
+  viewBox="0 0 854 300"
+  width="854"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  
+        
+  <style>
+    
+      .text {   font-size: 20px;   font-weight: 700;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .desc {   font-size: 30px;   font-weight: 500;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .text, .desc {   transform-origin: center center;   transform: rotate(1deg);  } 
+      .text, .desc {   animation: fadeIn 1.2s ease-in-out forwards;  } @keyframes fadeIn {   from {     opacity: 0;   }   to {     opacity: 1;   }  } 
+    
+  </style>
+  
+        
+  <defs>
+    
+              
+    <lineargradient
+      id="linear"
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    >
+      
+                
+      <stop
+        offset="0%"
+        stop-color="#ddd6f3"
+      />
+      <stop
+        offset="100%"
+        stop-color="#faaca8"
+      />
+      
+              
+    </lineargradient>
+    
+            
+  </defs>
+  
+        
+      
+  <g
+    transform="scale (-1, 1)"
+    transform-origin="center"
+  >
+    
+        
+    <g
+      transform="translate(427 150)"
+    >
+      
+          
+      <circle
+        cx="0"
+        cy="0"
+        fill="url(#linear)"
+        opacity="0.08"
+        r="84.00000000000001"
+      >
+        
+            
+        <animate
+          attributeName="r"
+          dur="4.5s"
+          repeatCount="indefinite"
+          values="71.4;92.40000000000002;71.4"
+        />
+        
+            
+        <animate
+          attributeName="opacity"
+          dur="4.5s"
+          repeatCount="indefinite"
+          values="0.05;0.12;0.05"
+        />
+        
+          
+      </circle>
+      
+          
+      <circle
+        cx="0"
+        cy="0"
+        fill="url(#linear)"
+        opacity="0.28"
+        r="48"
+      >
+        
+            
+        <animatetransform
+          attributeName="transform"
+          dur="4.5s"
+          repeatCount="indefinite"
+          type="scale"
+          values="1;1.2;1"
+        />
+        
+          
+      </circle>
+      
+          
+      <circle
+        cx="0"
+        cy="0"
+        fill="#ffffff"
+        opacity="0.45"
+        r="19.200000000000003"
+      >
+        
+            
+        <animate
+          attributeName="opacity"
+          dur="4.5s"
+          repeatCount="indefinite"
+          values="0.28;0.55;0.28"
+        />
+        
+          
+      </circle>
+      
+        
+    </g>
+    
+      
+  </g>
+  
+         
+  <text
+    class="text"
+    dominant-baseline="middle"
+    stroke="#none"
+    stroke-width="1"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    pulse
+  </text>
+  
+        
+  <text
+    class="desc"
+    dominant-baseline="middle"
+    style="fill:#f7f5f5;"
+    text-anchor="middle"
+    x="40%"
+    y="50%"
+  >
+    pulse
   </text>
   
       

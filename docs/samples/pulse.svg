@@ -1,0 +1,37 @@
+
+      <svg
+        width="854"
+        height="200"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        style="z-index:1;position:relative"
+        viewBox="0 0 854 200"
+      >
+        <style>
+      .text {   font-size: 70px;   font-weight: 700;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } .desc {   font-size: 20px;   font-weight: 500;   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;  } 
+      .text, .desc {   animation: fadeIn 1.2s ease-in-out forwards;  } @keyframes fadeIn {   from {     opacity: 0;   }   to {     opacity: 1;   }  } 
+    </style>
+        <defs>
+              <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#5433FF"/><stop offset="50%" stop-color="#20BDFF"/><stop offset="100%" stop-color="#A5FECB"/>
+              </linearGradient>
+            </defs>
+        
+      <g >
+        <g transform="translate(427 100)">
+          <circle cx="0" cy="0" r="56.00000000000001" fill="url(#linear)" opacity="0.08">
+            <animate attributeName="r" values="47.6;61.600000000000016;47.6" dur="4.5s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.05;0.12;0.05" dur="4.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="0" cy="0" r="32" fill="url(#linear)" opacity="0.28">
+            <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="4.5s" repeatCount="indefinite" />
+          </circle>
+          <circle cx="0" cy="0" r="12.8" fill="#ffffff" opacity="0.45">
+            <animate attributeName="opacity" values="0.28;0.55;0.28" dur="4.5s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      </g>
+         <text text-anchor="middle" dominant-baseline="middle" x="50%" y="50%" class="text" style="fill:#f7f5f5;" stroke="#none" stroke-width="1" >Pulse</text>
+        
+      </svg>
+    

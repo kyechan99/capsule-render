@@ -126,6 +126,8 @@ Le paramètre `&type= ` change la forme de l'arrière-plan. Les formes dont vous
 - [venom](#venom)
 - [speech](#speech)
 - [blur](#blur)
+- [pulse](#pulse)
+- [checkered](#checkered)
 - [transparent](#transparent)
 
 Ajoute `&type= ` au URL, suivi par la forme que vous voulez afficher.
@@ -483,5 +485,13 @@ Le valeur devrais être plus grand que 0.
 ## Blur <a id="blur">
 
 [![blur](samples/blur.svg)](https://capsule-render.vercel.app/api?type=blur&height=300&color=gradient&text=Blur&strokeWidth=2&section=footer&reversal=true&fontAlign=50&stroke=E0E0E0&fontSize=55&textBg=false)
+
+## Pulse <a id="pulse">
+
+[![pulse](samples/pulse.svg)](https://capsule-render.vercel.app/api?type=pulse&height=200&color=gradient&text=Pulse)
+
+## Checkered <a id="checkered">
+
+[![checkered](samples/checkered.svg)](https://capsule-render.vercel.app/api?type=checkered&height=200&color=gradient&text=Checkered)
 
 <hr/>
