@@ -1,0 +1,55 @@
+language: "en-US"
+tone_instructions: >
+  Write friendly, helpful English in a calm and respectful tone. Avoid evaluative
+  praise such as "This is good code." Prefer gentle, specific wording over
+  absolute or provocative language. Mix clear statements, questions, and
+  suggestions where natural. Do not use emojis, and use exclamation marks
+  sparingly.
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  review_status: true
+  poem: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!dist/**"
+    - "!package-lock.json"
+  path_instructions:
+    - path: "api/**"
+      instructions: |
+        Review public query-parameter compatibility, error response behavior,
+        and content types. Flag unsafe interpolation of request values into SVG
+        or HTML, but avoid generic findings without a concrete attack path.
+    - path: "model/**"
+      instructions: |
+        The rendered SVG is a public API. Check that new model types are
+        exported through the registry, preserve shared Model behavior, and have
+        meaningful Jest or snapshot coverage for intentional output changes.
+    - path: "src/generator/**"
+      instructions: |
+        Check that generator defaults/fallbacks remain consistent with
+        `/api/options` and the renderer registry. Preserve URL query generation
+        and accessible controls.
+    - path: "src/*.json"
+      instructions: |
+        Palette, gradient, and theme files are runtime data. Check their shape,
+        referenced indices, and compatibility with existing data-integrity tests.
+  pre_merge_checks:
+    title:
+      mode: "warning"
+      requirements: >
+        Use a concise Conventional Commit-style title that explains the
+        user-facing or maintainer-facing change. Engineering work such as
+        refactors, infrastructure, or build changes may use precise technical
+        terms.
+
+chat:
+  auto_reply: true
+
+knowledge_base:
+  learnings:
+    scope: "local"
