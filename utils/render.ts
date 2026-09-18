@@ -3,6 +3,14 @@ import { css } from "../utils/css";
 import { ColorMap } from "../types/color";
 import { _, append, appendIf } from "../utils/_";
 
+export const ANIMATION_NAMES = [
+  "fadeIn",
+  "scaleIn",
+  "blink",
+  "blinking",
+  "twinkling",
+] as const;
+
 export const getStyle = (
   section: "footer" | "header",
   fontSize: number = 70,

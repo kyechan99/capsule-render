@@ -5,4 +5,7 @@ const Models = {
   ...normalModels,
   ...animationModels,
 };
+
+export const getModelTypes = () => Object.keys(Models);
+
 export default Models;

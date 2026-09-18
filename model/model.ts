@@ -16,6 +16,7 @@ import {
   getText,
   getTextBg,
 } from "../utils/render";
+import { COLOR_PRESETS } from "./capabilities";
 
 export abstract class Model {
   width = 854;
@@ -86,17 +87,20 @@ export abstract class Model {
       );
       this.descColor = this.textBgColor;
     } else {
-      if (this.color === "auto") {
+      if (this.color === COLOR_PRESETS.auto) {
         [this.color, this.fontColor, this.textBgColor] = generateAutoColor(
           this.fontColor,
           this.customColorList,
         );
-      } else if (this.color === "gradient") {
+      } else if (this.color === COLOR_PRESETS.gradient) {
         [this.color, this.fontColor, this.textBgColor] = generateAutoGradient(
           this.fontColor,
           this.customColorList,
         );
-      } else if (this.color === "timeAuto" || this.color === "timeGradient") {
+      } else if (
+        this.color === COLOR_PRESETS.timeAuto ||
+        this.color === COLOR_PRESETS.timeGradient
+      ) {
         [this.color, this.fontColor, this.textBgColor] = generateAutoByTime(
           this.color,
           this.fontColor,

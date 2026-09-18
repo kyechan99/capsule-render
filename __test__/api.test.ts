@@ -1,4 +1,5 @@
 import api from "../api";
+import options from "../api/options";
 
 const route = (query: any) => {
   const req = {
@@ -38,5 +39,23 @@ describe("Test API", () => {
     expect(res.setHeader).toBeCalledWith("Content-Type", "text/html");
     const svgContent = res.send.mock.lastCall[0];
     expect(svgContent).toContain("The value of 'type=' is invalid.");
+  });
+
+  it("exposes generator options from the renderer registry", () => {
+    const res = {
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn(),
+    };
+
+    options({}, res);
+
+    expect(res.status).toHaveBeenCalledWith(200);
+    expect(res.json).toHaveBeenCalledWith(
+      expect.objectContaining({
+        types: expect.arrayContaining(["wave", "waving"]),
+        animations: expect.arrayContaining(["fadeIn", "twinkling"]),
+        colorPresets: expect.arrayContaining(["gradient", "timeGradient"]),
+      }),
+    );
   });
 });
