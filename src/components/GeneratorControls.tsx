@@ -62,7 +62,9 @@ function GeneratorField({ field, query, onChange }: FieldProps) {
           <SelectToggle id={fieldId} className="field-select">
             {titleCase(inputValue)}
           </SelectToggle>
-          <SelectContent>
+          <SelectContent
+            style={{ maxHeight: "min(20rem, 45vh)", overflowY: "auto" }}
+          >
             {field.options.map(option => (
               <SelectItem key={option || "none"} value={option}>
                 {titleCase(option)}
