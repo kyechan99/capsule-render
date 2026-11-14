@@ -32,7 +32,7 @@
     "bmates-ui": "^1.1.5",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "vercel": "^54.0.0",
+    "vercel": "^59.23.1",
     "xmldom": "^0.6.0"
   },
   "devDependencies": {
